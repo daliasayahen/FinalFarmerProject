@@ -1,0 +1,50 @@
+<body>
+<div style="margin-top: -10%;">
+
+<h1 style="text-align: center; font-family: Georgia, 'Times New Roman', Times, serif;margin-top: 10%;">Login</h1>
+<div class="container">  
+  <div class="loginCard">
+    <div class="example-container">
+            <mat-form-field appearance="fill"class="example-full-width">
+              <mat-label>Enter your username</mat-label>
+              <input matInput placeholder="Enter your User name" [formControl]="LoginService.username">
+              <mat-error *ngIf="LoginService.username.hasError('required')">
+                 please enter user name
+              </mat-error>
+              <!-- <mat-error *ngIf="auth.Email.hasError('email')">
+                Enter valid Email
+              </mat-error> -->
+            </mat-form-field>
+
+
+             <mat-form-field appearance="fill" class="example-full-width">
+                <mat-label>Enter your Password</mat-label>
+                <input type ="password" matInput placeholder="pat@example.com" [formControl]="LoginService.password" value="Password">
+                <mat-error *ngIf="LoginService.password.hasError('required')&& !LoginService.password.hasError('minlength')">
+                   please enter Password
+                </mat-error> 
+           <mat-error *ngIf="LoginService.password.hasError('minlength')">
+                  Enter strong password 
+                </mat-error>
+                <ng-container>
+
+                </ng-container>
+              </mat-form-field>
+              <section class="example-section">
+                <mat-checkbox class="example-margin" [(ngModel)]="LoginService.checked" (click)="RememberFun()">Remember me</mat-checkbox>
+              </section>
+              <button [disabled]="!LoginService.username.valid || !LoginService.password.valid" mat-button color="primary" (click)="submit()" style="flex:1;width:100%;margin-top:50px ;">
+
+                <ng-container>Login</ng-container>  </button>
+
+       
+        <p (click)="gotToRegister()">if you dont have an account <span style="color:tomato">register Now</span></p>
+         <p routerLink="register">Create New Acoout</p> 
+           </div>
+    </div>
+</div>
+</div> 
+
+
+</body> 
+  

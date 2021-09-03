@@ -1,0 +1,38 @@
+
+
+
+body{
+  background: url(https://images.unsplash.com/photo-1495195129352-aeb325a55b65?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGJhY2tncm91bmQlMjBwaWNzJTIwZm9yJTIwb3JnYW5pYyUyMGZhcm1lcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60) no-repeat center center fixed ; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  /* opacity: 0.5; */
+}
+.container{
+  /* background-color: tan; */
+  width: 100vw;
+  /* height: 100vh;  */
+  overflow: hidden;
+  display:flex ;
+  justify-content: center;
+}
+.loginCard{
+  width: 700px;
+  height: 60vh;
+  padding: 20px;
+  background-color:lightyellow;
+  align-self: center;
+  border-radius: 25px;
+   /* padding: 9%; */
+
+}
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+.example-full-width {
+  width: 100%;
+
+}

@@ -1,0 +1,57 @@
+
+
+<div class="bg_img">
+  <h1 > 𝒸𝑜𝓃𝓉𝒶𝒸𝓉 𝓊𝓈</h1>
+  <a href="#" class="btn btn-outline-light btn-lg float-right" href="#!" role="button " >Home »</a>
+
+</div>
+
+<body>
+  <div style="margin-top: -10%;">
+  
+  <!-- <h1 style="text-align: center; font-family: Georgia, 'Times New Roman', Times, serif;margin-top: 10%;">Contact Us </h1> -->
+  <div class="container">  
+    <div class="loginCard">
+      <div class="example-container">
+        <form [formGroup]="ContactForm">
+              <mat-form-field appearance="fill"class="example-full-width">
+                <mat-label>Enter your name</mat-label>
+                <input matInput placeholder="enter your name" formControlName="fullName">
+                 <mat-error *ngIf="ContactForm.controls.fullName.hasError('required')">
+                   please enter your name
+                </mat-error>
+              
+              </mat-form-field>
+
+              <mat-form-field appearance="fill"class="example-full-width">
+                <mat-label>Enter your email</mat-label>
+                <input matInput placeholder="pat@example.com" formControlName="email">
+                <mat-error *ngIf="ContactForm.controls.email.hasError('required')">
+                   please enter email
+                </mat-error>
+                <mat-error *ngIf="ContactForm.controls.email.hasError('email')">
+                  Enter valid Email
+                </mat-error> 
+              </mat-form-field>
+              
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Leave a comment</mat-label>
+                <textarea matInput placeholder="Ex. It makes me feel..." formControlName="message" ></textarea>
+              </mat-form-field>
+  
+              
+               
+                <button [disabled]="!ContactForm.controls.email.valid" mat-button color="primary" (click)="submit()" style="flex:1;width:100%;margin-top:50px ;"> 
+  
+                  <ng-container>send</ng-container>
+                  </button>
+  
+                </form>
+             </div>
+      </div>
+  </div>
+  </div> 
+  
+  
+  </body> 
+    

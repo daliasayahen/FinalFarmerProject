@@ -1,0 +1,100 @@
+<!-- <h1 style="    font-size: 24px;
+font-weight: 700;margin-bottom: 5%;    line-height: 120% !important">GET IN TOUCH</h1> -->
+
+<body>
+<div style="margin-top: -10%;">
+<h1 style="text-align: center; font-family: Georgia, 'Times New Roman', Times, serif;margin-top: 10%;color:peru;  font-weight: bold;
+"></h1>
+
+<div class="container" style="margin-bottom: 10%; margin-top: 3%;">
+    <div class="loginCard">
+<form [formGroup]="formRegister">
+  <mat-form-field class="example-full-width">
+    <mat-label>Enter Full Name </mat-label>
+    <input matInput  formControlName="userName" placeholder="enter your name">
+    <mat-error *ngIf="formRegister.controls.userName.hasError('required')">
+      Please Enter your name
+    </mat-error>
+
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Enter your Phone Number</mat-label>
+    <input matInput  formControlName="phoneNumber" placeholder="enter your phoneNumber">
+    </mat-form-field>
+
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Enter your email</mat-label>
+    <input matInput placeholder="pat@example.com" formControlName="email">
+    <mat-error *ngIf="formRegister.controls.email.hasError('required') && !formRegister.controls.email.hasError('email')">
+      Please Enter your email
+    </mat-error>
+    <mat-error *ngIf="formRegister.controls.email.hasError('email') ">
+      Please Enter valid email
+    </mat-error>
+  </mat-form-field>
+
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Enter your password</mat-label>
+    <input matInput  formControlName="password" type="password" placeholder="enter password">
+    <mat-error *ngIf="formRegister.controls.password.hasError('required') && !formRegister.controls.password.hasError('minlength')">
+      Please Enter your password
+    </mat-error>
+    <mat-error *ngIf="formRegister.controls.password.hasError('minlength') ">
+      Please Enter strong password
+    </mat-error>
+  </mat-form-field>
+
+
+  <!-- <mat-form-field class="example-full-width">
+    <mat-label>Confirm password </mat-label>
+    <input matInput  formControlName="confirmPassword" type="password">
+    <mat-error *ngIf="formRegister.controls.confirmPassword.hasError('required') ">
+     password are required
+    </mat-error>
+    <mat-error *ngIf="formRegister.controls.confirmPassword.hasError('minlength') && !formRegister.controls.confirmPassword.hasError('required') && 
+    formRegister.controls.confirmPassword.value != 
+    formRegister.controls.password.value">
+     password Not Matched
+    </mat-error>
+   
+  </mat-form-field> -->
+
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Enter your Address</mat-label>
+    <input matInput  formControlName="address" placeholder="enter your address">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Enter your position</mat-label>
+      <input matInput  formControlName="roleId" placeholder="enter your position">
+      </mat-form-field>
+
+
+  
+  <mat-form-field class="example-full-width">
+    <mat-label>Enter your Age</mat-label>
+    <input matInput  formControlName="age" placeholder="enter your age">
+  </mat-form-field>
+
+  <button  mat-button color="black" (click)="submit()" 
+  style="flex:1;width:100%; margin-top: 20px; ; font-size: 119%; background-color: #cd853fd4; 
+  font-family:  Georgia, 'Times New Roman', Times, serif; color: seashell;">
+
+    <ng-container>Register</ng-container>  </button>
+
+  
+    
+
+ 
+
+
+
+</form>
+</div>
+</div>
+</div>
+</body>
