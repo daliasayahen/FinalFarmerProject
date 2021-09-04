@@ -18,7 +18,7 @@ export class NavbarComponent implements OnInit {
 
   }
   AboutUs(){
-    this.router.navigate(["aboutus"]);
+    this.router.navigate(["aboutUsHome"]);
 
   }
   ContactUs(){
@@ -34,6 +34,9 @@ export class NavbarComponent implements OnInit {
 
   GoToReg(){
     this.router.navigate(["Register"]);
+  }
+  GoToTestimonial(){
+    this.router.navigate(["testimonial"]);
   }
 
 }

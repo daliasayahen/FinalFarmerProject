@@ -145,3 +145,8 @@
  [reviewID]="card.reviewID"  [userName]="card.userName" [descriptiontext]="card.descriptiontext"
  [img]="card.img" [rate]="card.rate"></app-review>
     
+ 
+
+ <app-tistimonial *ngFor="let card of tetimonialService.data"
+ [TestimonialID]="card.TestimonialID"  [userName]="card.userName" [descriptiontext]="card.descriptiontext"
+ [img]="card.img" ></app-tistimonial>

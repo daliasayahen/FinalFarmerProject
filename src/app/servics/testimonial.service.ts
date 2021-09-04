@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
@@ -12,6 +12,7 @@ export class TestimonialService {
 
   data:any[]=[];
   selectedItem:any;
+  display_image:any;
   constructor(private http:HttpClient , private toaster:ToastrService ,private spiner:NgxSpinnerService ,private router:Router) { }
  
  
@@ -52,4 +53,22 @@ export class TestimonialService {
     
   }
 
+  uploadAttachment(file:FormData){
+    
+    const headerDict = {
+    'Content-Type': 'application/json',
+    'Accept': 'application/json'
+    }
+    const requestOptions = {
+    headers: new HttpHeaders(headerDict),
+    };
+    debugger
+    this.http.post("https://localhost:44379/api/Testimonial",file).subscribe((data: any) => {
+    this.display_image=data.image;
+    debugger
+    if(data){
+    console.log(data);}
+    }, err => {
+    })
+    }
 }

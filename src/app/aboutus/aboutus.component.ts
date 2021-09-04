@@ -1,5 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { NgxSpinnerService } from 'ngx-spinner';
+import { ToastrService } from 'ngx-toastr';
+import { AboutUsService } from '../servics/about-us.service';
 
 @Component({
   selector: 'app-aboutus',
@@ -7,10 +11,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./aboutus.component.css']
 })
 export class AboutusComponent implements OnInit {
+  @Input()description:String|undefined
+  @Input() img:any|undefined
+  
+  constructor(private http:HttpClient , private toaster:ToastrService ,private spiner:NgxSpinnerService ,private router:Router,public aboutusService:AboutUsService) { }
 
-  constructor(private router:Router) { }
 
   ngOnInit(): void {
+
   }
   GoToLogin(){
     this.router.navigate(["Login"]);
@@ -26,4 +34,24 @@ export class AboutusComponent implements OnInit {
     this.router.navigate(["AboutUs"]);
   }
 
-}
+ 
+  getImagePath(value:string ){
+
+    let basePath="../../../assets/DBimages/Uploaded File/";
+   return basePath+value;
+   
+    }
+
+    uploadFile(files:any) {​​​
+      if (files.length === 0) {​​​
+      return;
+      }​​​
+      let fileToUpload = <File>files[0];
+      const formData = new FormData();
+      formData.append('file', fileToUpload, fileToUpload.name);
+      this.aboutusService.uploadAttachment(formData);
+      }​​​
+
+  }
+
+

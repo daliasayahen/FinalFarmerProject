@@ -17,6 +17,7 @@ import { ToastrModule, ToastNoAnimation, ToastNoAnimationModule } from 'ngx-toas
 import {HttpClientModule } from '@angular/common/http';
 import { TistimonialComponent } from './tistimonial/tistimonial.component';
 import { ProductComponent } from './product/product.component';
+import { AboutUsHomeComponent } from './about-us-home/about-us-home.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ProductComponent } from './product/product.component';
     HomePageComponent,
     TistimonialComponent,
     ProductComponent,
+    AboutUsHomeComponent,
   ],
   imports: [
     BrowserModule,

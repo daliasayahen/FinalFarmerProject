@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormControlDirective, Validators } from '@angular/forms';
+import { FormControl, FormControlDirective, FormGroup, Validators } from '@angular/forms';
 import { ThemePalette } from '@angular/material/core';
 import { ProgressSpinnerMode } from '@angular/material/progress-spinner';
 import { Router } from '@angular/router';
@@ -16,6 +16,7 @@ import { LoginServiceService } from 'src/app/servics/login-service.service';
   
 })
 export class LoginComponent implements OnInit {
+ 
   color: ThemePalette = 'primary';
   mode: ProgressSpinnerMode = 'indeterminate';
   value = 50;
