@@ -20,12 +20,9 @@ export class AboutusComponent implements OnInit {
   ngOnInit(): void {
 
   }
-  GoToLogin(){
-    this.router.navigate(["Login"]);
-  }
-  GoToReg(){
-    this.router.navigate(["Register"]);
-  }
+ 
+ 
+  
   GoToContact(){
     this.router.navigate(["Contact"]);
 
@@ -33,6 +30,32 @@ export class AboutusComponent implements OnInit {
   GoToAboutUs(){
     this.router.navigate(["AboutUs"]);
   }
+  Home(){
+    this.router.navigate([""]);
+
+  }
+  AboutUs(){
+    this.router.navigate(["aboutUsHome"]);
+
+  }
+  ContactUs(){
+
+    this.router.navigate(["contact"]);
+
+    
+  }
+
+  GoToLogin(){
+    this.router.navigate(["Login"]);
+  }
+
+  GoToReg(){
+    this.router.navigate(["Register"]);
+  }
+  GoToTestimonial(){
+    this.router.navigate(["testimonial"]);
+  }
+
 
  
   getImagePath(value:string ){

@@ -17,6 +17,33 @@ export class TistimonialComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  Home(){
+    this.router.navigate([""]);
+
+  }
+  AboutUs(){
+    this.router.navigate(["aboutUsHome"]);
+
+  }
+  ContactUs(){
+
+    this.router.navigate(["contact"]);
+
+    
+  }
+
+  GoToLogin(){
+    this.router.navigate(["Login"]);
+  }
+
+  GoToReg(){
+    this.router.navigate(["Register"]);
+  }
+  GoToTestimonial(){
+    this.router.navigate(["testimonial"]);
+  }
+
+
 
   getImagePath(value:string ){
 

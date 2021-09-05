@@ -51,6 +51,25 @@ export class LoginComponent implements OnInit {
   RememberFun(){
     this.LoginService.RememberFun();
   }
+  Home(){
+    this.router.navigate([""]);
+
+  }
+  AboutUs(){
+    this.router.navigate(["aboutUsHome"]);
+
+  }
+  ContactUs(){
+
+    this.router.navigate(["contact"]);
+
+    
+  }
+  
+  GoToTestimonial(){
+    this.router.navigate(["testimonial"]);
+  }
+
 
   }
 

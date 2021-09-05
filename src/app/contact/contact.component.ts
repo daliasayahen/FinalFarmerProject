@@ -41,6 +41,25 @@ export class ContactComponent implements OnInit {
     this.router.navigate([''])
 
   }
+  Home(){
+    this.router.navigate([""]);
+
+  }
+  AboutUs(){
+    this.router.navigate(["aboutUsHome"]);
+
+  }
+  ContactUs(){
+
+    this.router.navigate(["contact"]);
+
+    
+  }
+
+  GoToTestimonial(){
+    this.router.navigate(["testimonial"]);
+  }
+
   submit(){
     debugger
     console.log(this.ContactForm.value);

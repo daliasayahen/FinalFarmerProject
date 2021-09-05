@@ -92,11 +92,35 @@ figure.snip1390 .profile {
 } */
 
 
+.carousel-item {
+	height: 100vh;
+	min-height: 300px;
+	background: no-repeat center center scroll;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.carousel-caption {
+	bottom: 270px;
+}
+.carousel-caption h5 {
+	font-size: 45px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	margin-top: 25px;
+}
+.carousel-caption p {
+	width: 75%;}
+
+
+
+
 body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-color: rgb(233, 150, 150);
+  background-color: rgb(221, 207, 207);
   font-family: 'Open Sans'
 }
 
