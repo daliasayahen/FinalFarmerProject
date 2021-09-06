@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutUsHomeComponent } from './about-us-home/about-us-home.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
+import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
 import { AdminModule } from './admin/admin.module';
 import { AuthModule } from './auth/auth.module';
 import { LoginComponent } from './auth/login/login.component';
@@ -11,6 +12,7 @@ import { FarmerModule } from './farmer/farmer.module';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { TistimonialComponent } from './tistimonial/tistimonial.component';
+import { TraderHomeComponent } from './trader/trader-home/trader-home.component';
 import { TraderModule } from './trader/trader.module';
 
 
@@ -19,7 +21,8 @@ const routes: Routes = [
   
   {
     path:'',
-    loadChildren:()=>AuthModule
+   // loadChildren:()=>AuthModule
+    component:TraderHomeComponent
   },
   {
     path:'admin',
