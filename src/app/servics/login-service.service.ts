@@ -91,6 +91,7 @@ console.log(body);
       const data:any=jwtDecode(responce.token);
       //save the decod on the local storge . but you must conver this data to string value using Json.stringify
       localStorage.setItem('user',JSON.stringify({...data}));
+      
       if(data.role=="admin"){
       this.router.navigate(['dashboard/admin']);
      //this.router.navigate(['contact']);

@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ProductComponent } from '../product/product.component';
 import { AdminComponent } from './admin/admin.component';
+import { CreateFarmerComponent } from './create-farmer/create-farmer.component';
+import { CreateTraderComponent } from './create-trader/create-trader.component';
 import { FarmerHomeComponent } from './farmer-home/farmer-home.component';
 import { FramerComponent } from './framer/framer.component';
 import { ProductHomeComponent } from './product-home/product-home.component';
@@ -37,6 +39,14 @@ const routes: Routes = [
   {
     path:'reviewHome',
     component: ReviewHomeComponent
+  },
+  {
+    path:'createFarmr',
+    component: CreateFarmerComponent
+  },
+  {
+    path:'createtrader',
+    component: CreateTraderComponent
   },
 ];
 

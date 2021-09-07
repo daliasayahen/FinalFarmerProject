@@ -1,8 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
 import { UsersService } from 'src/app/servics/users.service';
+import { CreateTraderComponent } from '../create-trader/create-trader.component';
 
 @Component({
   selector: 'app-traderhome',
@@ -16,7 +18,7 @@ export class TraderhomeComponent implements OnInit {
 
 
   constructor(private router:Router,private toast:ToastrService,
-    private spiner:NgxSpinnerService, public userService:UsersService) { }
+    private spiner:NgxSpinnerService, public userService:UsersService,private dialog:MatDialog) { }
   ngOnInit(): void {
     this.getalltraders();
     
@@ -34,6 +36,10 @@ export class TraderhomeComponent implements OnInit {
     }
     )
 
+  }
+  createNewUser(){
+    debugger
+    this.dialog.open(CreateTraderComponent);
   }
  
 

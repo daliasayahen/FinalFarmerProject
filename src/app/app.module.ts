@@ -18,6 +18,8 @@ import {HttpClientModule } from '@angular/common/http';
 import { TistimonialComponent } from './tistimonial/tistimonial.component';
 import { ProductComponent } from './product/product.component';
 import { AboutUsHomeComponent } from './about-us-home/about-us-home.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { TraderComponent } from './traderDashboard/trader/trader.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,7 @@ import { AboutUsHomeComponent } from './about-us-home/about-us-home.component';
     TistimonialComponent,
     ProductComponent,
     AboutUsHomeComponent,
+    TraderComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,7 +44,8 @@ import { AboutUsHomeComponent } from './about-us-home/about-us-home.component';
     SharedModule,
     ToastrModule.forRoot(),
     ToastNoAnimationModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

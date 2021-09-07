@@ -34,7 +34,6 @@ export class FarmerHomeComponent implements OnInit {
 
   }
   createNewUser(){
-    debugger
     this.dialog.open(CreateFarmerComponent);
 
 

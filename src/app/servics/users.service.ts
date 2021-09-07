@@ -61,7 +61,7 @@ export class UsersService {
       headers: new HttpHeaders(headerDict), 
     };
     this.spiner.show();
-    this.http.post('',data,requestOptions).subscribe((res:any)=>{
+    this.http.post('https://localhost:44379/api/users/register',data,requestOptions).subscribe((res:any)=>{
     this.toaster.success('Created');
     this.spiner.hide();
     },err=>{

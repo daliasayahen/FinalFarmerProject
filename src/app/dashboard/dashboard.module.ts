@@ -13,6 +13,7 @@ import { ProductCardComponent } from './product-card/product-card.component';
 import { ReviewCardComponent } from './review-card/review-card.component';
 import { ReviewHomeComponent } from './review-home/review-home.component';
 import { CreateFarmerComponent } from './create-farmer/create-farmer.component';
+import { CreateTraderComponent } from './create-trader/create-trader.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { CreateFarmerComponent } from './create-farmer/create-farmer.component';
     ProductCardComponent,
     ReviewCardComponent,
     ReviewHomeComponent,
-    CreateFarmerComponent
+    CreateFarmerComponent,
+    CreateTraderComponent
   ],
   imports: [
     CommonModule,

@@ -3,15 +3,14 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ToastrService } from 'ngx-toastr';
 import { UsersService } from 'src/app/servics/users.service';
+import { CreateFarmerComponent } from '../create-farmer/create-farmer.component';
 
 @Component({
-  selector: 'app-create-farmer',
-  templateUrl: './create-farmer.component.html',
-  styleUrls: ['./create-farmer.component.css']
+  selector: 'app-create-trader',
+  templateUrl: './create-trader.component.html',
+  styleUrls: ['./create-trader.component.css']
 })
-export class CreateFarmerComponent implements OnInit {
-
-
+export class CreateTraderComponent implements OnInit {
 
   formGroup=new FormGroup({
     userName:new FormControl('',[Validators.required]),
@@ -24,7 +23,7 @@ export class CreateFarmerComponent implements OnInit {
 
   })
   constructor(private userService:UsersService,private toastr:ToastrService,
-    private dialog:MatDialogRef<CreateFarmerComponent>, @Inject (MAT_DIALOG_DATA) public data:any )  { }
+    private dialog:MatDialogRef<CreateTraderComponent>, @Inject (MAT_DIALOG_DATA) public data:any )  { }
   ngOnInit(): void {
     //MAT_DIALOG_DATA  data is an object  ==> to set the data that the user entered into dialog to form group 
       this.formGroup.controls.userName.setValue(this.data.userName);
@@ -57,4 +56,5 @@ export class CreateFarmerComponent implements OnInit {
 // function MAT_DIALOG_DATA(MAT_DIALOG_DATA: any) {
 //   throw new Error('Function not implemented.');
 // }
+
 
