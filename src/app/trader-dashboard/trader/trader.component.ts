@@ -11,5 +11,11 @@ export class TraderComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  GetAllproducts(){
+
+  }
+  logout(){
+    
+  }
 
 }

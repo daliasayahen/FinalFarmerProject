@@ -19,7 +19,6 @@ import { TistimonialComponent } from './tistimonial/tistimonial.component';
 import { ProductComponent } from './product/product.component';
 import { AboutUsHomeComponent } from './about-us-home/about-us-home.component';
 import { MatDialogModule } from '@angular/material/dialog';
-import { TraderComponent } from './traderDashboard/trader/trader.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +32,6 @@ import { TraderComponent } from './traderDashboard/trader/trader.component';
     TistimonialComponent,
     ProductComponent,
     AboutUsHomeComponent,
-    TraderComponent,
   ],
   imports: [
     BrowserModule,

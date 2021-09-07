@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { TraderComponent } from '../dashboard/trader/trader.component';
+import { TraderComponent } from './trader/trader.component';
 
 const routes: Routes = [
   

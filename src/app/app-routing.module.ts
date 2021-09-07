@@ -10,6 +10,7 @@ import { DashboardModule } from './dashboard/dashboard.module';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { TistimonialComponent } from './tistimonial/tistimonial.component';
+import { TraderDashboardModule } from './trader-dashboard/trader-dashboard.module';
 
 
 const routes: Routes = [
@@ -24,6 +25,10 @@ const routes: Routes = [
   {
     path:'dashboard',
     loadChildren:()=>DashboardModule
+  },
+  {
+    path:'Traderdashboard',
+    loadChildren:()=>TraderDashboardModule
   },
   
   {

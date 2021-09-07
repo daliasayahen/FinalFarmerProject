@@ -104,7 +104,7 @@ console.log(body);
       }
       else if(data.role=="trader")
       {
-        this.router.navigate(['dashboard/trader']);
+        this.router.navigate(['Traderdashboard/Trader']);
       }
       else {
         alert("User does not exist")
