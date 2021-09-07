@@ -1,0 +1,17 @@
+show all farmers and thier information
+<div class=container>
+    <!-- <button (click)="create()">Create</button> -->
+    <button (click)="createNewUser()">Create New farmer</button>
+      <div class="cards">
+    
+          <app-framer *ngFor ="let card of userService.data " [userID]="card.userID" [userName]="card.userName" [phoneNumber]="card.phoneNumber"  [email]="card.email" 
+          [password]="card.password" [address]="card.address" [age]="card.age" [roleId]="card.roleId" style="display: inline-block; padding: 1%;"></app-framer>
+  
+    </div>
+    
+  
+  
+  <!-- <button (click)="logout()">Logout</button> -->
+  </div>
+  
+  

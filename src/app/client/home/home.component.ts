@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { HomeService } from 'src/app/servics/home.service';
 import { ToastrService } from 'ngx-toastr';
 import { NgxSpinner, NgxSpinnerService } from 'ngx-spinner';
+import { UsersService } from 'src/app/servics/users.service';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +12,8 @@ import { NgxSpinner, NgxSpinnerService } from 'ngx-spinner';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private router:Router, public homeService:HomeService,private toast:ToastrService , private spiner :NgxSpinnerService) { }
+  constructor(private router:Router, public homeService:HomeService,
+    private toast:ToastrService , private spiner :NgxSpinnerService) { }
   updatevalue:number=0;
 
   ngOnInit(): void {
@@ -52,6 +54,9 @@ getall(){
   }
   )
 }
+
+
+
 }
 
 

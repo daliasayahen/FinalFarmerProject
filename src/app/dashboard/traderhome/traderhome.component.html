@@ -1,0 +1,21 @@
+show all traders and thier information
+<button>Create New trader</button>
+
+<div class=container>
+    <!-- <button>Create New Coures</button> -->
+      <div class="cards">
+    
+          <app-framer *ngFor ="let card of userService.data " [userID]="card.userID" [userName]="card.userName" [phoneNumber]="card.phoneNumber"  [email]="card.email" 
+          [password]="card.password" [address]="card.address" [age]="card.age" [roleId]="card.roleId"  style="display: inline-block; padding: 1%;"></app-framer>
+  
+    </div>
+
+
+   
+    
+  
+  
+  <!-- <button (click)="logout()">Logout</button> -->
+  <!-- </div> -->
+  
+  

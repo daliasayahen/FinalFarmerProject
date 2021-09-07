@@ -1,0 +1,62 @@
+<h2 mat-dialog-title>Create Course</h2>
+    <mat-dialog-content class="mat-typograghy">
+    
+<form [formGroup]='formGroup'>
+        <mat-form-field class="example-full-width">
+          <mat-label>User Name</mat-label>
+          <input matInput formControlName="userName" >
+          <mat-error *ngIf="formGroup.controls.userName.hasError('required')">
+             Name is Required
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>phone Number</mat-label>
+            <input matInput formControlName="phoneNumber" >
+            <mat-error *ngIf="formGroup.controls.phoneNumber.hasError('required')" >
+                phone Number is Required
+            </mat-error> 
+        </mat-form-field>
+        <!-- <mat-form-field class="example-full-width">
+            <mat-label>email</mat-label>
+            <input matInput formControlName="email" >
+            <mat-error *ngIf="formGroup.controls.email.hasError('required')" >
+                email is Required
+            </mat-error> 
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>password</mat-label>
+            <input matInput formControlName="password" >
+            <mat-error *ngIf="formGroup.controls.password.hasError('required')" >
+                password is Required
+            </mat-error> 
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>address</mat-label>
+            <input matInput formControlName="address" >
+            <mat-error *ngIf="formGroup.controls.address.hasError('required')" >
+                address is  Required
+            </mat-error> 
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>age</mat-label>
+            <input matInput formControlName="age" >
+            <mat-error *ngIf="formGroup.controls.age.hasError('required')" >
+                age is Required
+            </mat-error> 
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>enter (2) to register new farmer User</mat-label>
+            <input matInput formControlName="roleId" >
+            <mat-error *ngIf="formGroup.controls.roleId.hasError('required')" >
+                
+            </mat-error> 
+        </mat-form-field> -->
+</form>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button  mat-button mat-dialog-close>Cancel</button>
+    <button [disabled]="!formGroup.valid" [mat-dialog-close]="true" mat-button color="info" (click)="saveItem()">Save</button>
+
+</mat-dialog-actions>
+
+

@@ -185,8 +185,16 @@ body {
 }
 
 i {
-  background-color: rgb(223, 56, 89);
+  /* background-color: rgb(223, 56, 89); */
   padding: 1.4rem
+}
+#i1{
+     background-color: rgb(223, 56, 89); 
+
+}
+#i2{
+  background-color: rgb(223, 56, 89); 
+
 }
 
 @media(max-width:767px) {

@@ -1,0 +1,4 @@
+<app-review-card *ngFor="let card of reviewService.data"
+ [reviewID]="card.reviewID"  [userName]="card.userName" [descriptiontext]="card.descriptiontext"
+ [img]="card.img" [rate]="card.rate"  style="display: inline-block; padding: 1%;"></app-review-card>
+    

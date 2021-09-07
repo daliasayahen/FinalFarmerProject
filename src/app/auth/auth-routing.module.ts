@@ -1,24 +1,24 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutusComponent } from '../aboutus/aboutus.component';
-import { AdminHomeComponent } from '../admin/admin-home/admin-home.component';
 import { ClientModule } from '../client/client.module';
 import { ContactComponent } from '../contact/contact.component';
+import { DashboardModule } from '../dashboard/dashboard.module';
 import { HomePageComponent } from '../home-page/home-page.component';
 import { AuthModule } from './auth.module';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
-  // {
-  //   path:'',
-  //   component: HomePageComponent
-  // },
   {
     path:'',
-    component: AdminHomeComponent
-  
+    component: HomePageComponent
   },
+  // {
+  //   path:'',
+  //   component: AdminHomeComponent
+  
+  // },
   {
     path:'Login',
     component:LoginComponent
@@ -34,6 +34,10 @@ const routes: Routes = [
   {
     path:'AboutUs',
     component:AboutusComponent
+  },
+  {
+    path:'dashboard',
+    loadChildren:()=>DashboardModule
   }
 
  

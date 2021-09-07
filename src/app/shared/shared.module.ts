@@ -11,6 +11,8 @@ import {MatCardModule} from '@angular/material/card';
 import { PipeFormatPipe } from '../MyPipe/pipe-format.pipe';
 import {MatRadioModule} from '@angular/material/radio';
 import {TextFieldModule} from '@angular/cdk/text-field';
+import {MatDialogModule} from '@angular/material/dialog';
+
 
 
 
@@ -32,7 +34,9 @@ import {TextFieldModule} from '@angular/cdk/text-field';
     MatToolbarModule,
     MatCardModule,
     MatRadioModule,
-    TextFieldModule
+    TextFieldModule,
+    MatDialogModule
+    
   ],exports:[
     MatFormFieldModule,
     FormsModule,
@@ -45,7 +49,8 @@ import {TextFieldModule} from '@angular/cdk/text-field';
     MatCardModule,
     PipeFormatPipe,
     MatRadioModule,
-    TextFieldModule
+    TextFieldModule,
+    MatDialogModule
 
 
   ]
