@@ -17,8 +17,8 @@ const routes: Routes = [
   
   {
     path:'',
-   // loadChildren:()=>AuthModule
-    component:TraderHomeComponent
+    loadChildren:()=>AuthModule
+   
   },
   
   {
