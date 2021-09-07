@@ -18,6 +18,7 @@ export class TraderDashService {
   getallProducts(): Observable<any[]>{
     return this.http.get<any>('');
   }
+ 
   
 
 }

@@ -100,7 +100,7 @@ console.log(body);
       }
       else if(data.role=="farmer")
       {
-        this.router.navigate(['dashboard/farmer']);
+        this.router.navigate(['Farmerdashboard/farmer']);
       }
       else if(data.role=="trader")
       {

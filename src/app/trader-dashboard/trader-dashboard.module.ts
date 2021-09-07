@@ -12,7 +12,7 @@ import { ProductHomeComponent } from './product-home/product-home.component';
   declarations: [
     TraderComponent,
     ProductCardComponent,
-    ProductHomeComponent
+    ProductHomeComponent,
   ],
   imports: [
     CommonModule,
