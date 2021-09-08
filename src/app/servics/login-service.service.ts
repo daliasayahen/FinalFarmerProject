@@ -51,15 +51,7 @@ constructor(private http:HttpClient , private toaster:ToastrService ,private spi
 
 
   login(){
-    
-    // console.log(this.username.value);
-    // console.log(this.password.value);
-    //2
-    
-    // const formValue=this.loginForm.value;
-    // formValue.username=this.loginForm.value.username.toString();
-    // formValue.password=this.loginForm.value.password;
-      
+
     var body = {
       username : this.username.value,
       password : this.password.value

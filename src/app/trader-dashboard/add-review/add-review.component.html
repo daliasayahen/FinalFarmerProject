@@ -15,10 +15,24 @@
       <textarea matInput placeholder="Ex. It makes me feel..." formControlName="descriptiontext" ></textarea>
     </mat-form-field>
 
-    <mat-form-field class="example-full-width" >
-        <mat-label>add img</mat-label>
-        <textarea matInput placeholder="Ex. It makes me feel..." formControlName="img" ></textarea>
-      </mat-form-field>
+ 
+
+    
+<div class="row" style="margin-bottom:15px;">
+
+                <div class="col-md-3">
+                  <input type="file" #file placeholder="Choose Image" 
+                     formControlName="img" (change)="uploadFile(file.files)" 
+                  style="display:none;">
+                  <button type="button" class="btn btn-success" 
+                  (click)="file.click()">Upload Image</button>
+                </div>
+               
+              </div>
+
+
+
+
 
       <mat-form-field class="example-full-width" >
         <mat-label>add rate</mat-label>
