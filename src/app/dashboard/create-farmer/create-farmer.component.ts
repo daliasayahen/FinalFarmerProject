@@ -14,6 +14,7 @@ export class CreateFarmerComponent implements OnInit {
 
 
   formGroup=new FormGroup({
+    userID:new FormControl('',[Validators.required]),
     userName:new FormControl('',[Validators.required]),
     phoneNumber:new FormControl('',Validators.required),
     email:new FormControl('',Validators.required),
@@ -27,7 +28,10 @@ export class CreateFarmerComponent implements OnInit {
     private dialog:MatDialogRef<CreateFarmerComponent>, @Inject (MAT_DIALOG_DATA) public data:any )  { }
   ngOnInit(): void {
     //MAT_DIALOG_DATA  data is an object  ==> to set the data that the user entered into dialog to form group 
-      this.formGroup.controls.userName.setValue(this.data.userName);
+    
+    this.formGroup.controls.userID.setValue(this.data.userID);
+
+    this.formGroup.controls.userName.setValue(this.data.userName);
       this.formGroup.controls.phoneNumber.setValue(this.data.phoneNumber);
       this.formGroup.controls.email.setValue(this.data.email);
       this.formGroup.controls.password.setValue(this.data.password);
@@ -38,6 +42,7 @@ export class CreateFarmerComponent implements OnInit {
   }
   saveItem(){
     debugger
+    console.log(this.formGroup.value);
     //get the data from form group then check if there is data (from the user I named it data in constructor)
     //after that send this data to the functions in homeservices that hits to the apis 
     const value=this.formGroup.value;

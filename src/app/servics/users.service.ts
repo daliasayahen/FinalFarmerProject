@@ -72,6 +72,27 @@ export class UsersService {
     )
   }
   
+  UpdateUser(data:any)
+  {//this code to convert the data to json object , use the requestOptions after the data that sent .
+    const headerDict = {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    }
+    const requestOptions = {                                                                                                                                                                                 
+      headers: new HttpHeaders(headerDict), 
+    };
+    this.spiner.show();
+    this.http.post('https://localhost:44379/api/users',data,requestOptions).subscribe((res:any)=>{
+    this.toaster.success('Created');
+    this.spiner.hide();
+    },err=>{
+      this.spiner.hide();
+      this.toaster.error('Somthing want worning ');
+    }
+    
+    )
+  }
+  
   
 }
 
