@@ -7,6 +7,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { ContactComponent } from './contact/contact.component';
 import { DashboardModule } from './dashboard/dashboard.module';
+import { FarmerDashboardModule } from './farmer-dashboard/farmer-dashboard.module';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { TistimonialComponent } from './tistimonial/tistimonial.component';
@@ -30,7 +31,10 @@ const routes: Routes = [
     path:'Traderdashboard',
     loadChildren:()=>TraderDashboardModule
   },
-  
+  {
+    path:'Farmerdashboard',
+    loadChildren:()=>FarmerDashboardModule
+  },
   {
     path:'aboutus',
     component:AboutusComponent

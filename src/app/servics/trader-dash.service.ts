@@ -18,6 +18,7 @@ export class TraderDashService {
   getallproducts(): Observable<any[]>{
     return this.http.get<any>('https://localhost:44379/api/products');
   }
+ 
   
 
 }
