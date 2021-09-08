@@ -43,7 +43,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     ToastrModule.forRoot(),
     ToastNoAnimationModule.forRoot(),
     HttpClientModule,
-    MatDialogModule
+    MatDialogModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

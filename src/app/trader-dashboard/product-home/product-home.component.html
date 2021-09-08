@@ -1,1 +1,15 @@
-<p>product-home works!</p>
+<div class="container">
+    <div class="cards">
+        <app-product-card *ngFor="let card of traderDash.data"
+         [productID]="card.productID"  
+         [productName]="card.productName" 
+         [productPrice]="card.productPrice"
+         [productImg]="card.productImg"
+          [productQuantity]="card.productQuantity"
+         [categoryID]="card.categoryID" 
+            [userID]="card.userID"  style="display: inline-block; padding: 1%;">
+  
+    </app-product-card >
+      
+    </div>
+  </div>

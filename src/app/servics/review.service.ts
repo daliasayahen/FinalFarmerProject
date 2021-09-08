@@ -94,4 +94,29 @@ export class ReviewService {
     }, err => {
     })
     }
+
+    create(data:any)
+    {//this code to convert the data to json object , use the requestOptions after the data that sent .
+      const headerDict = {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      }
+      const requestOptions = {                                                                                                                                                                                 
+        headers: new HttpHeaders(headerDict), 
+      };
+      this.spiner.show();
+      debugger
+      this.http.post('https://localhost:44379/api/Review',data,requestOptions).subscribe((res:any)=>{
+      this.toaster.success('Created');
+     // this.router.navigate([])login page 
+      this.spiner.hide();
+      alert("thanks for your message!")
+      },err=>{
+        
+        this.spiner.hide();
+        this.toaster.error('Somthing want worning ');
+      }
+      
+      )
+    }
 }
