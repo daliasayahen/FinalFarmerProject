@@ -7,6 +7,7 @@ import { ProductCardComponent } from './product-card/product-card.component';
 import { ProductHomeComponent } from './product-home/product-home.component';
 import { ReviewformComponent } from './reviewform/reviewform.component';
 import { ProductSoldoutComponent } from './product-soldout/product-soldout.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ProductSoldoutComponent } from './product-soldout/product-soldout.compo
   ],
   imports: [
     CommonModule,
-    FarmerDashboardRoutingModule
+    FarmerDashboardRoutingModule,
+    SharedModule
   ]
 })
 export class FarmerDashboardModule { }

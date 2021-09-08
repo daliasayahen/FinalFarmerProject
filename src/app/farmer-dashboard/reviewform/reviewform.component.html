@@ -1,1 +1,43 @@
-<p>reviewform works!</p>
+<form [formGroup]="formReview">
+
+  <!-- <mat-form-field class="example-full-width">
+    <mat-label>Enter reviewID</mat-label>
+    <input matInput  formControlName="reviewID" placeholder="enter your description">
+    </mat-form-field> -->
+
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Enter Name </mat-label>
+      <input matInput  formControlName="userName" placeholder="enter your name">
+      <mat-error *ngIf="formReview.controls.userName.hasError('required')">
+        Please Enter your name
+      </mat-error>
+  
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Enter img</mat-label>
+      <input matInput  formControlName="img" placeholder="enter your description">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Enter rate</mat-label>
+        <input matInput  formControlName="rate" placeholder="enter your description">
+        </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Enter Description</mat-label>
+      <input matInput  formControlName="descriptiontext" placeholder="enter your description">
+      </mat-form-field>
+  
+  
+  
+    <button  mat-button color="black" (click)="submit()" 
+    style="flex:1;width:100%; margin-top: 20px; ; font-size: 119%; background-color: #b1b539; 
+    font-family:  Georgia, 'Times New Roman', Times, serif; color: seashell;">
+  
+      <ng-container>Send</ng-container>  </button>
+  
+    
+
+  </form>

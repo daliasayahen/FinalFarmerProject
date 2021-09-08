@@ -4,6 +4,7 @@ import { AboutusComponent } from '../aboutus/aboutus.component';
 import { ClientModule } from '../client/client.module';
 import { ContactComponent } from '../contact/contact.component';
 import { DashboardModule } from '../dashboard/dashboard.module';
+import { FarmerComponent } from '../farmer-dashboard/farmer/farmer.component';
 import { HomePageComponent } from '../home-page/home-page.component';
 import { AuthModule } from './auth.module';
 import { LoginComponent } from './login/login.component';
@@ -12,7 +13,7 @@ import { RegisterComponent } from './register/register.component';
 const routes: Routes = [
   {
     path:'',
-    component: HomePageComponent
+    component: FarmerComponent
   },
   // {
   //   path:'',

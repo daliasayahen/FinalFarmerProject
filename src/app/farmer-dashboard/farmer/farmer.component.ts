@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { NgxSpinnerService } from 'ngx-spinner';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-farmer',
@@ -7,9 +10,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FarmerComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router,private toast:ToastrService ,
+    private spiner :NgxSpinnerService) { }
 
   ngOnInit(): void {
   }
+  GetAllproducts(){
+    this.router.navigate(['dashboard/producthome'])
+  }
+  GetAllproductssoldout(){
+    
+  }
+  addreviews(){
 
+    this.router.navigate(['Farmerdashboard/Reviewform'])
+
+  }
+  logout(){
+    localStorage.clear();
+
+    this.router.navigate(['/Login'])
+
+    
+  }
 }
