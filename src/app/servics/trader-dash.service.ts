@@ -15,8 +15,8 @@ export class TraderDashService {
   constructor(private http:HttpClient , private toaster:ToastrService ,private spiner:NgxSpinnerService ,private router:Router) { }
  
  
-  getallProducts(): Observable<any[]>{
-    return this.http.get<any>('');
+  getallproducts(): Observable<any[]>{
+    return this.http.get<any>('https://localhost:44379/api/products');
   }
  
   

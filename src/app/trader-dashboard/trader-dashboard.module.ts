@@ -6,6 +6,7 @@ import { TraderComponent } from './trader/trader.component';
 import { SharedModule } from '../shared/shared.module';
 import { ProductCardComponent } from './product-card/product-card.component';
 import { ProductHomeComponent } from './product-home/product-home.component';
+import { AddReviewComponent } from './add-review/add-review.component';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import { ProductHomeComponent } from './product-home/product-home.component';
     TraderComponent,
     ProductCardComponent,
     ProductHomeComponent,
+    AddReviewComponent
   ],
   imports: [
     CommonModule,
