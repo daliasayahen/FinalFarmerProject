@@ -1,5 +1,9 @@
 .example-card {
     max-width: 400px;
+
+  }
+  .example-card:hover{
+   background-color:#fad961;
   }
   
   .example-header-image {
