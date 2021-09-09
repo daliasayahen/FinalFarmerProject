@@ -14,7 +14,7 @@ export class CreateFarmerComponent implements OnInit {
 
 
     formGroup=new FormGroup({
-    userID:new FormControl('',[Validators.required]),
+    // userID:new FormControl('',[Validators.required]),
     userName:new FormControl('',[Validators.required]),
     phoneNumber:new FormControl('',Validators.required),
     email:new FormControl('',Validators.required),
@@ -29,7 +29,7 @@ export class CreateFarmerComponent implements OnInit {
   ngOnInit(): void {
     //MAT_DIALOG_DATA  data is an object  ==> to set the data that the user entered into dialog to form group 
     
-     this.formGroup.controls.userID.setValue(parseInt(this.data.userID));
+    //  this.formGroup.controls.userID.setValue(parseInt(this.data.userID));
      this.formGroup.controls.userName.setValue(this.data.userName.toString());
       this.formGroup.controls.phoneNumber.setValue(this.data.phoneNumber.toString());
       this.formGroup.controls.email.setValue(this.data.email.toString());
@@ -39,7 +39,7 @@ export class CreateFarmerComponent implements OnInit {
       this.formGroup.controls.roleId.setValue(parseInt(this.data.roleId));
 
   }
-  userId2:any;
+  // userId2:any;
   username2:any;
   phoneNumber2:any;
   email2:any;
@@ -52,14 +52,14 @@ export class CreateFarmerComponent implements OnInit {
     console.log(this.formGroup.value);
     //get the data from form group then check if there is data (from the user I named it data in constructor)
     //after that send this data to the functions in homeservices that hits to the apis 
-    this.userId2=this.formGroup.value.userID;
-    this.username2=this.formGroup.value.userName;
-    this.phoneNumber2=this.formGroup.value.phoneNumber;
-    this.email2=this.formGroup.value.email;
-    this.password2=this.formGroup.value.password;
-    this.address2=this.formGroup.value.address;
-    this.age2=this.formGroup.value.age;
-    this.roleId2=this.formGroup.value.roleId;
+    // this.userId2=parseInt(this.formGroup.value.userID);
+    this.username2=this.formGroup.value.userName.toString();
+    this.phoneNumber2=this.formGroup.value.phoneNumber.toString();
+    this.email2=this.formGroup.value.email.toString();
+    this.password2=this.formGroup.value.password.toString();
+    this.address2=this.formGroup.value.address.toString();
+    this.age2=parseInt(this.formGroup.value.age);
+    this.roleId2=parseInt(this.formGroup.value.roleId);
 
 
     const value=this.formGroup.value;
