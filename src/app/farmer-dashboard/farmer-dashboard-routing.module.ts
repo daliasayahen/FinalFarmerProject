@@ -3,7 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { ProductCardComponent } from '../dashboard/product-card/product-card.component';
 import { ProductHomeComponent } from '../dashboard/product-home/product-home.component';
 import { ReviewHomeComponent } from '../dashboard/review-home/review-home.component';
+import { ProductComponent } from '../product/product.component';
 import { FarmerComponent } from './farmer/farmer.component';
+import { FarmerprodhomeComponent } from './farmerprodhome/farmerprodhome.component';
 import { ProductSoldoutComponent } from './product-soldout/product-soldout.component';
 import { ReviewformComponent } from './reviewform/reviewform.component';
 
@@ -16,10 +18,7 @@ const routes: Routes = [
     path:'ProductCard',
     component:ProductCardComponent
   },
-  {
-    path:'ProductHome',
-    component: ProductHomeComponent
-  },
+
   {
     path:'Reviewform',
     component: ReviewformComponent
@@ -27,6 +26,14 @@ const routes: Routes = [
   {
     path:'ProductSoldout',
     component: ProductSoldoutComponent
+  },
+  {
+    path:'Reviewhome',
+    component: ReviewHomeComponent
+  },
+  {
+    path:'Farmerprodhome',
+    component: FarmerprodhomeComponent
   },
   
 ];

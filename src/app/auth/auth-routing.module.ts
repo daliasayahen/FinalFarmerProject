@@ -4,8 +4,11 @@ import { AboutusComponent } from '../aboutus/aboutus.component';
 import { ClientModule } from '../client/client.module';
 import { ContactComponent } from '../contact/contact.component';
 import { DashboardModule } from '../dashboard/dashboard.module';
+import { FramerComponent } from '../dashboard/framer/framer.component';
+import { TraderComponent } from '../dashboard/trader/trader.component';
 import { FarmerComponent } from '../farmer-dashboard/farmer/farmer.component';
 import { HomePageComponent } from '../home-page/home-page.component';
+import { TraderDashboardModule } from '../trader-dashboard/trader-dashboard.module';
 import { AuthModule } from './auth.module';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
@@ -13,7 +16,7 @@ import { RegisterComponent } from './register/register.component';
 const routes: Routes = [
   {
     path:'',
-    component: FarmerComponent
+    component: FramerComponent
   },
   // {
   //   path:'',
