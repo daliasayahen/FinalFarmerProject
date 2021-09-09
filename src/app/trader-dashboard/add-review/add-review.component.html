@@ -1,48 +1,180 @@
-<form [formGroup]="ContactForm"> 
-    <mat-form-field class="example-full-width">
-      <mat-label>Enter Full name</mat-label>
-      <input matInput placeholder="enter your name" formControlName="userName">
-       <mat-error *ngIf="ContactForm.controls.userName.hasError('required')">
-         please enter your name
-      </mat-error>
-    
-    </mat-form-field>
 
+<!-- <button (click)="GetAllFarmers()">show all farmers</button>
+<div class="cards"> -->
+
+    <!-- <button (click)="GetAlltraders()">show all trader</button>
+<div class="cards"> -->
 
     
-    <mat-form-field class="example-full-width" >
-      <mat-label>Leave a comment</mat-label>
-      <textarea matInput placeholder="Ex. It makes me feel..." formControlName="descriptiontext" ></textarea>
-    </mat-form-field>
+    <!-- <button (click)="GetAllproducts()">show all products</button>
+<div class="cards">
+    <button (click)="AddReview()">Add Review</button>
+<div class="cards"> -->
 
- 
 
-    
-<div class="row" style="margin-bottom:15px;">
+    <!-- <button (click)="GetAllreviews()">show all Reviews from farmers and traders</button>
+    <div class="cards"> -->
+        
+        <!-- <button (click)="logout()">logout</button>
+        <div class="cards"> -->
 
-                <div class="col-md-3">
-                  <input type="file" #file placeholder="Choose Image" 
-                     formControlName="img" (change)="uploadFile(file.files)" 
-                  style="display:none;">
-                  <button type="button" class="btn btn-success" 
-                  (click)="file.click()">Upload Image</button>
-                </div>
-               
+
+          <div class="container-scroller">
+            <!-- partial:partials/_navbar.html -->
+            <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row" style="margin-left: 1.20%;">
+              <div class="navbar-brand-wrapper d-flex align-items-center">
+                <a class="navbar-brand" href="index.html"><img src="../../assets/images/logo.png" style="width: 100%;height: 100%;margin-left: 5%;" class="logo" alt=""></a>
+
+                <a class="navbar-brand brand-logo-mini" href="index.html"><img src="../../assets/imagesDash/logo-mini.svg" alt="logo" /></a>
               </div>
+              <div class="navbar-menu-wrapper d-flex align-items-center flex-grow-1">
+                <h5 class="mb-0 font-weight-medium d-none d-lg-flex">Welcome Trader dashboard!</h5>
+            
+                <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+                  <span class="icon-menu"></span>
+                </button>
+              </div>
+            </nav>
+            <!-- partial -->
+            <div class="container-fluid page-body-wrapper">
+              <!-- partial:partials/_sidebar.html -->
+              <nav class="sidebar sidebar-offcanvas" id="sidebar">
+                <ul class="nav">
+                  <li class="nav-item nav-profile">
+                    <a href="#" class="nav-link">
+                      <div class="profile-image">
+                        <img class="img-xs rounded-circle" src="../../assets/imagesDash/faces/face8.jpg" alt="profile image">
+                        <div class="dot-indicator bg-success"></div>
+                      </div>
+                      <div class="text-wrapper">
+                        <p class="profile-name">Allen Moreno</p>
+                        <p class="designation">Trader</p>
+                      </div>
+                      <div class="icon-container">
+                        <i class="icon-bubbles"></i>
+                        <div class="dot-indicator bg-danger"></div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="nav-item nav-category">
+                    <span class="nav-link">Trader</span>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link">
+                      <span class="menu-title" (click)="GetAllproducts()">show all products </span>
+                      <i class="icon-screen-desktop menu-icon"></i>
+                    </a>
+                  </li>
+                 <!--  <li class="nav-item" (click)="GetAlltraders()">
+                    <a class="nav-link" >
+                      <span class="menu-title" >show all trader</span>
+                      <i class="icon-screen-desktop menu-icon"></i>
+                    </a>
+                  </li> -->
+               <!--    <li class="nav-item">
+                    <a class="nav-link" >
+                      <span class="menu-title" (click)="GetAllproducts()">show all products</span>
+                      <i class="icon-globe menu-icon"></i>
+                    </a>
+                  </li> -->
+                  <li class="nav-item">
+                    <a class="nav-link" >
+                      <span class="menu-title" (click)="AddReview()">Add Review </span>
+                      <i class="icon-book-open menu-icon"></i>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="pages/charts/chartist.html">
+                      <span class="menu-title">Charts</span>
+                      <i class="icon-chart menu-icon"></i>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="pages/tables/basic-table.html">
+                      <span class="menu-title">Tables</span>
+                      <i class="icon-grid menu-icon"></i>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" (click)="logout()" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+                      <span class="menu-title">LogOut Trader!</span>
+                      <i class="icon-doc menu-icon"></i>
+                    </a>
+                  
+                  </li>
+                
+                </ul>
+              </nav>
+              <!-- partial -->
+              <div class="main-panel">
+                <div class="content-wrapper">
+                  <div class="row purchace-popup">
+                    <div class="col-12 stretch-card grid-margin">
+                      <div class="card card-secondary">
+                        <span class="card-body d-lg-flex align-items-center">
+                          <p class="mb-lg-0">Trader dashboard to show product buy product, and more! </p>
+                       
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <form [formGroup]="ContactForm" style="margin-left: 30%;"> 
+                      <mat-form-field class="example-full-width">
+                        <mat-label>Enter Full name</mat-label>
+                        <input matInput placeholder="enter your name" formControlName="userName">
+                         <mat-error *ngIf="ContactForm.controls.userName.hasError('required')">
+                           please enter your name
+                        </mat-error>
+                      
+                      </mat-form-field>
+                  
+                  
+                      
+                      <mat-form-field class="example-full-width" >
+                        <mat-label>Leave a comment</mat-label>
+                        <textarea matInput placeholder="Ex. It makes me feel..." formControlName="descriptiontext" ></textarea>
+                      </mat-form-field>
+                  
+                   
+                  
+                      
+                  <div class="row" style="margin-bottom:15px;">
+                  
+                                  <div class="col-md-3">
+                                    <input type="file" #file placeholder="Choose Image" 
+                                       formControlName="img" (change)="uploadFile(file.files)" 
+                                    style="display:none;">
+                                    <button type="button" class="btn btn-success" 
+                                    (click)="file.click()">Upload Image</button>
+                                  </div>
+                                 
+                                </div>
+                        <mat-form-field class="example-full-width" >
+                          <mat-label>add rate</mat-label>
+                          <textarea matInput placeholder="Ex. It makes me feel..." formControlName="rate" ></textarea>
+                        </mat-form-field>
+                      
+                       
+                        <button [disabled]="!ContactForm.controls.descriptiontext.valid" mat-button color="primary" (click)="submit()" style="flex:1;width:100%;margin-top:50px ;"> 
+                  
+                          <ng-container>send</ng-container>
+                          </button>
+                  
+                        </form> 
+                  </div>
+                </div>
+                <!-- content-wrapper ends -->
+                <!-- partial:partials/_footer.html -->
+                <footer class="footer">
+                  <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                    <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © bootstrapdash.com 2020</span>
+                  </div>
+                </footer>
+                <!-- partial -->
+              </div>
+              <!-- main-panel ends -->
+            </div>
+            <!-- page-body-wrapper ends -->
+          </div>
 
-
-
-
-
-      <mat-form-field class="example-full-width" >
-        <mat-label>add rate</mat-label>
-        <textarea matInput placeholder="Ex. It makes me feel..." formControlName="rate" ></textarea>
-      </mat-form-field>
-    
-     
-      <button [disabled]="!ContactForm.controls.descriptiontext.valid" mat-button color="primary" (click)="submit()" style="flex:1;width:100%;margin-top:50px ;"> 
-
-        <ng-container>send</ng-container>
-        </button>
-
-      </form> 

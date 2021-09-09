@@ -7,6 +7,7 @@ import { SharedModule } from '../shared/shared.module';
 import { ProductCardComponent } from './product-card/product-card.component';
 import { ProductHomeComponent } from './product-home/product-home.component';
 import { AddReviewComponent } from './add-review/add-review.component';
+import { TraderprodhomeComponent } from './traderprodhome/traderprodhome.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { AddReviewComponent } from './add-review/add-review.component';
     TraderComponent,
     ProductCardComponent,
     ProductHomeComponent,
-    AddReviewComponent
+    AddReviewComponent,
+    TraderprodhomeComponent
   ],
   imports: [
     CommonModule,

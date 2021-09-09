@@ -50,6 +50,18 @@ const formData = new FormData();
 formData.append('file', fileToUpload, fileToUpload.name);
 this.reviewService.uploadAttachment(formData);
 }​​​
+GetAllproducts(){
+  this.router.navigate(['Traderdashboard/ProductHome'])
+}
+AddReview(){
+  this.router.navigate(['Traderdashboard/AddReview'])
+}
+logout(){
+  localStorage.clear();
+
+  this.router.navigate(['/Login'])
+  
+}
 }​​​
 
 
