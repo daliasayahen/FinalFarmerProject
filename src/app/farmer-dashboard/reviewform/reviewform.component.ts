@@ -73,4 +73,16 @@ export class ReviewformComponent implements OnInit {
       this.reviewservic.create(formValue);
      }
 
+
+
+     uploadFile(files:any) {​​​
+      if (files.length === 0) {​​​
+      return;
+      }​​​
+      let fileToUpload = <File>files[0];
+      const formData = new FormData();
+      formData.append('file', fileToUpload, fileToUpload.name);
+      this.reviewservic.uploadAttachment(formData);
+      }​​​
+
 }

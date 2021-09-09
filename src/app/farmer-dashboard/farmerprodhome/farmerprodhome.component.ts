@@ -39,7 +39,7 @@ export class FarmerprodhomeComponent implements OnInit {
 
 
   gohome(){
-    this.router.navigate(['Farmerdashboard/Reviewform'])
+    this.router.navigate(['HomePage'])
   }
 
   getallproducts(){

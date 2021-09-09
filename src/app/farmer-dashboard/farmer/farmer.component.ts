@@ -36,6 +36,6 @@ export class FarmerComponent implements OnInit {
 
 
   gohome(){
-    this.router.navigate(['Farmerdashboard/farmer'])
+    this.router.navigate([''])
   }
 }
