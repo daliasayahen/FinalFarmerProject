@@ -16,7 +16,7 @@ export class FarmerComponent implements OnInit {
   ngOnInit(): void {
   }
   GetAllproducts(){
-    this.router.navigate(['dashboard/producthome'])
+    this.router.navigate(['Farmerdashboard/Farmerprodhome'])
   }
   GetAllproductssoldout(){
     
@@ -32,5 +32,10 @@ export class FarmerComponent implements OnInit {
     this.router.navigate(['/Login'])
 
     
+  }
+
+
+  gohome(){
+    this.router.navigate([''])
   }
 }

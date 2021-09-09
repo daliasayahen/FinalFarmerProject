@@ -7,6 +7,7 @@ import { CreateTraderComponent } from './create-trader/create-trader.component';
 import { FarmerHomeComponent } from './farmer-home/farmer-home.component';
 import { FramerComponent } from './framer/framer.component';
 import { ProductHomeComponent } from './product-home/product-home.component';
+import { ReviewCardComponent } from './review-card/review-card.component';
 import { ReviewHomeComponent } from './review-home/review-home.component';
 import { TraderComponent } from './trader/trader.component';
 import { TraderhomeComponent } from './traderhome/traderhome.component';
@@ -34,7 +35,7 @@ const routes: Routes = [
   },
   {
     path:'reviewCard',
-    component: ProductHomeComponent
+    component: ReviewCardComponent
   },
   {
     path:'reviewHome',

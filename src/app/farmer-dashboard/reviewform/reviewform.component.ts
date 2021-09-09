@@ -27,7 +27,34 @@ export class ReviewformComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  
+  GetAllproducts(){
+    this.router.navigate(['dashboard/producthome'])
+  }
+  GetAllproductssoldout(){
+    
+  }
+  addreviews(){
+
+    this.router.navigate(['Farmerdashboard/Reviewform'])
+
+  }
+  logout(){
+    localStorage.clear();
+
+    this.router.navigate(['/Login'])
+
+    
+  }
+
+
+  gohome(){
+    this.router.navigate(['Farmerdashboard/Reviewform'])
+  }
+
+
+
+
+
   submit() {
     debugger
     console.log(this.formReview.value);
@@ -45,5 +72,17 @@ export class ReviewformComponent implements OnInit {
   
       this.reviewservic.create(formValue);
      }
+
+
+
+     uploadFile(files:any) {​​​
+      if (files.length === 0) {​​​
+      return;
+      }​​​
+      let fileToUpload = <File>files[0];
+      const formData = new FormData();
+      formData.append('file', fileToUpload, fileToUpload.name);
+      this.reviewservic.uploadAttachment(formData);
+      }​​​
 
 }
