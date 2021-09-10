@@ -20,6 +20,17 @@ export class ProductServiceService {
     return this.http.get<any>('https://localhost:44379/api/products');
   }
 
+  getAllproductssoldout(): Observable<any[]>{
+    return this.http.get<any>('https://localhost:44379/api/Products/ProductsSoldOut"');
+  }
+
+
+
+
+
+
+
+
   create(data:any)
   {//this code to convert the data to json object , use the requestOptions after the data that sent .
     const headerDict = {

@@ -41,7 +41,9 @@ export class ProductComponent implements OnInit {
     )
   }
 
-
+  AddtoCart(){
+    this.router.navigate(['Cart'])
+  }
   getImagePath(value:string ){
 
     let basePath="../../../assets/DBimages/Uploaded File/";

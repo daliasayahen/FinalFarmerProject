@@ -6,11 +6,11 @@ import { ProductServiceService } from 'src/app/servics/product-service.service';
 import { UsersService } from 'src/app/servics/users.service';
 
 @Component({
-  selector: 'app-product-card',
-  templateUrl: './product-card.component.html',
-  styleUrls: ['./product-card.component.css']
+  selector: 'app-productcardfarmer',
+  templateUrl: './productcardfarmer.component.html',
+  styleUrls: ['./productcardfarmer.component.css']
 })
-export class ProductCardComponent implements OnInit {
+export class ProductcardfarmerComponent implements OnInit {
   @Input() productID:number|undefined
   @Input() productName:String|undefined
    @Input() productPrice:number|undefined
@@ -60,7 +60,4 @@ export class ProductCardComponent implements OnInit {
       formData.append('file', fileToUpload, fileToUpload.name);
       this.productService.uploadAttachment(formData);
       }​​​
-      
-      }​​​
-      
-      
+    }

@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ReviewService } from 'src/app/servics/review.service';
+import { UsersService } from 'src/app/servics/users.service';
 
 @Component({
   selector: 'app-reviewform',
@@ -23,7 +24,8 @@ export class ReviewformComponent implements OnInit {
 
   )
 
-  constructor(private router:Router, private spinner: NgxSpinnerService , public reviewservic:ReviewService) { }
+  constructor(private router:Router, private spinner: NgxSpinnerService ,
+     public reviewservic:ReviewService, public userService:UsersService) { }
 
   ngOnInit(): void {
   }
@@ -31,7 +33,7 @@ export class ReviewformComponent implements OnInit {
     this.router.navigate(['dashboard/producthome'])
   }
   GetAllproductssoldout(){
-    
+    this.router.navigate(['Farmerdashboard/Productsoldouthome'])
   }
   addreviews(){
 
@@ -48,9 +50,8 @@ export class ReviewformComponent implements OnInit {
 
 
   gohome(){
-    this.router.navigate(['Farmerdashboard/Reviewform'])
+    this.router.navigate(['HomePage'])
   }
-
 
 
 
@@ -84,5 +85,5 @@ export class ReviewformComponent implements OnInit {
       formData.append('file', fileToUpload, fileToUpload.name);
       this.reviewservic.uploadAttachment(formData);
       }​​​
-
+    
 }

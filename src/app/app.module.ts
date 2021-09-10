@@ -19,6 +19,9 @@ import { TistimonialComponent } from './tistimonial/tistimonial.component';
 import { ProductComponent } from './product/product.component';
 import { AboutUsHomeComponent } from './about-us-home/about-us-home.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { CartComponent } from './cart/cart.component';
+import { GallaryComponent } from './gallary/gallary.component';
+import { CheckoutpaymentComponent } from './checkoutpayment/checkoutpayment.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +35,9 @@ import { MatDialogModule } from '@angular/material/dialog';
     TistimonialComponent,
     ProductComponent,
     AboutUsHomeComponent,
+    CartComponent,
+    GallaryComponent,
+    CheckoutpaymentComponent,
   ],
   imports: [
     BrowserModule,

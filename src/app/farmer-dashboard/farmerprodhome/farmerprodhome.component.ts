@@ -1,8 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
+import { ProductServiceService } from 'src/app/servics/product-service.service';
 import { UsersService } from 'src/app/servics/users.service';
+import { CreatproductfarmerComponent } from '../creatproductfarmer/creatproductfarmer.component';
 
 @Component({
   selector: 'app-farmerprodhome',
@@ -11,8 +14,12 @@ import { UsersService } from 'src/app/servics/users.service';
 })
 export class FarmerprodhomeComponent implements OnInit {
 
+  @Input() ProductID:number|undefined
+
+
+
   constructor(private router:Router,private toast:ToastrService,
-    private spiner:NgxSpinnerService, public userService:UsersService) { }
+    private spiner:NgxSpinnerService, public userService:UsersService,private dialog:MatDialog,public productsservics:ProductServiceService) { }
   ngOnInit(): void {
     this.getallproducts();
     
@@ -22,7 +29,7 @@ export class FarmerprodhomeComponent implements OnInit {
     this.router.navigate(['Farmerdashboard/Farmerprodhome'])
   }
   GetAllproductssoldout(){
-    
+    this.router.navigate(['Farmerdashboard/Productsoldouthome'])
   }
   addreviews(){
 
@@ -56,4 +63,16 @@ export class FarmerprodhomeComponent implements OnInit {
     )
 
   }
+  createNewproduct(){
+    debugger
+    this.dialog.open(CreatproductfarmerComponent);
+  }
+ 
+
+
+
+
+
+
+
 }

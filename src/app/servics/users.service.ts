@@ -28,6 +28,12 @@ export class UsersService {
   getallReview(): Observable<any[]>{
     return this.http.get<any>('https://localhost:44379/api/review');
   }
+
+  getAllproductssoldout(): Observable<any[]>{
+    return this.http.get<any>('https://localhost:44379/api/Products/ProductsSoldOut"');
+  }
+
+
   Deletefarmer(id:number){
     //from home service 
     debugger

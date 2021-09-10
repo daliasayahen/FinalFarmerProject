@@ -193,11 +193,12 @@
          
           <!-- Quick Action Toolbar Ends-->
          
-         
+          <button (click)="createNewproduct()" style="border-radius: 2%; border-color: greenyellow;">Create New Product</button>
+
         
           <div class="container">
             <div class="cards">
-                <app-product-card *ngFor="let card of userService.data"
+                <app-productcardfarmer *ngFor="let card of userService.data"
                  [productID]="card.productID"  
                  [productName]="card.productName" 
                  [productPrice]="card.productPrice"
@@ -206,10 +207,10 @@
                  [categoryID]="card.categoryID" 
                     [userID]="card.userID"  style="display: inline-block; padding: 1%;">
           
-            </app-product-card >
+            </app-productcardfarmer>
               
             </div>
-          </div> -->
+  
 
 
 

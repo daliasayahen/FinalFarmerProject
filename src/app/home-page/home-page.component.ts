@@ -55,7 +55,9 @@ export class HomePageComponent implements OnInit {
   GoToTestimonial(){
     this.router.navigate(["testimonial"]);
   }
-
+  Gallary(){
+    this.router.navigate(["Gallary"]);
+  }
 
   getall(){
     this.spiner.show();

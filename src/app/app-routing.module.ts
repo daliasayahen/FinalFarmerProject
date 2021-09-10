@@ -5,10 +5,13 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { AuthModule } from './auth/auth.module';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
+import { CartComponent } from './cart/cart.component';
+import { CheckoutpaymentComponent } from './checkoutpayment/checkoutpayment.component';
 import { ContactComponent } from './contact/contact.component';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { FarmerDashboardModule } from './farmer-dashboard/farmer-dashboard.module';
 import { FooterComponent } from './footer/footer.component';
+import { GallaryComponent } from './gallary/gallary.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { TistimonialComponent } from './tistimonial/tistimonial.component';
@@ -64,7 +67,20 @@ const routes: Routes = [
   {
     path:'HomePage',
     component:HomePageComponent
+  },
+  {
+    path:'Cart',
+    component:CartComponent
+  },
+  {
+    path:'Gallary',
+    component:GallaryComponent
+  },
+  {
+    path:'Checkoutpayment',
+    component:CheckoutpaymentComponent
   }
+
 
 ];
 
