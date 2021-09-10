@@ -4,6 +4,7 @@ import { ProductCardComponent } from '../dashboard/product-card/product-card.com
 import { ProductHomeComponent } from '../dashboard/product-home/product-home.component';
 import { AddReviewComponent } from './add-review/add-review.component';
 import { TraderComponent } from './trader/trader.component';
+import { TraderprodhomeComponent } from './traderprodhome/traderprodhome.component';
 
 const routes: Routes = [
   
@@ -17,7 +18,7 @@ const routes: Routes = [
    },
    {
     path:'ProductHome',
-    component: ProductHomeComponent
+    component: TraderprodhomeComponent
  },
  {
    path:'AddReview',
