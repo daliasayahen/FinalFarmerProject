@@ -32,6 +32,31 @@ export class ReviewHomeComponent implements OnInit {
     )
 
   }
+  GetAllFarmers(){
+    this.router.navigate(['dashboard/farmerhome'])
+
+  }
+  GetAlltraders(){
+    this.router.navigate(['dashboard/traderhome'])
+
+  }
+  GetAllproducts(){
+    this.router.navigate(['dashboard/producthome'])
+
+  }
+  GetAllreviews(){
+    this.router.navigate(['dashboard/reviewHome'])
+
+  }
+  logout(){
+    localStorage.clear();
+
+    this.router.navigate(['/Login'])
+
+  }
+  goToHome(){
+    
+  }
  
 
 }

@@ -130,7 +130,7 @@
                         <div class="dot-indicator bg-success"></div>
                       </div>
                       <div class="text-wrapper">
-                        <p class="profile-name">Allen Moreno</p>
+                        <p class="profile-name">Admin</p>
                         <p class="designation">Administrator</p>
                       </div>
                       <div class="icon-container">
@@ -164,6 +164,12 @@
                     <a class="nav-link" >
                       <span class="menu-title" (click)="GetAllreviews()">show all Reviews </span>
                       <i class="icon-book-open menu-icon"></i>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="pages/charts/chartist.html">
+                      <span class="menu-title"(click)="goHome()">go to home</span>
+                      <i class="icon-chart menu-icon"></i>
                     </a>
                   </li>
                   <li class="nav-item">
@@ -206,7 +212,8 @@
                             </button>
                           </div>
                           <div class="col-sm-6 col-md-3 p-3 text-center btn-wrapper">
-                            <button type="button" class="btn px-0" (click)="createNewUser()"><i class="icon-docs mr-2"></i>show all farmers</button>
+                            <button type="button" class="btn px-0" (click)="UpdateUser()">
+                              <i class="icon-docs mr-2"></i>Update Farmer Account</button>
                           </div>
                           <div class="col-sm-6 col-md-3 p-3 text-center btn-wrapper">
                             <button type="button" class="btn px-0"><i class="icon-folder mr-2"></i> Enter Payment</button>

@@ -60,7 +60,7 @@ export class HomePageComponent implements OnInit {
   }
 
   getall(){
-    this.spiner.show();
+   // this.spiner.show();
     this.homepageservice.getall().subscribe((res:any)=>{
       this.homepageservice.data=res;
       this.spiner.hide();
@@ -73,7 +73,7 @@ export class HomePageComponent implements OnInit {
     )
   }
   getallReview(){
-    this.spiner.show();
+   // this.spiner.show();
     debugger
     this.reviewservice.getall().subscribe((res:any)=>{
       this.reviewservice.data=res;
@@ -87,7 +87,7 @@ export class HomePageComponent implements OnInit {
     )
   }
   getalltestimonial(){
-    this.spiner.show();
+   // this.spiner.show();
     debugger
     this.tetimonialService.getall().subscribe((res:any)=>{
       this.tetimonialService.data=res;

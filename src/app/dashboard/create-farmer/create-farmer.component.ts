@@ -50,28 +50,25 @@ export class CreateFarmerComponent implements OnInit {
   saveItem(){
     debugger
     console.log(this.formGroup.value);
-    //get the data from form group then check if there is data (from the user I named it data in constructor)
-    //after that send this data to the functions in homeservices that hits to the apis 
-    // this.userId2=parseInt(this.formGroup.value.userID);
-    this.username2=this.formGroup.value.userName.toString();
-    this.phoneNumber2=this.formGroup.value.phoneNumber.toString();
-    this.email2=this.formGroup.value.email.toString();
-    this.password2=this.formGroup.value.password.toString();
-    this.address2=this.formGroup.value.address.toString();
-    this.age2=parseInt(this.formGroup.value.age);
-    this.roleId2=parseInt(this.formGroup.value.roleId);
+    this.username2=this.formGroup.value.userName;
+    this.phoneNumber2=this.formGroup.value.phoneNumber;
+    this.email2=this.formGroup.value.email;
+    this.password2=this.formGroup.value.password;
+    this.address2=this.formGroup.value.address;
+    this.age2=this.formGroup.value.age;
+    this.roleId2=this.formGroup.value.roleId;
+   const data2={
+ username:this.username2.toString(),
+ phoneNumber:this.phoneNumber2.toString(),
+ email:this.email2.toString(),
+ password:this.password2.toString(),
+address:this.address2.toString(),
+ age:parseInt(this.age2),
 
+ roleId:parseInt(this.roleId2),
 
-    const value=this.formGroup.value;
-    if(this.data){
-      this.dialog.close({
-        ...value,
-      })
-    }
-    else{
-      this.dialog.close(value);
-    }
-    this.userService.createUser(value);
+   }
+    this.userService.createUser(data2);
   }
 
 

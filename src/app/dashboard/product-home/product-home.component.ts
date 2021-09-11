@@ -65,4 +65,7 @@ logout(){
   this.router.navigate(['/Login'])
 
 }
+goHome(){
+  
+}
 }

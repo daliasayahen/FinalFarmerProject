@@ -23,6 +23,32 @@ export class TraderhomeComponent implements OnInit {
     this.getalltraders();
     
   }
+  GetAllFarmers(){
+    this.router.navigate(['dashboard/farmerhome'])
+
+  }
+  GetAlltraders(){
+    this.router.navigate(['dashboard/traderhome'])
+
+  }
+  GetAllproducts(){
+    this.router.navigate(['dashboard/producthome'])
+
+  }
+  GetAllreviews(){
+    this.router.navigate(['dashboard/reviewHome'])
+
+  }
+  logout(){
+    localStorage.clear();
+
+    this.router.navigate(['/Login'])
+
+  }
+ 
+  goToHome(){
+    
+  }
   getalltraders(){
     this.spiner.show();
     this.userService.getalltraders().subscribe((res:any)=>{
@@ -40,6 +66,9 @@ export class TraderhomeComponent implements OnInit {
   createNewUser(){
     debugger
     this.dialog.open(CreateTraderComponent);
+  }
+  UpdateUser(){
+    
   }
  
 
