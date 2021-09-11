@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
 import { HomepageService } from '../servics/homepage.service';
+import { ProductServiceService } from '../servics/product-service.service';
 
 @Component({
   selector: 'app-gallary',
@@ -11,7 +12,8 @@ import { HomepageService } from '../servics/homepage.service';
 })
 export class GallaryComponent implements OnInit {
 
-  constructor(private router:Router,public homepageservice:HomepageService,private toast:ToastrService , 
+  constructor(private router:Router,public homepageservice:HomepageService,
+    private toast:ToastrService , public productService:ProductServiceService,
     private spiner :NgxSpinnerService) { }
 
   ngOnInit(): void {
@@ -63,4 +65,21 @@ export class GallaryComponent implements OnInit {
     }
     )
   }
+
+
+
+  getallProductsByCategory(){
+    this.spiner.show();
+    this.productService.getAllproductsByCategory().subscribe((res:any)=>{
+      this.homepageservice.data=res;
+      this.spiner.hide();
+      this.toast.success('Data Retrived');
+  
+    },err=>{
+      this.spiner.hide();
+      this.toast.error('something want worring');
+    }
+    )
+  }
 }
+

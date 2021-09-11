@@ -22,6 +22,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { CartComponent } from './cart/cart.component';
 import { GallaryComponent } from './gallary/gallary.component';
 import { CheckoutpaymentComponent } from './checkoutpayment/checkoutpayment.component';
+import { GalaryProductsComponent } from './galary-products/galary-products.component';
+import { FruitsComponent } from './fruits/fruits.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,8 @@ import { CheckoutpaymentComponent } from './checkoutpayment/checkoutpayment.comp
     CartComponent,
     GallaryComponent,
     CheckoutpaymentComponent,
+    GalaryProductsComponent,
+    FruitsComponent,
   ],
   imports: [
     BrowserModule,

@@ -11,6 +11,8 @@ import { ContactComponent } from './contact/contact.component';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { FarmerDashboardModule } from './farmer-dashboard/farmer-dashboard.module';
 import { FooterComponent } from './footer/footer.component';
+import { FruitsComponent } from './fruits/fruits.component';
+import { GalaryProductsComponent } from './galary-products/galary-products.component';
 import { GallaryComponent } from './gallary/gallary.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -79,7 +81,15 @@ const routes: Routes = [
   {
     path:'Checkoutpayment',
     component:CheckoutpaymentComponent
-  }
+  },
+  {
+    path:'fruits',
+    component:FruitsComponent
+  },
+  {
+    path:'GalaryProducts',
+    component:GalaryProductsComponent
+  },
 
 
 ];

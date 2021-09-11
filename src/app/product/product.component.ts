@@ -28,7 +28,7 @@ export class ProductComponent implements OnInit {
 
   }
   getall(){
-    this.spiner.show();
+   // this.spiner.show();
     this.homepageservice.getall().subscribe((res:any)=>{
       this.homepageservice.data=res;
       this.spiner.hide();

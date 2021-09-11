@@ -21,15 +21,11 @@ export class ProductServiceService {
   }
 
   getAllproductssoldout(): Observable<any[]>{
-    return this.http.get<any>('https://localhost:44379/api/Products/ProductsSoldOut"');
+    return this.http.get<any>('https://localhost:44379/api/Products/ProductsSoldOut');
   }
-
-
-
-
-
-
-
+  getAllproductsByCategory(): Observable<any[]>{
+    return this.http.get<any>('https://localhost:44379/api/category/GetAllCategoryProduct');
+  }
 
   create(data:any)
   {//this code to convert the data to json object , use the requestOptions after the data that sent .

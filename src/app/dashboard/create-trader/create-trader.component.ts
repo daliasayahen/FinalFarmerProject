@@ -26,33 +26,47 @@ export class CreateTraderComponent implements OnInit {
     private dialog:MatDialogRef<CreateTraderComponent>, @Inject (MAT_DIALOG_DATA) public data:any )  { }
   ngOnInit(): void {
     //MAT_DIALOG_DATA  data is an object  ==> to set the data that the user entered into dialog to form group 
-      this.formGroup.controls.userName.setValue(this.data.userName);
-      this.formGroup.controls.phoneNumber.setValue(this.data.phoneNumber);
-      this.formGroup.controls.email.setValue(this.data.email);
-      this.formGroup.controls.password.setValue(this.data.password);
-      this.formGroup.controls.address.setValue(this.data.address);
-      this.formGroup.controls.age.setValue(this.data.age);
+      this.formGroup.controls.userName.setValue(this.data.userName.toString());
+      this.formGroup.controls.phoneNumber.setValue(this.data.phoneNumber.toString());
+      this.formGroup.controls.email.setValue(this.data.email.toString());
+      this.formGroup.controls.password.setValue(this.data.password.toString());
+      this.formGroup.controls.address.setValue(this.data.address.toString());
+      this.formGroup.controls.age.setValue(parseInt(this.data.age));
       this.formGroup.controls.roleId.setValue(this.data.roleId);
 
   }
+  username2:any;
+  phoneNumber2:any;
+  email2:any;
+  password2:any;
+  address2:any;
+  age2:any;
+  roleId2:any;
   saveItem(){
     debugger
-    //get the data from form group then check if there is data (from the user I named it data in constructor)
-    //after that send this data to the functions in homeservices that hits to the apis 
-    const value=this.formGroup.value;
-    if(this.data){
-      this.dialog.close({
-        ...value,
-      })
-    }
-    else{
-      this.dialog.close(value);
-    }
-    this.userService.createUser(value);
+    console.log(this.formGroup.value);
+    this.username2=this.formGroup.value.userName;
+    this.phoneNumber2=this.formGroup.value.phoneNumber;
+    this.email2=this.formGroup.value.email;
+    this.password2=this.formGroup.value.password;
+    this.address2=this.formGroup.value.address;
+    this.age2=this.formGroup.value.age;
+    this.roleId2=this.formGroup.value.roleId;
+   const data2={
+ username:this.username2.toString(),
+ phoneNumber:this.phoneNumber2.toString(),
+ email:this.email2.toString(),
+ password:this.password2.toString(),
+address:this.address2.toString(),
+ age:parseInt(this.age2),
+
+ roleId:parseInt(this.roleId2),
+
+   }
+    this.userService.createUser(data2);
   }
-
-
 }
+
 // function MAT_DIALOG_DATA(MAT_DIALOG_DATA: any) {
 //   throw new Error('Function not implemented.');
 // }

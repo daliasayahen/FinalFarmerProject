@@ -60,6 +60,12 @@ export class FarmerHomeComponent implements OnInit {
     this.router.navigate(['/Login'])
 
   }
+  UpdateUser(){
+
+  }
+  goHome(){
+    
+  }
 
  
 
