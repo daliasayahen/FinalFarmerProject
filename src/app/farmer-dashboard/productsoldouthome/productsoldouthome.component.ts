@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
+import { ProductServiceService } from 'src/app/servics/product-service.service';
 import { UsersService } from 'src/app/servics/users.service';
 
 @Component({
@@ -12,15 +13,15 @@ import { UsersService } from 'src/app/servics/users.service';
 export class ProductsoldouthomeComponent implements OnInit {
 
   constructor(private router:Router,private toast:ToastrService ,
-    private spiner :NgxSpinnerService , public userService:UsersService) { }
+    private spiner :NgxSpinnerService , public productService:ProductServiceService) { }
 
   ngOnInit(): void {
     this.getAllproductssoldout();
   }
   getAllproductssoldout(){
     this.spiner.show();
-    this.userService.getAllproductssoldout().subscribe((res:any)=>{
-      this.userService.data=res;
+    this.productService.getAllproductssoldout().subscribe((res:any)=>{
+      this.productService.data=res;
       this.spiner.hide();
       this.toast.success('Data Retrived');
   

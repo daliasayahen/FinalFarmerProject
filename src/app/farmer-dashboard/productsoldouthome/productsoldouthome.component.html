@@ -212,6 +212,27 @@
                   </div>
                   <!-- content-wrapper ends -->
                 
+                  <div class="cards">
+                    <app-product-soldout *ngFor="let card of productService.data"
+                     [productID]="card.productID"  
+                     [productName]="card.productName" 
+                     [productPrice]="card.productPrice"
+                     [productImg]="card.productImg"
+                      [productQuantity]="card.productQuantity"
+                     [categoryID]="card.categoryID" 
+                        [userID]="card.userID"  style="display: inline-block; padding: 1%;">
+              
+                </app-product-soldout>
+                  
+                </div>
+
+
+
+
+
+
+
+
                   <footer class="footer">
                     <div class="d-sm-flex justify-content-center justify-content-sm-between">
                       <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © bootstrapdash.com 2020</span>

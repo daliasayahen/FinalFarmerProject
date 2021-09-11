@@ -21,7 +21,7 @@ export class ProductcardfarmerComponent implements OnInit {
 
 
   
-   constructor(private router:Router,public userService:UsersService,
+   constructor(private router:Router,
     private toast:ToastrService , private spiner :NgxSpinnerService ,
     public productService:ProductServiceService){}
 
@@ -31,8 +31,8 @@ export class ProductcardfarmerComponent implements OnInit {
   }
   getall(){
     this.spiner.show();
-    this.userService.getallproducts().subscribe((res:any)=>{
-      this.userService.data=res;
+    this.productService.getall().subscribe((res:any)=>{
+      this.productService.data=res;
       this.spiner.hide();
       this.toast.success('Data Retrived');
   

@@ -2,6 +2,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ToastrService } from 'ngx-toastr';
+import { ProductServiceService } from 'src/app/servics/product-service.service';
 import { UsersService } from 'src/app/servics/users.service';
 
 @Component({
@@ -12,43 +13,63 @@ import { UsersService } from 'src/app/servics/users.service';
 export class CreatproductfarmerComponent implements OnInit {
 
   formGroup=new FormGroup({
-    userName:new FormControl('',[Validators.required]),
-    phoneNumber:new FormControl('',Validators.required),
-    email:new FormControl('',Validators.required),
-    password:new FormControl('',Validators.required),
-    address:new FormControl('',Validators.required),
-    age:new FormControl('',Validators.required),
-    roleId:new FormControl('',Validators.required),
+    productName:new FormControl('',[Validators.required]),
+    productPrice:new FormControl('',Validators.required),
+    productImg:new FormControl('',Validators.required),
+    productQuantity:new FormControl('',Validators.required),
+    categoryID:new FormControl('',Validators.required),
+    userID:new FormControl('',Validators.required),
 
   })
-  constructor(private userService:UsersService,private toastr:ToastrService,
+  constructor(private productService:ProductServiceService,private toastr:ToastrService,
     private dialog:MatDialogRef<CreatproductfarmerComponent>, @Inject (MAT_DIALOG_DATA) public data:any )  { }
   ngOnInit(): void {
     //MAT_DIALOG_DATA  data is an object  ==> to set the data that the user entered into dialog to form group 
-      this.formGroup.controls.ProductName.setValue(this.data.ProductName);
-      this.formGroup.controls.ProductPrice.setValue(this.data.ProductPrice);
-      this.formGroup.controls.ProductImg.setValue(this.data.ProductImg);
-      this.formGroup.controls.ProductQuantity.setValue(this.data.ProductQuantity);
-      this.formGroup.controls.CategoryID.setValue(this.data.CategoryID);
-      this.formGroup.controls.UserID.setValue(this.data.UserID);
-     
-
+      this.formGroup.controls.productName.setValue(this.data.productName.toString());
+      this.formGroup.controls.productPrice.setValue(parseInt(this.data.productPrice));
+      this.formGroup.controls.productImg.setValue(this.data.productImg.toString());
+      this.formGroup.controls.productQuantity.setValue(parseInt(this.data.productQuantity));
+      this.formGroup.controls.categoryID.setValue(parseInt(this.data.categoryID));
+      this.formGroup.controls.userID.setValue(parseInt(this.data.userID));
   }
-  saveItem(){
-    debugger
-    //get the data from form group then check if there is data (from the user I named it data in constructor)
-    //after that send this data to the functions in homeservices that hits to the apis 
-    const value=this.formGroup.value;
-    if(this.data){
-      this.dialog.close({
-        ...value,
-      })
-    }
-    else{
-      this.dialog.close(value);
-    }
-    this.userService.createUser(value);
-  }
+  productName2:any;
+  productPrice2:any;
+  productImg2:any;
+  productQuantity2:any;
+  categoryID2:any;
+  userID2:any;
+      
 
-
-}
+      saveItem(){
+        debugger
+        console.log(this.formGroup.value);
+        this.productName2=this.formGroup.value.productName;
+        this.productPrice2=this.formGroup.value.productPrice;
+        this.productImg2=this.formGroup.value.productImg;
+        this.productQuantity2=this.formGroup.value.productQuantity;
+        this.categoryID2=this.formGroup.value.categoryID;
+        this.userID2=this.formGroup.value.userID;
+        
+       const data2={
+       productName:this.productName2.toString(),
+       productPrice:parseInt(this.productPrice2),
+        productImg:this.productImg2.toString(),
+        productQuantity:parseInt(this.productQuantity2),
+       categoryID:parseInt(this.categoryID2),
+       userID:parseInt(this.userID2)
+    
+       }
+       
+        this.productService.create(data2);
+      }
+    
+      uploadFile(files:any) {​​​
+        if (files.length === 0) {​​​
+        return;
+        }​​​
+        let fileToUpload = <File>files[0];
+        const formData = new FormData();
+        formData.append('file', fileToUpload, fileToUpload.name);
+        this.productService.uploadAttachment(formData);
+        }​​​
+    }
