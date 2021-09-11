@@ -11,7 +11,7 @@ import { HomepageService } from '../servics/homepage.service';
 })
 export class CartComponent implements OnInit {
 
-  constructor(private router:Router,public homepageservice:HomepageService,private toast:ToastrService , 
+  constructor(private router:Router,private toast:ToastrService , 
     private spiner :NgxSpinnerService) { }
 
   ngOnInit(): void {
@@ -41,30 +41,20 @@ export class CartComponent implements OnInit {
   ContactUs(){
 
     this.router.navigate(["contact"]);
-
     
   }
 
   GoToTestimonial(){
     this.router.navigate(["testimonial"]);
   }
+
+
   Checkout(){
     this.router.navigate(["Checkoutpayment"]);
   }
 
-  getall(){
-    this.spiner.show();
-    this.homepageservice.getall().subscribe((res:any)=>{
-      this.homepageservice.data=res;
-      this.spiner.hide();
-      this.toast.success('Data Retrived');
-  
-    },err=>{
-      this.spiner.hide();
-      this.toast.error('something want worring');
-    }
-    )
+
   }
 
 
-}
+

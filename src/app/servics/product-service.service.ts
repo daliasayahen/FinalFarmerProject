@@ -21,14 +21,21 @@ export class ProductServiceService {
   }
 
   getAllproductssoldout(): Observable<any[]>{
+<<<<<<< HEAD
     return this.http.get<any>('https://localhost:44379/api/Products/ProductsSoldOut');
   }
   getAllproductsByCategory(): Observable<any[]>{
     return this.http.get<any>('https://localhost:44379/api/category/GetAllCategoryProduct');
   }
 
+=======
+    return this.http.get<any>('https://localhost:44379/api/Products/ProductSoldOut"');
+  }
+
+
+>>>>>>> b853a4bb4ea19bc570be77acbeda1ffd21f1b78d
   create(data:any)
-  {//this code to convert the data to json object , use the requestOptions after the data that sent .
+  {
     const headerDict = {
       'Content-Type': 'application/json',
       'Accept': 'application/json'
@@ -40,7 +47,6 @@ export class ProductServiceService {
     debugger
     this.http.post('https://localhost:44379/api/products',data,requestOptions).subscribe((res:any)=>{
     this.toaster.success('Created');
-   // this.router.navigate([])login page 
     this.spiner.hide();
     },err=>{
       
@@ -50,8 +56,19 @@ export class ProductServiceService {
     
     )
   }
-  
 
+  DeleteItem(id:number){
+    this.spiner.show();
+    this.http.delete('https://localhost:44334/api/products/delete/'+id).subscribe((data:any)=>{
+      this.toaster.success('Deleted');
+      this.spiner.hide();
+
+    },err=>{
+      this.spiner.hide();
+    }
+    );
+    
+  }
 
   uploadAttachment(file:FormData){
     

@@ -64,7 +64,7 @@ export class FarmerprodhomeComponent implements OnInit {
 
   }
   createNewproduct(){
-    debugger
+    
     this.dialog.open(CreatproductfarmerComponent);
   }
  

@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
 import { HomepageService } from '../servics/homepage.service';
+import { RegServiceService } from '../servics/reg-service.service';
 
 @Component({
   selector: 'app-checkoutpayment',
@@ -11,7 +13,11 @@ import { HomepageService } from '../servics/homepage.service';
 })
 export class CheckoutpaymentComponent implements OnInit {
 
-  constructor(private router:Router,public homepageservice:HomepageService,private toast:ToastrService , 
+  
+
+
+
+  constructor(private router:Router,private toast:ToastrService , 
     private spiner :NgxSpinnerService) { }
 
   ngOnInit(): void {
@@ -48,23 +54,8 @@ export class CheckoutpaymentComponent implements OnInit {
   GoToTestimonial(){
     this.router.navigate(["testimonial"]);
   }
-  
 
-  getall(){
-    this.spiner.show();
-    this.homepageservice.getall().subscribe((res:any)=>{
-      this.homepageservice.data=res;
-      this.spiner.hide();
-      this.toast.success('Data Retrived');
   
-    },err=>{
-      this.spiner.hide();
-      this.toast.error('something want worring');
-    }
-    )
-  }
-  
-
 
 }
 
