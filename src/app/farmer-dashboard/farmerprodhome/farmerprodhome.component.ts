@@ -19,9 +19,9 @@ export class FarmerprodhomeComponent implements OnInit {
 
 
   constructor(private router:Router,private toast:ToastrService,
-    private spiner:NgxSpinnerService, public userService:UsersService,private dialog:MatDialog,public productsservics:ProductServiceService) { }
+    private spiner:NgxSpinnerService, private dialog:MatDialog,public productsservics:ProductServiceService) { }
   ngOnInit(): void {
-    this.getallproducts();
+    this.getall();
     
   }
 
@@ -49,10 +49,10 @@ export class FarmerprodhomeComponent implements OnInit {
     this.router.navigate(['HomePage'])
   }
 
-  getallproducts(){
+  getall(){
     this.spiner.show();
-    this.userService.getallproducts().subscribe((res:any)=>{
-      this.userService.data=res;
+    this.productsservics.getall().subscribe((res:any)=>{
+      this.productsservics.data=res;
       this.spiner.hide();
       this.toast.success('Data Retrived');
   
@@ -63,7 +63,7 @@ export class FarmerprodhomeComponent implements OnInit {
     )
 
   }
-  createNewproduct(){
+  create(){
     
     this.dialog.open(CreatproductfarmerComponent);
   }

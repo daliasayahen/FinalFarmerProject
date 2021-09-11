@@ -64,7 +64,7 @@ export class HomePageComponent implements OnInit {
     this.homepageservice.getall().subscribe((res:any)=>{
       this.homepageservice.data=res;
       this.spiner.hide();
-      this.toast.success('Data Retrived');
+     // this.toast.success('Data Retrived');
   
     },err=>{
       this.spiner.hide();
@@ -78,7 +78,7 @@ export class HomePageComponent implements OnInit {
     this.reviewservice.getall().subscribe((res:any)=>{
       this.reviewservice.data=res;
       this.spiner.hide();
-      this.toast.success('Data Retrived');
+     // this.toast.success('Data Retrived');
   
     },err=>{
       this.spiner.hide();
@@ -92,7 +92,7 @@ export class HomePageComponent implements OnInit {
     this.tetimonialService.getall().subscribe((res:any)=>{
       this.tetimonialService.data=res;
       this.spiner.hide();
-      this.toast.success('Data Retrived');
+     // this.toast.success('Data Retrived');
   
     },err=>{
       this.spiner.hide();

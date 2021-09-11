@@ -19,7 +19,7 @@ export class FarmerComponent implements OnInit {
     this.router.navigate(['Farmerdashboard/Farmerprodhome'])
   }
   GetAllproductssoldout(){
-    
+    this.router.navigate(['Farmerdashboard/Productsoldouthome'])
   }
   addreviews(){
 

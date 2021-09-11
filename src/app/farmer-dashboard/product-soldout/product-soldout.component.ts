@@ -27,7 +27,7 @@ export class ProductSoldoutComponent implements OnInit {
     public productService:ProductServiceService){}
 
   ngOnInit(): void {
-    this.getAllproductssoldout();
+    //this.getAllproductssoldout();
 
   }
 getAllproductssoldout(){
