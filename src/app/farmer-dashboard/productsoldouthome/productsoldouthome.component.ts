@@ -16,11 +16,11 @@ export class ProductsoldouthomeComponent implements OnInit {
     private spiner :NgxSpinnerService , public productService:ProductServiceService) { }
 
   ngOnInit(): void {
-    this.getAllproductssoldout();
+    this. getAllproductssoldout();
   }
   getAllproductssoldout(){
     this.spiner.show();
-    this.productService.getAllproductssoldout().subscribe((res:any)=>{
+    this.productService. getAllproductssoldout().subscribe((res:any)=>{
       this.productService.data=res;
       this.spiner.hide();
       this.toast.success('Data Retrived');

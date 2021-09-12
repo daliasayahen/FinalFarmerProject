@@ -78,7 +78,7 @@ export class HomePageComponent implements OnInit {
     this.reviewservice.getall().subscribe((res:any)=>{
       this.reviewservice.data=res;
       this.spiner.hide();
-      //this.toast.success('Data Retrived');
+     // this.toast.success('Data Retrived');
   
     },err=>{
       this.spiner.hide();
