@@ -24,11 +24,22 @@ export class ProductServiceService {
 
     return this.http.get<any>('https://localhost:44379/api/products/ProductSoldOut');
 
-    
   }
   getAllproductsByCategory(): Observable<any[]>{
     return this.http.get<any>('https://localhost:44379/api/category/GetAllCategoryProduct');
   }
+  getAllfruitsProducts(): Observable<any[]>{
+    return this.http.get<any>('https://localhost:44379/api/category/GetAllFruitCat');
+  }
+  getAllvegitablesProducts(): Observable<any[]>{
+    return this.http.get<any>('https://localhost:44379/api/category/GetAllVegetableCat');
+  }
+
+
+ 
+
+
+
 
   create(data:any)
   {

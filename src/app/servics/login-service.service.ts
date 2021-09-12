@@ -86,10 +86,10 @@ console.log(body);
       
       if(data.role=="admin"){
       this.router.navigate(['dashboard/admin']);
-     //this.router.navigate(['contact']);
-
-
       }
+  
+
+      
       else if(data.role=="farmer")
       {
         this.router.navigate(['Farmerdashboard/farmer']);
@@ -98,10 +98,13 @@ console.log(body);
       {
         this.router.navigate(['Traderdashboard/Trader']);
       }
+
       else {
         alert("User does not exist")
     }
-      })
+  
+      }
+      )
 
   
   }

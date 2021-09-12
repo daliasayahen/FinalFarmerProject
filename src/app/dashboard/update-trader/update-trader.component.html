@@ -1,7 +1,14 @@
-<h2 mat-dialog-title>Add trader</h2>
+<h2 mat-dialog-title>Update Trader</h2>
     <mat-dialog-content class="mat-typograghy">
     
 <form [formGroup]='formGroup'>
+    <mat-form-field class="example-full-width">
+        <mat-label>Enter Id</mat-label>
+        <input matInput formControlName="userID" >
+        <mat-error *ngIf="formGroup.controls.userID.hasError('required')">
+          id is Required 
+        </mat-error>
+      </mat-form-field>
         <mat-form-field class="example-full-width">
           <mat-label>User Name</mat-label>
           <input matInput formControlName="userName" >
@@ -16,7 +23,7 @@
                 phone Number is Required
             </mat-error> 
         </mat-form-field>
-         <mat-form-field class="example-full-width"> 
+         <mat-form-field class="example-full-width">
             <mat-label>email</mat-label>
             <input matInput formControlName="email" >
             <mat-error *ngIf="formGroup.controls.email.hasError('required')" >
@@ -45,7 +52,7 @@
             </mat-error> 
         </mat-form-field>
         <mat-form-field class="example-full-width">
-            <mat-label>enter (3) to register new trader User</mat-label>
+            <mat-label>enter (3) to update trader User</mat-label>
             <input matInput formControlName="roleId" >
             <mat-error *ngIf="formGroup.controls.roleId.hasError('required')" >
                 
