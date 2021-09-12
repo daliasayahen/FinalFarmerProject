@@ -54,5 +54,5 @@ export class ProductsoldouthomeComponent implements OnInit {
 
   gohome(){
     this.router.navigate(['HomePage'])
-  }
+ }
 }
