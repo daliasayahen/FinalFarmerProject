@@ -232,26 +232,18 @@
   <!-- /Card  angular material-->
 
  
-  <div class="latest-blog">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="title-all text-center">
-                    <h1>latest blog</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lacus enim.</p>
-                </div>
-            </div>
- </div>
+  
 
- <app-review *ngFor="let card of reviewservice.data"
+ <app-review *ngFor="let card of reviewservice.data" 
  [reviewID]="card.reviewID"  [userName]="card.userName" [descriptiontext]="card.descriptiontext"
- [img]="card.img" [rate]="card.rate" style="display:inline-block;"></app-review>
+ [img]="card.img" [rate]="card.rate" style="display:inline-block; 
+  margin-left: 10%;"></app-review>
     
  
 
- <app-tistimonial *ngFor="let card of tetimonialService.data"
+ <app-tistimonial *ngFor="let card of tetimonialService.data" 
  [TestimonialID]="card.TestimonialID"  [userName]="card.userName" [descriptiontext]="card.descriptiontext"
- [img]="card.img" ></app-tistimonial>
+ [img]="card.img" style="margin-bottom: 15%; scroll-margin-inline: 10%;" ></app-tistimonial>
 
 
 
@@ -274,35 +266,36 @@
   <!-- </div>  -->
   <!-- /Card  angular material-->
 
-  <footer>
+<!-- Start Footer  -->
+<footer>
     <div class="footer-main">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-12 col-sm-12">
-                    <div class="footer-top-box">
-                        <h3>Business Time</h3>
-                        <ul class="list-time">
-                            <li>Monday - Friday: 08.00am to 05.00pm</li> <li>Saturday: 10.00am to 08.00pm</li> <li>Sunday: <span>Closed</span></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-12 col-sm-12">
-                    <div class="footer-top-box">
-                        <h3>Newsletter</h3>
-                        <form class="newsletter-box">
-                            <div class="form-group">
-                                <input class="" type="email" name="Email" placeholder="Email Address*" />
-                                <i class="fa fa-envelope"></i>
-                            </div>
-                            <button class="btn hvr-hover" type="submit">Submit</button>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-12 col-sm-12">
-                    <div class="footer-top-box">
-                        <h3>Social Media</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <ul>
+    <div class="row">
+      <div class="col-lg-4 col-md-12 col-sm-12">
+        <div class="footer-top-box">
+          <h3>Business Time</h3>
+          <ul class="list-time">
+            <li>Monday - Friday: 08.00am to 05.00pm</li> <li>Saturday: 10.00am to 08.00pm</li> <li>Sunday: <span>Closed</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-12 col-sm-12">
+        <div class="footer-top-box">
+          <h3>Newsletter</h3>
+          <form class="newsletter-box">
+            <div class="form-group">
+              <input class="" type="email" name="Email" placeholder="Email Address*" />
+              <i class="fa fa-envelope"></i>
+            </div>
+            <button class="btn hvr-hover" type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-12 col-sm-12">
+        <div class="footer-top-box">
+          <h3>Social Media</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <ul>
                             <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
                             <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
                             <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
@@ -311,16 +304,16 @@
                             <li><a href="#"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a></li>
                             <li><a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
                         </ul>
-                    </div>
-                </div>
-            </div>
-            <hr>
+        </div>
+      </div>
+    </div>
+    
             <div class="row">
                 <div class="col-lg-4 col-md-12 col-sm-12">
                     <div class="footer-widget">
                         <h4>About Freshshop</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p> 							
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p> 							
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12 col-sm-12">

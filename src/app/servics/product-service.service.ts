@@ -30,6 +30,7 @@ export class ProductServiceService {
     return this.http.get<any>('https://localhost:44379/api/category/GetAllCategoryProduct');
   }
 
+
   create(data:any)
   {
     const headerDict = {
