@@ -14,13 +14,14 @@ body{
 
 
 
-.container{
+.formcontainer{
   /* background-color: tan; */
   width: 100vw;
   /* height: 100vh;  */
   overflow: hidden;
   display:flex ;
   justify-content: center;
+  
 }
 .loginCard{
   width: 700px;

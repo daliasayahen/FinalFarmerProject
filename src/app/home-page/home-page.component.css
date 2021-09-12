@@ -20,6 +20,11 @@
 .carousel-caption p {
 	width: 75%;}
 
+	
+	.box-add-products{
+		margin-top: -8%;
+
+	}
 
 
 	
@@ -42,7 +47,10 @@
 	margin-top: 25px;
 }
 .carousel-caption p {
-	width: 75%;}
+	width: 75%;
+	
+}
+	
 
 
 
