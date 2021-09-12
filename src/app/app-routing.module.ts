@@ -18,6 +18,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { TistimonialComponent } from './tistimonial/tistimonial.component';
 import { TraderDashboardModule } from './trader-dashboard/trader-dashboard.module';
+import { VegitableComponent } from './vegitable/vegitable.component';
 
 
 const routes: Routes = [
@@ -85,6 +86,10 @@ const routes: Routes = [
   {
     path:'fruits',
     component:FruitsComponent
+  },
+  {
+    path:'Vegitable',
+    component:VegitableComponent
   },
   {
     path:'GalaryProducts',

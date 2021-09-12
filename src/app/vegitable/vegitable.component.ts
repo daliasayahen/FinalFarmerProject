@@ -8,20 +8,20 @@ import { ReviewService } from '../servics/review.service';
 import { TestimonialService } from '../servics/testimonial.service';
 
 @Component({
-  selector: 'app-fruits',
-  templateUrl: './fruits.component.html',
-  styleUrls: ['./fruits.component.css']
+  selector: 'app-vegitable',
+  templateUrl: './vegitable.component.html',
+  styleUrls: ['./vegitable.component.css']
 })
-export class FruitsComponent implements OnInit {
+export class VegitableComponent implements OnInit {
 
-  constructor(private router:Router,public homepageservice:HomepageService,private toast:ToastrService ,public productService:ProductServiceService 
-   , private spiner :NgxSpinnerService,public reviewservice:ReviewService,public tetimonialService:TestimonialService)
+  
+  constructor(private router:Router,public homepageservice:HomepageService,private toast:ToastrService , 
+    private spiner :NgxSpinnerService,public productService:ProductServiceService,public reviewservice:ReviewService,public tetimonialService:TestimonialService)
    { 
   }
 
   ngOnInit(): void {
-    this.getallfruits();
- 
+ this.getallVegitables();
   }
   
   GoToLogin(){
@@ -68,17 +68,17 @@ getfruitsProducts(){
 
 
 }
-getallfruits(){
-  // this.spiner.show();
-   this.productService.getAllfruitsProducts().subscribe((res:any)=>{
-     this.productService.data=res;
-     this.spiner.hide();
-     this.toast.success('Data Retrived');
- 
-   },err=>{
-     this.spiner.hide();
-     this.toast.error('something want worring');
-   }
-   )
- }
+getallVegitables(){
+  this.productService.getAllvegitablesProducts().subscribe((res:any)=>{
+    this.productService.data=res;
+    this.spiner.hide();
+    this.toast.success('Data Retrived');
+
+  },err=>{
+    this.spiner.hide();
+    this.toast.error('something want worring');
+  }
+  )
 }
+}
+

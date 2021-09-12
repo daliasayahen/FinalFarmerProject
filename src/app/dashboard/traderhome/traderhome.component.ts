@@ -5,6 +5,7 @@ import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
 import { UsersService } from 'src/app/servics/users.service';
 import { CreateTraderComponent } from '../create-trader/create-trader.component';
+import { UpdateTraderComponent } from '../update-trader/update-trader.component';
 
 @Component({
   selector: 'app-traderhome',
@@ -47,6 +48,9 @@ export class TraderhomeComponent implements OnInit {
   }
  
   goToHome(){
+    this.router.navigate(['dashboard/admin'])
+
+
     
   }
   getalltraders(){
@@ -68,8 +72,10 @@ export class TraderhomeComponent implements OnInit {
     this.dialog.open(CreateTraderComponent);
   }
   UpdateUser(){
-    
+    this.dialog.open(UpdateTraderComponent);
+
   }
+
  
 
 }

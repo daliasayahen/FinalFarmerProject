@@ -24,6 +24,7 @@ import { GallaryComponent } from './gallary/gallary.component';
 import { CheckoutpaymentComponent } from './checkoutpayment/checkoutpayment.component';
 import { GalaryProductsComponent } from './galary-products/galary-products.component';
 import { FruitsComponent } from './fruits/fruits.component';
+import { VegitableComponent } from './vegitable/vegitable.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { FruitsComponent } from './fruits/fruits.component';
     CheckoutpaymentComponent,
     GalaryProductsComponent,
     FruitsComponent,
+    VegitableComponent,
   ],
   imports: [
     BrowserModule,

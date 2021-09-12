@@ -22,6 +22,7 @@ export class GalaryProductsComponent implements OnInit {
    @Input() categoryID:number|undefined
    @Input() userID:number|undefined
   ngOnInit(): void {
+    //this.getallfruits()
   }
   // getallProductsByCategory(){
   //   this.spiner.show();
@@ -42,5 +43,19 @@ export class GalaryProductsComponent implements OnInit {
    return basePath+value;
    
     }
+
+    getallfruits(){
+      // this.spiner.show();
+       this.productService.getAllfruitsProducts().subscribe((res:any)=>{
+         this.productService.data=res;
+         this.spiner.hide();
+         this.toast.success('Data Retrived');
+     
+       },err=>{
+         this.spiner.hide();
+         this.toast.error('something want worring');
+       }
+       )
+     }
 }
 

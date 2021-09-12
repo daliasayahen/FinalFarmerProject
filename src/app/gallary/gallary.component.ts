@@ -65,21 +65,30 @@ export class GallaryComponent implements OnInit {
     }
     )
   }
+  getvegitablesProducts(){
+    this.router.navigate(["Vegitable"]);
 
 
-
-  getallProductsByCategory(){
-    this.spiner.show();
-    this.productService.getAllproductsByCategory().subscribe((res:any)=>{
-      this.homepageservice.data=res;
-      this.spiner.hide();
-      this.toast.success('Data Retrived');
-  
-    },err=>{
-      this.spiner.hide();
-      this.toast.error('something want worring');
-    }
-    )
   }
+getfruitsProducts(){
+  this.router.navigate(["fruits"]);
+
+
 }
+
+  // getallProductsByCategory(){
+  //   this.spiner.show();
+  //   this.productService.getAllproductsByCategory().subscribe((res:any)=>{
+  //     this.homepageservice.data=res;
+  //     this.spiner.hide();
+  //     this.toast.success('Data Retrived');
+  
+  //   },err=>{
+  //     this.spiner.hide();
+  //     this.toast.error('something want worring');
+  //   }
+  //   )
+  // }
+}
+
 

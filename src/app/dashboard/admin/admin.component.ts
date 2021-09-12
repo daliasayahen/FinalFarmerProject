@@ -42,7 +42,8 @@ export class AdminComponent implements OnInit {
 
   }
   goToHome(){
-    
+    this.router.navigate(['dashboard/admin'])
+
   }
 
 

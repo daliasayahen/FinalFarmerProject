@@ -14,6 +14,8 @@ import { ReviewCardComponent } from './review-card/review-card.component';
 import { ReviewHomeComponent } from './review-home/review-home.component';
 import { CreateFarmerComponent } from './create-farmer/create-farmer.component';
 import { CreateTraderComponent } from './create-trader/create-trader.component';
+import { UpdateFarmerComponent } from './update-farmer/update-farmer.component';
+import { UpdateTraderComponent } from './update-trader/update-trader.component';
 
 
 @NgModule({
@@ -28,7 +30,9 @@ import { CreateTraderComponent } from './create-trader/create-trader.component';
     ReviewCardComponent,
     ReviewHomeComponent,
     CreateFarmerComponent,
-    CreateTraderComponent
+    CreateTraderComponent,
+    UpdateFarmerComponent,
+    UpdateTraderComponent
   ],
   imports: [
     CommonModule,

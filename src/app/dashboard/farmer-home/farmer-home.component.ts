@@ -5,6 +5,7 @@ import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
 import { UsersService } from 'src/app/servics/users.service';
 import { CreateFarmerComponent } from '../create-farmer/create-farmer.component';
+import { UpdateFarmerComponent } from '../update-farmer/update-farmer.component';
 
 @Component({
   selector: 'app-farmer-home',
@@ -61,10 +62,14 @@ export class FarmerHomeComponent implements OnInit {
 
   }
   UpdateUser(){
+    
+    this.dialog.open(UpdateFarmerComponent);
+
 
   }
   goHome(){
-    
+    this.router.navigate(['dashboard/admin'])
+
   }
 
  

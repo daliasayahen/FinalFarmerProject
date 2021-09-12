@@ -129,18 +129,25 @@
                 <div class="special-menu text-center">
                     <div class="button-group filter-button-group">
                         <button class="active" data-filter="*">All</button>
-                        <button data-filter=".bulbs" >vegetables</button>
-                        <button data-filter=".fruits">Fruits</button>
+                        <button data-filter=".bulbs" (click)="getvegitablesProducts()" >vegetables</button>
+                        <button data-filter=".fruits" (click)="getfruitsProducts()" >Fruits</button>
                        
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="row special-list">
+        <div class="row special-list" style="display: inline-block;">"
         
 
-           <!-- <app-galary-products></app-galary-products> -->
+            <app-galary-products *ngFor="let card of productService.data"
+            [productID]="card.productID"  
+            [productName]="card.productName" 
+            [productPrice]="card.productPrice"
+            [productImg]="card.productImg"
+             [productQuantity]="card.productQuantity"
+            [categoryID]="card.categoryID" 
+               [userID]="card.userID" style="display: inline-block;"></app-galary-products>
 
            
 
