@@ -23,7 +23,10 @@ export class FruitsComponent implements OnInit {
     this.getallfruits();
  
   }
+  goToAll(){
+    this.router.navigate(["Gallary"]);
   
+  }
   GoToLogin(){
     this.router.navigate(["Login"]);
   }

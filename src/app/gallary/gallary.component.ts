@@ -75,6 +75,10 @@ getfruitsProducts(){
 
 
 }
+goToAll(){
+  this.router.navigate(["Gallary"]);
+
+}
 
   // getallProductsByCategory(){
   //   this.spiner.show();

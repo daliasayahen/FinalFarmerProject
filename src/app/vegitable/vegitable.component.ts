@@ -68,6 +68,10 @@ getfruitsProducts(){
 
 
 }
+goToAll(){
+  this.router.navigate(["Gallary"]);
+
+}
 getallVegitables(){
   this.productService.getAllvegitablesProducts().subscribe((res:any)=>{
     this.productService.data=res;
