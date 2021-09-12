@@ -49,6 +49,9 @@ export class FarmerprodhomeComponent implements OnInit {
     this.router.navigate(['HomePage'])
   }
 
+  Updateproduct(){
+
+  }
   getall(){
     this.spiner.show();
     this.productsservics.getall().subscribe((res:any)=>{

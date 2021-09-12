@@ -24,7 +24,7 @@ export class ProductServiceService {
 
     return this.http.get<any>('https://localhost:44379/api/products/ProductSoldOut');
 
-    return this.http.get<any>('https://localhost:44379/api/Products/ProductsSoldOut');
+    
   }
   getAllproductsByCategory(): Observable<any[]>{
     return this.http.get<any>('https://localhost:44379/api/category/GetAllCategoryProduct');

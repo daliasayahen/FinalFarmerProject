@@ -31,7 +31,7 @@ export class CreatproductfarmerComponent implements OnInit {
       this.formGroup.controls.productQuantity.setValue(parseInt(this.data.productQuantity));
       this.formGroup.controls.categoryID.setValue(parseInt(this.data.categoryID));
       this.formGroup.controls.userID.setValue(parseInt(this.data.userID));
-  }
+  }    
   productName2:any;
   productPrice2:any;
   productImg2:any;
@@ -56,13 +56,16 @@ export class CreatproductfarmerComponent implements OnInit {
         productImg:this.productImg2.toString(),
         productQuantity:parseInt(this.productQuantity2),
        categoryID:parseInt(this.categoryID2),
-       userID:parseInt(this.userID2)
+       userID:parseInt(this.userID2),
     
        }
        
         this.productService.create(data2);
       }
     
+
+
+
       uploadFile(files:any) {​​​
         if (files.length === 0) {​​​
         return;
