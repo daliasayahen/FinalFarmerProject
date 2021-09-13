@@ -16,11 +16,11 @@ export class UsersService {
  
  
   getallfarmers(): Observable<any[]>{
-    return this.http.get<any>('https://localhost:44379/api/users/allfarmers');
+    return this.http.get<any>('https://localhost:44379/api/users/alltraders');
   }
 
   getalltraders(): Observable<any[]>{
-    return this.http.get<any>('https://localhost:44379/api/users/alltraders');
+    return this.http.get<any>('https://localhost:44379/api/users/allfarmers');
   }
   getallproducts(): Observable<any[]>{
     return this.http.get<any>('https://localhost:44379/api/products');
@@ -86,7 +86,7 @@ export class UsersService {
     };
     this.spiner.show();
     this.http.put('https://localhost:44379/api/users',data,requestOptions).subscribe((res:any)=>{
-    this.toaster.success('Created');
+    this.toaster.success('User Updated');
     this.spiner.hide();
     },err=>{
       this.spiner.hide();

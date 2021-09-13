@@ -10,6 +10,7 @@ import { ProductSoldoutComponent } from './product-soldout/product-soldout.compo
 import { ProductcardfarmerComponent } from './productcardfarmer/productcardfarmer.component';
 import { ProductsoldouthomeComponent } from './productsoldouthome/productsoldouthome.component';
 import { ReviewformComponent } from './reviewform/reviewform.component';
+import { UpdateFarmerProductComponent } from './update-farmer-product/update-farmer-product.component';
 
 const routes: Routes = [
   {
@@ -37,6 +38,10 @@ const routes: Routes = [
   {
     path:'Creatproductfarmer',
     component: CreatproductfarmerComponent
+  },
+  {
+    path:' UpdateFarmerProduct',
+    component: UpdateFarmerProductComponent
   },
   {
     path:'Productsoldouthome',

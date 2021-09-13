@@ -58,7 +58,7 @@ export class UpdateFarmerComponent implements OnInit {
     this.age2=this.formGroup.value.age;
     this.roleId2=this.formGroup.value.roleId;
    const data2={
-     userId:parseInt(this.userId2),
+ userId:parseInt(this.userId2),
  username:this.username2.toString(),
  phoneNumber:this.phoneNumber2.toString(),
  email:this.email2.toString(),

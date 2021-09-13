@@ -76,7 +76,7 @@ export class ProductServiceService {
       headers: new HttpHeaders(headerDict), 
     };
     this.spiner.show();
-    this.http.post('https://localhost:44379/api/products',data,requestOptions).subscribe((res:any)=>{
+    this.http.put('https://localhost:44379/api/products',data,requestOptions).subscribe((res:any)=>{
     this.toaster.success('Created');
     this.spiner.hide();
     },err=>{
