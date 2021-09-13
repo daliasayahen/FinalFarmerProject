@@ -64,8 +64,6 @@ export class FarmerHomeComponent implements OnInit {
   UpdateUser(){
     
     this.dialog.open(UpdateFarmerComponent);
-
-
   }
   goHome(){
     this.router.navigate(['dashboard/admin'])

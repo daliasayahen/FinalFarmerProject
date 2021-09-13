@@ -1,0 +1,88 @@
+
+<h2 mat-dialog-title>Add Products</h2>
+<mat-dialog-content class="mat-typograghy">
+
+     
+<form [formGroup]='formGroup'>
+    <mat-form-field class="example-full-width">
+        <mat-label>Product ID</mat-label>
+        <input matInput formControlName="productID" >
+        <mat-error *ngIf="formGroup.controls.productID.hasError('required')">
+            product id is Required
+        </mat-error>
+      </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Product Name</mat-label>
+      <input matInput formControlName="productName" >
+      <mat-error *ngIf="formGroup.controls.productName.hasError('required')">
+          product Name is Required
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-label>Product Price</mat-label>
+        <input matInput formControlName="productPrice" >
+        <mat-error *ngIf="formGroup.controls.productPrice.hasError('required')" >
+            Product Price is Required
+        </mat-error> 
+    </mat-form-field>
+
+
+
+
+    
+     <mat-form-field class="example-full-width"> 
+        <mat-label>Product Img</mat-label>
+        <input matInput formControlName="productImg" >
+        <mat-error *ngIf="formGroup.controls.productImg.hasError('required')" >
+            Product Img is Required
+        </mat-error> 
+    </mat-form-field>
+
+    <!-- <mat-form-field class="example-full-width"> 
+        <mat-label>Product Img</mat-label>
+        <input type="file" #file placeholder="Choose Image" 
+             formControlName="img" (change)="uploadFile(file.files)" 
+          style="display:none;">
+          <button type="button" class="btn btn-success" 
+          (click)="file.click()">Upload Image</button>
+    </mat-form-field> -->
+
+
+
+
+
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Product Quantity</mat-label>
+        <input matInput formControlName="productQuantity" >
+        <mat-error *ngIf="formGroup.controls.productQuantity.hasError('required')" >
+            ProductQuantity is Required
+        </mat-error> 
+    </mat-form-field>
+
+    <!-- <mat-form-field class="example-full-width">
+        <mat-label>user ID</mat-label>
+        <input matInput formControlName="userID" >
+        <mat-error *ngIf="formGroup.controls.userID.hasError('required')" >
+           userIDs is Required
+        </mat-error> 
+    </mat-form-field> -->
+    <mat-form-field class="example-full-width">
+        <mat-label> Fruit press(1)/vegitable press(2)</mat-label>
+        <input matInput formControlName="categoryID" >
+        <mat-error *ngIf="formGroup.controls.categoryID.hasError('required')" >
+            CategoryID is  Required
+        </mat-error> 
+    </mat-form-field>
+    
+
+
+</form>
+</mat-dialog-content>
+<mat-dialog-actions>
+<button  mat-button mat-dialog-close>Cancel</button>
+<button [disabled]="!formGroup.valid" [mat-dialog-close]="true" mat-button color="info" (click)="saveItem()">Save</button>
+
+</mat-dialog-actions>
+
+

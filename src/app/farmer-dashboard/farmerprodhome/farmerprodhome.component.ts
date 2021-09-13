@@ -6,6 +6,7 @@ import { ToastrService } from 'ngx-toastr';
 import { ProductServiceService } from 'src/app/servics/product-service.service';
 import { UsersService } from 'src/app/servics/users.service';
 import { CreatproductfarmerComponent } from '../creatproductfarmer/creatproductfarmer.component';
+import { UpdateFarmerProductComponent } from '../update-farmer-product/update-farmer-product.component';
 
 @Component({
   selector: 'app-farmerprodhome',
@@ -50,6 +51,7 @@ export class FarmerprodhomeComponent implements OnInit {
   }
 
   Updateproduct(){
+    this.dialog.open(UpdateFarmerProductComponent);
 
   }
   getall(){

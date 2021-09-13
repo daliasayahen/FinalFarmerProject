@@ -17,8 +17,8 @@ export class CreatproductfarmerComponent implements OnInit {
     productPrice:new FormControl('',Validators.required),
     productImg:new FormControl('',Validators.required),
     productQuantity:new FormControl('',Validators.required),
-    categoryID:new FormControl('',Validators.required),
-    userID:new FormControl('',Validators.required),
+    categoryID:new FormControl('',Validators.required)
+    // userID:new FormControl('',Validators.required),
 
   })
   constructor(private productService:ProductServiceService,private toastr:ToastrService,
@@ -30,14 +30,14 @@ export class CreatproductfarmerComponent implements OnInit {
       this.formGroup.controls.productImg.setValue(this.data.productImg.toString());
       this.formGroup.controls.productQuantity.setValue(parseInt(this.data.productQuantity));
       this.formGroup.controls.categoryID.setValue(parseInt(this.data.categoryID));
-      this.formGroup.controls.userID.setValue(parseInt(this.data.userID));
+      // this.formGroup.controls.userID.setValue(parseInt(this.data.userID));
   }    
   productName2:any;
   productPrice2:any;
   productImg2:any;
   productQuantity2:any;
   categoryID2:any;
-  userID2:any;
+  // userID2:any;
       
 
       saveItem(){
@@ -48,15 +48,15 @@ export class CreatproductfarmerComponent implements OnInit {
         this.productImg2=this.formGroup.value.productImg;
         this.productQuantity2=this.formGroup.value.productQuantity;
         this.categoryID2=this.formGroup.value.categoryID;
-        this.userID2=this.formGroup.value.userID;
+        // this.userID2=this.formGroup.value.userID;
         
        const data2={
        productName:this.productName2.toString(),
        productPrice:parseInt(this.productPrice2),
         productImg:this.productImg2.toString(),
         productQuantity:parseInt(this.productQuantity2),
-       categoryID:parseInt(this.categoryID2),
-       userID:parseInt(this.userID2),
+       categoryID:parseInt(this.categoryID2)
+      //  userID:parseInt(this.userID2),
     
        }
        

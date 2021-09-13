@@ -30,3 +30,17 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
+.products-single {
+  width: 345px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 30px;
+  padding: 100%;
+  margin-top: -286%;
+}
+.box-img-hover img {
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+  width: 91%;
+}

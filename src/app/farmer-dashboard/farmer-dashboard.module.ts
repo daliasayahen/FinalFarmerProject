@@ -9,6 +9,7 @@ import { FarmerprodhomeComponent } from './farmerprodhome/farmerprodhome.compone
 import { CreatproductfarmerComponent } from './creatproductfarmer/creatproductfarmer.component';
 import { ProductsoldouthomeComponent } from './productsoldouthome/productsoldouthome.component';
 import { ProductcardfarmerComponent } from './productcardfarmer/productcardfarmer.component';
+import { UpdateFarmerProductComponent } from './update-farmer-product/update-farmer-product.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { ProductcardfarmerComponent } from './productcardfarmer/productcardfarme
     CreatproductfarmerComponent,
     ProductsoldouthomeComponent,
     ProductcardfarmerComponent,
+    UpdateFarmerProductComponent,
   ],
   imports: [
     CommonModule,

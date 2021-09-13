@@ -1,4 +1,4 @@
-<!--navbar-->
+
 
 <!-- Start Main Top -->
 <header class="main-header">
@@ -101,7 +101,7 @@
 <!-- End Top Search -->
 <!--/navbar-->
 
-<div class="all-title-box">
+<!-- <div class="all-title-box">
   <div class="formcontainer">
       <div class="row">
           <div class="col-lg-12">
@@ -113,58 +113,115 @@
           </div>
       </div>
   </div>
-</div>
+</div> -->
 
 
-<div style="margin-top: -10%;">
+  
 
-  <h1 style="text-align: center; font-family: Georgia, 'Times New Roman', Times, serif;margin-top: 15%;">Login</h1>
-  <div class="container">  
-    <div class="loginCard">
-      <form >
-      <div class="example-container">
-              <mat-form-field appearance="fill" class="example-full-width">
-                <mat-label>Enter your username</mat-label>
-                <input matInput placeholder="Enter your User name" [formControl]="LoginService.username">
-                <mat-error *ngIf="LoginService.username.hasError('required')">
-                   please enter user name
-                </mat-error>
-                <!-- <mat-error *ngIf="auth.Email.hasError('email')">
-                  Enter valid Email
-                </mat-error> -->
-              </mat-form-field>
+  <!--/login form-->
+
+ 
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form">
+					<span class="login100-form-title p-b-43">
+						Login to continue
+					</span>
+					
+					
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+            <mat-form-field  class="example-full-width">
+               <mat-label>Enter your username</mat-label>
+              <input matInput placeholder="Enter your User name" [formControl]="LoginService.username">
+              <mat-error *ngIf="LoginService.username.hasError('required')">
+                 please enter user name
+              </mat-error>
+              <!-- <mat-error *ngIf="auth.Email.hasError('email')">
+                Enter valid Email
+              </mat-error> -->
+            </mat-form-field>
+					</div>
+					
+					
+					<div class="wrap-input100 validate-input" data-validate="Password is required">
+						<mat-form-field  class="example-full-width">
+              <mat-label>Enter your Password</mat-label>
+              <input type ="password" matInput placeholder="pat@example.com" [formControl]="LoginService.password" value="Password">
+              <mat-error *ngIf="LoginService.password.hasError('required')&& !LoginService.password.hasError('minlength')">
+                 please enter Password
+              </mat-error> 
+         <mat-error *ngIf="LoginService.password.hasError('minlength')">
+                Enter strong password 
+              </mat-error>
+              <ng-container>
+
+              </ng-container>
+            </mat-form-field>
+					</div>
+
+					<div class="flex-sb-m w-full p-t-3 p-b-32">
+                <mat-checkbox class="example-margin" [(ngModel)]="LoginService.checked"
+               (click)="RememberFun()"  for="ckb1">Remember me</mat-checkbox>
+						<div>
+							<a href="#" class="txt1">
+								Forgot Password?
+							</a>
+						</div>
+					</div>
+			
+
+					<div class="container-login100-form-btn">
+						
+
+            <button  color="primary" (click)="submit()" class="login100-form-btn" style="background-color: #b2b63bc7;">
   
-  
-               <mat-form-field appearance="fill" class="example-full-width">
-                  <mat-label>Enter your Password</mat-label>
-                  <input type ="password" matInput placeholder="pat@example.com" [formControl]="LoginService.password" value="Password">
-                  <mat-error *ngIf="LoginService.password.hasError('required')&& !LoginService.password.hasError('minlength')">
-                     please enter Password
-                  </mat-error> 
-             <mat-error *ngIf="LoginService.password.hasError('minlength')">
-                    Enter strong password 
-                  </mat-error>
-                  <ng-container>
-  
-                  </ng-container>
-                </mat-form-field>
-                <section class="example-section">
-                  <mat-checkbox class="example-margin" [(ngModel)]="LoginService.checked" (click)="RememberFun()">Remember me</mat-checkbox>
-                </section>
-                <button [disabled]="!LoginService.username.valid || !LoginService.password.valid" mat-button color="primary" (click)="submit()" style="flex:1;width:100%;margin-top:50px ;">
-  
-                  <ng-container>Login</ng-container>  </button>
-  
-         
-          <p (click)="gotToRegister()">if you dont have an account <span style="color:tomato">register Now</span></p>
-           <p routerLink="register">Create New Acoout</p> 
-             </div>
-      </form>
-      </div>
-  </div>
-  </div> 
+              <ng-container>Login</ng-container>  </button>
+					</div>
+
+					
+					<div class="text-center p-t-46 p-b-20">
+						<span class="txt2">
+							or sign up using
+						</span>
+					</div>
+
+					<div class="login100-form-social flex-c-m">
+						<a href="#" class="login100-form-social-item flex-c-m bg1 m-r-5">
+							<i class="fa fa-facebook-f" aria-hidden="true"></i>
+						</a>
+
+						<a href="#" class="login100-form-social-item flex-c-m bg2 m-r-5">
+							<i class="fa fa-twitter" aria-hidden="true"></i>
+						</a>
+					</div>
+				</form>
+
+				<div class="login100-more" style="background-image: url('https://images.unsplash.com/photo-1630660003299-614c9c523a53?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDI2fF9oYi1kbDRRLTRVfHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');">
+				</div>
+			</div>
+		</div>
+	</div> 
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
   <!-- Start Footer  -->
-<footer>
+
+
+
+<footer style="margin-top: 4%;">
     <div class="footer-main">
         <div class="container">
     <div class="row">
@@ -259,3 +316,75 @@
   
   
   
+
+
+
+<!-- <body style="background-color: #666666;">
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form">
+					<span class="login100-form-title p-b-43">
+						Login to continue
+					</span>
+					
+					
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<input class="input100" type="text" name="email">
+						<span class="focus-input100"></span>
+						<span class="label-input100">Email</span>
+					</div>
+					
+					
+					<div class="wrap-input100 validate-input" data-validate="Password is required">
+						<input class="input100" type="password" name="pass">
+						<span class="focus-input100"></span>
+						<span class="label-input100">Password</span>
+					</div>
+
+					<div class="flex-sb-m w-full p-t-3 p-b-32">
+						<div class="contact100-form-checkbox">
+							<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+							<label class="label-checkbox100" for="ckb1">
+								Remember me
+							</label>
+						</div>
+
+						<div>
+							<a href="#" class="txt1">
+								Forgot Password?
+							</a>
+						</div>
+					</div>
+			
+
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn">
+							Login
+						</button>
+					</div>
+					
+					<div class="text-center p-t-46 p-b-20">
+						<span class="txt2">
+							or sign up using
+						</span>
+					</div>
+
+					<div class="login100-form-social flex-c-m">
+						<a href="#" class="login100-form-social-item flex-c-m bg1 m-r-5">
+							<i class="fa fa-facebook-f" aria-hidden="true"></i>
+						</a>
+
+						<a href="#" class="login100-form-social-item flex-c-m bg2 m-r-5">
+							<i class="fa fa-twitter" aria-hidden="true"></i>
+						</a>
+					</div>
+				</form>
+
+				<div class="login100-more" style="background-image: url('../../assets/imageslogin/farmer.jpg');">
+				</div>
+			</div>
+		</div>
+	</div> -->
+	
