@@ -1,20 +1,18 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
-import { ProductComponent } from 'src/app/product/product.component';
-import { CartService } from 'src/app/servics/cart.service';
-import { HomepageService } from 'src/app/servics/homepage.service';
-import { ProductServiceService } from 'src/app/servics/product-service.service';
-import { UsersService } from 'src/app/servics/users.service';
+import { CartService } from '../servics/cart.service';
+import { LoginServiceService } from '../servics/login-service.service';
+import { ProductServiceService } from '../servics/product-service.service';
+import { UsersService } from '../servics/users.service';
 
 @Component({
-  selector: 'app-product-card',
-  templateUrl: './product-card.component.html',
-  styleUrls: ['./product-card.component.css']
+  selector: 'app-cartproduct',
+  templateUrl: './cartproduct.component.html',
+  styleUrls: ['./cartproduct.component.css']
 })
-export class ProductCardComponent implements OnInit {
-  products: Array<object> = [];
+export class CartproductComponent implements OnInit {
 
   @Input() productID:number|undefined
   @Input() productName:String|undefined
@@ -23,17 +21,15 @@ export class ProductCardComponent implements OnInit {
    @Input() productQuantity:number|undefined
    @Input() categoryID:number|undefined
    @Input() userID:number|undefined
+   Quantity:any;
 
 
-
-  
-   constructor(private router:Router,public userService:UsersService,
+  constructor(private router:Router,public userService:UsersService,
     private toast:ToastrService , private spiner :NgxSpinnerService ,
-    public productService:ProductServiceService,private cartService: CartService){}
+    public productService:ProductServiceService,private cartService: CartService,public loginservice:LoginServiceService){}
+
 
   ngOnInit(): void {
-    //    this.getall();
-
   }
   getall(){
     this.spiner.show();
@@ -66,20 +62,35 @@ export class ProductCardComponent implements OnInit {
       formData.append('file', fileToUpload, fileToUpload.name);
       this.productService.uploadAttachment(formData);
       }​​​
-    
-    
-      _addItemToCart( productId:any  ): void {
-        let payload = {
-          productID: productId,
+
+
+      insertRecord(Id: any) {
+        console.log(this.Quantity);
+            this.productID = Id;
+          
+          const val = {
+            quantity: this.Quantity,
+       
+        prouductId: Id,
+        username: this.loginservice.username.value
+            
+           
+            
+           
+
+
+          };
+
         
-        };
-        this.cartService.addToCart(payload);
-         alert('Product Added');
+          console.log(val);
+          this.cartService.Book(val).subscribe((res) => {
+          });
+          console.log(val);
+        }
       
-      }​​​
+      }
       
-      
+    
+    
 
 
-
-    }

@@ -11,15 +11,25 @@ import { environment } from 'src/environments/environment';
   
 })
 export class ProductServiceService {
-
+  public products:any;
   data:any[]=[];
   display_image:any;
-  constructor(private http:HttpClient , private toaster:ToastrService ,private spiner:NgxSpinnerService ,private router:Router) { }
- 
+  cartProductList = [];
+
+  
+  constructor(private http:HttpClient , private toaster:ToastrService ,private spiner:NgxSpinnerService ,private router:Router) 
+  {
+    
+  
+} 
+
+//cart crud
+
  
   getall(): Observable<any[]>{
     return this.http.get<any>('https://localhost:44379/api/products');
   }
+  
 
   getAllproductssoldout(): Observable<any[]>{
 
