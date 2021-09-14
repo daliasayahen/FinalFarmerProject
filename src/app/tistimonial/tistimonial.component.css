@@ -1,5 +1,8 @@
 
 
+
+/* 
+
 .carousel-item {
 	height: 100vh;
 	min-height: 300px;
@@ -94,7 +97,7 @@ body {
 
 i {
   /* background-color: rgb(223, 56, 89); */
-  padding: 1.4rem
+  /* padding: 1.4rem
 }
 #i1{
      background-color: rgb(223, 56, 89); 
@@ -123,4 +126,56 @@ i {
 .carousel-control-next {
   transition: none;
   opacity: unset;
+}  */
+
+
+
+
+
+
+@import url("https://use.typekit.net/ivq4uiu.css");
+html {
+	background: #2b2a34;
+	color: #f2f2f2;
 }
+.container {
+	margin-top: 50px;
+}
+	.testimonial-wrapper {
+		padding: 20px;
+		transition: all 0.2s ease-in-out;
+  }
+		:hover {
+			margin-top: -3px;
+		}
+		.testimonial {
+			background: #8fad09;
+			box-shadow: 0 10px 100px #efeef3;
+			border-radius: 2px;
+			padding: 15px;
+    }
+			.quote {
+				font-size: 1.3rem;
+				color: #f2f2f2;
+				z-index: 1;
+			
+        font-family: 'Roboto Slab', serif;
+				font-weight: 120;
+				font-style: normal;
+				letter-spacing: 0.02rem;
+       
+			}
+			.attribution {
+				color: #0f0d0a;
+        
+				text-transform: uppercase;
+				letter-spacing: 0.05rem;
+				padding-top: 15px;
+				font-family: poppins, sans-serif;
+				font-weight: 700;
+				font-size: 1rem;
+				font-style: normal;
+			}
+	
+	
+
