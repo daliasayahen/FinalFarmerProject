@@ -44,6 +44,7 @@ import { VegitableComponent } from './vegitable/vegitable.component';
     GalaryProductsComponent,
     FruitsComponent,
     VegitableComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -56,7 +57,8 @@ import { VegitableComponent } from './vegitable/vegitable.component';
     ToastNoAnimationModule.forRoot(),
     HttpClientModule,
     MatDialogModule,
-    SharedModule
+    SharedModule,
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

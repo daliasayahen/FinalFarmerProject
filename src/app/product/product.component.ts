@@ -42,7 +42,7 @@ export class ProductComponent implements OnInit {
   }
 
   AddtoCart(){
-    this.router.navigate(['Cart'])
+    this.router.navigate(['Register'])
   }
   getImagePath(value:string ){
 
