@@ -1,7 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
+import { ProductComponent } from 'src/app/product/product.component';
+import { CartService } from 'src/app/servics/cart.service';
 import { HomepageService } from 'src/app/servics/homepage.service';
 import { ProductServiceService } from 'src/app/servics/product-service.service';
 import { UsersService } from 'src/app/servics/users.service';
@@ -12,6 +14,7 @@ import { UsersService } from 'src/app/servics/users.service';
   styleUrls: ['./product-card.component.css']
 })
 export class ProductCardComponent implements OnInit {
+  products: Array<object> = [];
 
   @Input() productID:number|undefined
   @Input() productName:String|undefined
@@ -22,10 +25,11 @@ export class ProductCardComponent implements OnInit {
    @Input() userID:number|undefined
 
 
+
   
    constructor(private router:Router,public userService:UsersService,
     private toast:ToastrService , private spiner :NgxSpinnerService ,
-    public productService:ProductServiceService){}
+    public productService:ProductServiceService,private cartService: CartService){}
 
   ngOnInit(): void {
     //    this.getall();
@@ -62,6 +66,15 @@ export class ProductCardComponent implements OnInit {
       formData.append('file', fileToUpload, fileToUpload.name);
       this.productService.uploadAttachment(formData);
       }​​​
+    
+    
+      _addItemToCart( productId:any  ): void {
+        let payload = {
+          productID: productId,
+        
+        };
+        this.productService.addToCart(payload)
+         alert('Product Added');
       
       }​​​
       
@@ -69,4 +82,4 @@ export class ProductCardComponent implements OnInit {
 
 
 
-
+    }

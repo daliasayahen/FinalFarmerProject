@@ -243,12 +243,19 @@
 
  
   
-
- <!-- <app-review *ngFor="let card of reviewservice.data" 
+<h1 style="text-align: center;"> Reviews !</h1>
+ <app-review *ngFor="let card of reviewservice.data" 
  [reviewID]="card.reviewID"  [userName]="card.userName" [descriptiontext]="card.descriptiontext"
- [img]="card.img" [rate]="card.rate" style="display:inline-block; 
-  margin-left: 10%;"></app-review> -->
-    
+ [img]="card.img" [rate]="card.rate"
+ class="col-4"
+            style=" display: inline-block;
+            width: 35%;
+            padding: 5%;
+            height: 17%;
+            margin-top: -12%;
+            margin-bottom: 3%;"
+  ></app-review>
+
  
 <!-- 
  <app-tistimonial *ngFor="let card of tetimonialService.data" 
@@ -258,24 +265,7 @@
 
 
 
-  <!-- Card  angular material-->
-  <!--  <div class="row"> -->
-    <!-- <div class="col">
-        <app-product *ngFor="let card of homepageservice.data"
-         [productID]="card.productID"  
-         [productName]="card.productName" 
-         [productPrice]="card.productPrice"
-         [productImg]="card.productImg"
-          [productQuantity]="card.productQuantity"
-         [categoryID]="card.categoryID" 
-            [userID]="card.userID">
   
-    </app-product>
-      
-    </div> -->
-  <!-- </div>  -->
-  <!-- /Card  angular material-->
-
 <!-- Start Footer  -->
 <footer>
     <div class="footer-main">

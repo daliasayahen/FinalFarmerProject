@@ -10,15 +10,68 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class ProductServiceService {
-
+  public products:any;
   data:any[]=[];
   display_image:any;
-  constructor(private http:HttpClient , private toaster:ToastrService ,private spiner:NgxSpinnerService ,private router:Router) { }
- 
+  cartProductList = [];
+
+  
+  constructor(private http:HttpClient , private toaster:ToastrService ,private spiner:NgxSpinnerService ,private router:Router) 
+  {
+    
+  
+} 
+
+//cart crud
+
+addToCart(payload:any)
+  {
+    const headerDict = {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    }
+    const requestOptions = {                                                                                                                                                                                 
+      headers: new HttpHeaders(headerDict), 
+    };
+    this.spiner.show();
+    debugger
+    this.http.post('https://localhost:44379/api/Cart',payload,requestOptions).subscribe((res:any)=>{
+    this.toaster.success('Created');
+    this.spiner.hide();
+    },err=>{
+      
+      this.spiner.hide();
+      this.toaster.error('Somthing want worning ');
+    }
+    
+    )
+  }
+
+
+getCartItems() {
+  return this.http.get('https://localhost:44379/api/Cart');
+}
+increaseQty(payload:any) {
+  return this.http.post('https://localhost:44379/api/Cart', payload);
+}
+
+
+emptyCart(id:number){
+  debugger
+  this.spiner.show();
+  this.http.delete('https://localhost:44379/api/products/'+id).subscribe((data:any)=>{
+    this.toaster.success('Deleted');
+    this.spiner.hide();
+  },err=>{
+    this.spiner.hide();
+  }
+  );    
+}
  
   getall(): Observable<any[]>{
     return this.http.get<any>('https://localhost:44379/api/products');
   }
+  
 
   getAllproductssoldout(): Observable<any[]>{
 

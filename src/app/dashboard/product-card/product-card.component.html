@@ -2,9 +2,9 @@
 <div class="products-box"  >
     <div class="container">
        
-        <div class="row special-list">
-            <div class="col-xs-6 col-sm-4 special-grid best-seller" >
-                <div class="products-single fix">
+        <div class="row special-list" >
+            <div class="col-xs-6 col-sm-4 special-grid best-seller"  >
+                <div class="products-single fix" style="width: 143%;">
                     <div class="box-img-hover">
                         <div class="type-lb">
                             <p class="sale">Sale</p>
@@ -16,7 +16,7 @@
                                 <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
                                 <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
                             </ul>
-                            <a class="cart" href="#">Add to Cart</a>
+                            <a class="cart" (click)="_addItemToCart(productID)" >Add to Cart</a>
                         </div>
                     </div>
                     <div class="why-text">
@@ -24,10 +24,12 @@
                         <h5> {{productPrice}}</h5>
                     </div>
                 </div>
-            </div>
+            </div> 
   
           
         </div>
     </div>
   </div>
   <!-- End Products  -->
+
+ 

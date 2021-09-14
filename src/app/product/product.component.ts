@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
+import { CartService } from '../servics/cart.service';
 import { HomepageService } from '../servics/homepage.service';
 import { ProductServiceService } from '../servics/product-service.service';
 
@@ -21,7 +22,11 @@ export class ProductComponent implements OnInit {
 
 
   
-   constructor(private router:Router,public homepageservice:HomepageService,private toast:ToastrService , private spiner :NgxSpinnerService ,public productService:ProductServiceService){}
+   constructor(private router:Router,
+    public homepageservice:HomepageService,
+    private toast:ToastrService , private spiner :NgxSpinnerService ,public product:ProductComponent,
+    public productService:ProductServiceService, private cartService: CartService
+    ){}
 
   ngOnInit(): void {
     //    this.getall();
@@ -60,6 +65,7 @@ export class ProductComponent implements OnInit {
       formData.append('file', fileToUpload, fileToUpload.name);
       this.productService.uploadAttachment(formData);
       }​​​
+   
       
       }​​​
       

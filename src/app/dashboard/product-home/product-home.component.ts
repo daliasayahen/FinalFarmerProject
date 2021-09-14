@@ -21,6 +21,7 @@ export class ProductHomeComponent implements OnInit {
     this.getallproducts();
     
   }
+  
   getallproducts(){
     this.spiner.show();
     this.userService.getallproducts().subscribe((res:any)=>{
