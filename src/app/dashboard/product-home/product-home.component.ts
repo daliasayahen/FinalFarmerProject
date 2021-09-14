@@ -69,4 +69,7 @@ logout(){
 goHome(){
   
 }
+gotocart(){
+  this.router.navigate(['Cart'])
+}
 }

@@ -84,11 +84,10 @@ console.log(body);
       //save the decod on the local storge . but you must conver this data to string value using Json.stringify
       localStorage.setItem('user',JSON.stringify({...data}));
       
-      if(data.role=="admin"){
+      if(data.role=="admin")
+      {
       this.router.navigate(['dashboard/admin']);
       }
-  
-
       
       else if(data.role=="farmer")
       {
@@ -99,8 +98,8 @@ console.log(body);
         this.router.navigate(['Traderdashboard/Trader']);
       }
 
-      else {
-        alert("User does not exist")
+    else {
+      this.router.navigate(['Traderdashboard/Trader']);
     }
   
       }

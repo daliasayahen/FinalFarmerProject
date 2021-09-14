@@ -1,0 +1,35 @@
+
+
+<div class="cart-box-main">
+    <div class="container">
+        <div class="row">
+<tbody>
+                           
+                          
+    <tr>
+        <td class="thumbnail-img">
+            
+        <img class="img-fluid" src="{{getImagePath(productImg)}}" alt="" />
+   
+        </td>
+        <td class="name-pr">
+           
+                {{productName}}                
+                 
+        </td>
+        <td class="price-pr">
+            <p>{{productPrice}}</p>
+        </td>
+        <td class="quantity-box">
+    <input type="number" size="4"  min="0" step="1" [(ngModel)]="Quantity" ></td>
+       
+        <td class="remove-pr">
+            
+        
+    <button class="btn " style="background-color: darkgoldenrod;" (click)="insertRecord(productID)" >Add to card</button>
+        </td>
+    </tr>
+</tbody>
+</div>
+</div>
+</div>
