@@ -119,8 +119,7 @@
 <!-- End All Title Box -->
 
 <!-- Start Cart  -->
-<div class="cart-box-main">
-    <div class="container">
+
         <div class="row">
             <div class="col-lg-12">
                 <div class="table-main table-responsive">
@@ -135,79 +134,21 @@
                                 <th>Remove</th>
                             </tr>
                         </thead>
+                        
                         <tbody>
-                            <tr>
-                                <td class="thumbnail-img">
-                                    <a href="#">
-                                <img class="img-fluid" src="../../assets/images/img-pro-01.jpg" alt="" />
-                            </a>
-                                </td>
-                                <td class="name-pr">
-                                    <a href="#">
-                                Lorem ipsum dolor sit amet
-                            </a>
-                                </td>
-                                <td class="price-pr">
-                                    <p>$ 80.0</p>
-                                </td>
-                                <td class="quantity-box"><input type="number" size="4" value="1" min="0" step="1" class="c-input-text qty text"></td>
-                                <td class="total-pr">
-                                    <p>$ 80.0</p>
-                                </td>
-                                <td class="remove-pr">
-                                    <a href="#">
-                                <i class="fas fa-times"></i>
-                            </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="thumbnail-img">
-                                    <a href="#">
-                                <img class="img-fluid" src="../../assets/images/img-pro-02.jpg" alt="" />
-                            </a>
-                                </td>
-                                <td class="name-pr">
-                                    <a href="#">
-                                Lorem ipsum dolor sit amet
-                            </a>
-                                </td>
-                                <td class="price-pr">
-                                    <p>$ 60.0</p>
-                                </td>
-                                <td class="quantity-box"><input type="number" size="4" value="1" min="0" step="1" class="c-input-text qty text"></td>
-                                <td class="total-pr">
-                                    <p>$ 80.0</p>
-                                </td>
-                                <td class="remove-pr">
-                                    <a href="#">
-                                <i class="fas fa-times"></i>
-                            </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="thumbnail-img">
-                                    <a href="#">
-                                <img class="img-fluid" src="../../assets/images/img-pro-03.jpg" alt="" />
-                            </a>
-                                </td>
-                                <td class="name-pr">
-                                    <a href="#">
-                                Lorem ipsum dolor sit amet
-                            </a>
-                                </td>
-                                <td class="price-pr">
-                                    <p>$ 30.0</p>
-                                </td>
-                                <td class="quantity-box"><input type="number" size="4" value="1" min="0" step="1" class="c-input-text qty text"></td>
-                                <td class="total-pr">
-                                    <p>$ 80.0</p>
-                                </td>
-                                <td class="remove-pr">
-                                    <a href="#">
-                                <i class="fas fa-times"></i>
-                            </a>
-                                </td>
-                            </tr>
+                          
+                          <app-cartproduct
+                          *ngFor="let card of userservice.data"
+         [productID]="card.productID"  
+         [productName]="card.productName" 
+         [productPrice]="card.productPrice"
+         [productImg]="card.productImg"
+          [productQuantity]="card.productQuantity"
+         [categoryID]="card.categoryID" 
+            [userID]="card.userID" 
+                          >
+                        </app-cartproduct>
+                          
                         </tbody>
                     </table>
                 </div>
@@ -232,10 +173,7 @@
                         <h4>Sub Total</h4>
                         <div class="ml-auto font-weight-bold"> $ 130 </div>
                     </div>
-                    <div class="d-flex">
-                        <h4>Discount</h4>
-                        <div class="ml-auto font-weight-bold"> $ 40 </div>
-                    </div>
+                  
                     <hr class="my-1">
                     <div class="d-flex">
                         <h4>Coupon Discount</h4>
@@ -259,8 +197,7 @@
             <div class="col-12 d-flex shopping-box"><a  class="ml-auto btn hvr-hover"  (click)="Checkout()">Checkout</a> </div>
         </div>
 
-    </div>
-</div>
+
 <!-- End Cart -->
 
 <!-- Start Instagram Feed  -->

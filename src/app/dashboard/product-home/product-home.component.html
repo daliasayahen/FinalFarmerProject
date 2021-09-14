@@ -210,23 +210,29 @@
                           <h5 class="mb-0">Quick Actions</h5>
                           <p class="ml-auto mb-0"><i class="icon-bulb"></i></p>
                         </div>
-                        <!-- <div class="d-md-flex row m-0 quick-action-btns" role="group" aria-label="Quick action buttons">
+                        <div class="d-md-flex row m-0 quick-action-btns" role="group" aria-label="Quick action buttons">
                           <div class="col-sm-6 col-md-3 p-3 text-center btn-wrapper">
-                            <button type="button" class="btn px-0"> <i class="icon-user mr-2"></i> Add Client</button>
+                            <button type="button" class="btn px-0" (click)="gotocart()"> 
+                              <i class="icon-user mr-2" >
+
+                            </i>
+Enter payment                            </button>
                           </div>
                           <div class="col-sm-6 col-md-3 p-3 text-center btn-wrapper">
-                            <button type="button" class="btn px-0"><i class="icon-docs mr-2"></i> Create Quote</button>
+                            <button type="button" class="btn px-0" >
+                              <i class="icon-docs mr-2" ></i>
+create invoice                            </button>
                           </div>
-                          <div class="col-sm-6 col-md-3 p-3 text-center btn-wrapper">
-                            <button type="button" class="btn px-0"><i class="icon-folder mr-2"></i> Enter Payment</button>
-                          </div>
-                          <div class="col-sm-6 col-md-3 p-3 text-center btn-wrapper">
-                            <button type="button" class="btn px-0"><i class="icon-book-open mr-2"></i>Create Invoice</button>
-                          </div>
-                        </div> -->
+                         
+                         
+                        </div>
                       </div>
                     </div>
                   </div>
+
+
+
+
                   <!-- Quick Action Toolbar Ends-->
                  <div class="container">
     <div class="cards">
@@ -237,8 +243,15 @@
          [productImg]="card.productImg"
           [productQuantity]="card.productQuantity"
          [categoryID]="card.categoryID" 
-            [userID]="card.userID"  style="display: inline-block; padding: 1%;">
-  
+            [userID]="card.userID" 
+            class="col-4"
+            style="display: inline-block; display: inline-block;
+            width: 35%;
+            padding: 5%;
+            height: 17%;
+            margin-top: -3%;
+            margin-bottom: 3%;" >
+         
     </app-product-card >
       
     </div>

@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {MatIconModule} from '@angular/material/icon';
+
 
 import { TraderComponent } from './trader.component';
 
