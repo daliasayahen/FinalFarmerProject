@@ -130,24 +130,23 @@
                                 <th>Product Name</th>
                                 <th>Price</th>
                                 <th>Quantity</th>
-                                <th>Total</th>
-                                <th>Remove</th>
+                                
                             </tr>
                         </thead>
                         
-                        <tbody>
+
+                <tbody >
                           
-                          <app-cartproduct
+                           <app-cartproduct
                           *ngFor="let card of userservice.data"
-         [productID]="card.productID"  
-         [productName]="card.productName" 
-         [productPrice]="card.productPrice"
-         [productImg]="card.productImg"
-          [productQuantity]="card.productQuantity"
-         [categoryID]="card.categoryID" 
-            [userID]="card.userID" 
-                          >
-                        </app-cartproduct>
+                          [productID]="card.productID"  
+                            [productName]="card.productName" 
+                         [productPrice]="card.productPrice" 
+                         [productImg]="card.productImg"
+                         [productQuantity]="card.productQuantity"
+                          [categoryID]="card.categoryID" 
+                           [userID]="card.userID"  style="margin-top:-1%" >
+                        </app-cartproduct >  
                           
                         </tbody>
                     </table>
