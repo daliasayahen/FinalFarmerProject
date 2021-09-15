@@ -5,27 +5,26 @@
 
  <div class="container-scroller">
             <!-- partial:partials/_navbar.html -->
-   <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
-              <div class="navbar-brand-wrapper d-flex align-items-center">
+            <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row" style="margin-left: 1.20%;">
+              <div class="navbar-brand-wrapper d-flex align-items-center" style=" background-color: white;">
                 <a class="navbar-brand brand-logo" href="index.html">
-                  <img src="../../assets/imagesDash/logo.svg" alt="logo" class="logo-dark" />
+                  <img src="../../assets/images/logo.png" style="width: 100%;height: 100%;margin-left: 5%; " alt="logo" class="logo-dark" />
                 </a>
-                <a class="navbar-brand brand-logo-mini" href="index.html"><img src="../../assets/imagesDash/logo-mini.svg" alt="logo" /></a>
+                <a class="navbar-brand brand-logo-mini" href="index.html"><img src="../../assets/imagesDash/logo-mini.svg" /></a>
               </div>
               <div class="navbar-menu-wrapper d-flex align-items-center flex-grow-1">
-                <h5 class="mb-0 font-weight-medium d-none d-lg-flex">Welcome stallar dashboard!</h5>
                 <ul class="navbar-nav navbar-nav-right ml-auto">
-                  <form class="search-form d-none d-md-block" action="#">
+                  <!-- <form class="search-form d-none d-md-block" action="#">
                     <i class="icon-magnifier"></i>
                     <input type="search" class="form-control" placeholder="Search Here" title="Search here">
-                  </form>
+                  </form> -->
                   <li class="nav-item"><a href="#" class="nav-link"><i class="icon-basket-loaded"></i></a></li>
-                  <li class="nav-item"><a href="#" class="nav-link"><i class="icon-chart"></i></a></li>
+                  <!-- <li class="nav-item"><a href="#" class="nav-link"><i class="icon-chart"></i></a></li> -->
                   <li class="nav-item dropdown">
-                    <a class="nav-link count-indicator message-dropdown" id="messageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+                  <!--   <a class="nav-link count-indicator message-dropdown" id="messageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
                       <i class="icon-speech"></i>
                       <span class="count">7</span>
-                    </a>
+                    </a> -->
                     <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0" aria-labelledby="messageDropdown">
                       <a class="dropdown-item py-3">
                         <p class="mb-0 font-weight-medium float-left">You have 7 unread mails </p>
@@ -68,7 +67,7 @@
                       </div>
                       <span class="profile-text font-weight-normal">English</span>
                     </a>
-                    <div class="dropdown-menu dropdown-menu-left navbar-dropdown py-2" aria-labelledby="LanguageDropdown">
+                   <!--  <div class="dropdown-menu dropdown-menu-left navbar-dropdown py-2" aria-labelledby="LanguageDropdown">
                       <a class="dropdown-item">
                         <i class="flag-icon flag-icon-us"></i> English </a>
                       <a class="dropdown-item">
@@ -77,7 +76,7 @@
                         <i class="flag-icon flag-icon-ae"></i> Arabic </a>
                       <a class="dropdown-item">
                         <i class="flag-icon flag-icon-ru"></i> Russian </a>
-                    </div>
+                    </div> -->
                   </li>
                   <li class="nav-item dropdown d-none d-xl-inline-flex user-dropdown">
                     <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
@@ -85,13 +84,13 @@
                     <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
                       <div class="dropdown-header text-center">
                         <img class="img-md rounded-circle" src="../../assets/imagesDash/faces/face8.jpg" alt="Profile image">
-                        <p class="mb-1 mt-3">Allen Moreno</p>
+                        <p class="mb-1 mt-3" style="font-weight:bolder;">ADMIN</p>
                         <p class="font-weight-light text-muted mb-0">allenmoreno@gmail.com</p>
                       </div>
                       <a class="dropdown-item"><i class="dropdown-item-icon icon-user text-primary"></i> My Profile <span class="badge badge-pill badge-danger">1</span></a>
-                      <a class="dropdown-item"><i class="dropdown-item-icon icon-speech text-primary"></i> Messages</a>
+                      <!-- <a class="dropdown-item"><i class="dropdown-item-icon icon-speech text-primary"></i> Messages</a>
                       <a class="dropdown-item"><i class="dropdown-item-icon icon-energy text-primary"></i> Activity</a>
-                      <a class="dropdown-item"><i class="dropdown-item-icon icon-question text-primary"></i> FAQ</a>
+                      <a class="dropdown-item"><i class="dropdown-item-icon icon-question text-primary"></i> FAQ</a> -->
                       <a class="dropdown-item"(click)="logout()"><i class="dropdown-item-icon icon-power text-primary"></i>Sign Out</a>
                     </div>
                   </li>
@@ -100,11 +99,11 @@
                   <span class="icon-menu"></span>
                 </button>
               </div>
-   </nav>
+            </nav>
             <!-- partial -->
             <div class="container-fluid page-body-wrapper">
               <!-- partial:partials/_sidebar.html -->
-              <nav class="sidebar sidebar-offcanvas" id="sidebar">
+              <nav class="sidebar sidebar-offcanvas" id="sidebar" style=" background-color:black;">
                 <ul class="nav">
                   <li class="nav-item nav-profile">
                     <a href="#" class="nav-link">
@@ -113,8 +112,8 @@
                         <div class="dot-indicator bg-success"></div>
                       </div>
                       <div class="text-wrapper">
-                        <p class="profile-name">Admin</p>
-                        <p class="designation">Administrator</p>
+                        <p class="profile-name">Admin<p>
+                        <!-- <p class="designation">Trader</p> -->
                       </div>
                       <div class="icon-container">
                         <i class="icon-bubbles"></i>
@@ -127,50 +126,55 @@
                   </li>
                   <li class="nav-item">
                     <a class="nav-link">
-                      <span class="menu-title" (click)="GetAllFarmers()">show all farmers</span>
-                      <i class="icon-screen-desktop menu-icon"></i>
+                      <span class="menu-title" (click)="GetAllFarmers()">Show All Farmers</span>
+                      <i class="icon-globe menu-icon"></i>
                     </a>
                   </li>
                   <li class="nav-item" (click)="GetAlltraders()">
                     <a class="nav-link" >
-                      <span class="menu-title" >show all trader</span>
-                      <i class="icon-screen-desktop menu-icon"></i>
+                      <span class="menu-title" >Show All Trader</span>
+                      <i class="icon-user menu-icon"></i>
                     </a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" >
-                      <span class="menu-title" (click)="GetAllproducts()">show all products</span>
-                      <i class="icon-globe menu-icon"></i>
+                      <span class="menu-title" (click)="GetAllproducts()">Show All Products</span>
+                      <i class="icon-basket-loaded menu-icon"></i>
                     </a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" >
-                      <span class="menu-title" (click)="GetAllreviews()">show all Reviews </span>
+                      <span class="menu-title" (click)="GetAllreviews()">Show All Reviews </span>
+                      <i class="icon-speech menu-icon"></i>
+                    </a>
+                  </li>
+                  <!-- <li class="nav-item">
+                    <a class="nav-link" >
+                      <span class="menu-title" (click)="goToHome()">Go To Home </span>
                       <i class="icon-book-open menu-icon"></i>
                     </a>
-                  </li>
+                  </li> -->
                   <li class="nav-item">
                     <a class="nav-link" >
-                      <span class="menu-title"(click)="goHome()">go to home</span>
-                      <i class="icon-chart menu-icon"></i>
+                      <span class="menu-title" (click)="logout()">Log out </span>
+                      <i class="icon-user menu-icon"></i>
                     </a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="pages/charts/chartist.html">
-                      <span class="menu-title">log out</span>
-                      <i class="icon-chart menu-icon"></i>
-                    </a>
-                  </li>
+           
                 
-                  
                 </ul>
               </nav>
               <!-- partial -->
               <div class="main-panel">
                 <div class="content-wrapper">
                   <div class="row purchace-popup">
-                    <div class="col-12 stretch-card grid-margin">
-                      
+                    <div class="col-12 stretch-card grid-margin" >
+                      <div class="card card-secondary" >
+                        <span class="card-body d-lg-flex align-items-center">
+                          <p class="mb-lg-0" >Trader dashboard  </p>
+                       
+                        </span>
+                      </div>
                     </div>
                   </div>
                   <div class="row">
@@ -178,12 +182,12 @@
                    
                   </div>
                   <!-- Quick Action Toolbar Starts-->
-                  <div class="row quick-action-toolbar">
+                  <div class="row quick-action-btns"   >
                     <div class="col-md-12 grid-margin">
-                      <div class="card">
-                        <div class="card-header d-block d-md-flex">
-                          <h5 class="mb-0">Quick Actions</h5>
-                          <p class="ml-auto mb-0"><i class="icon-bulb"></i></p>
+                      <div class="card"  style="color: black;"  >
+                        <div class="card-header d-block d-md-flex" style="color: black;"  >
+                          <h5 class="mb-0"  >Quick Actions</h5>
+                          <p class="ml-auto mb-0"><i class=""></i></p>
                         </div>
                         <div class="d-md-flex row m-0 quick-action-btns" role="group" aria-label="Quick action buttons">
                           <div class="col-sm-6 col-md-3 p-3 text-center btn-wrapper">
@@ -209,7 +213,7 @@
                     </div>
                   </div>
                   <!-- Quick Action Toolbar Ends-->
-                 show all farmers and thier information
+                 All Farmers and thier information
 <div class=container>
     <!-- <button (click)="createNewUser()">Create New farmer</button> -->
       <div class="cards">
@@ -227,8 +231,6 @@
                 <!-- partial:partials/_footer.html -->
                 <footer class="footer">
                   <div class="d-sm-flex justify-content-center justify-content-sm-between">
-                    <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © bootstrapdash.com 2020</span>
-                    <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Free <a href="https://www.bootstrapdash.com/bootstrap-admin-template/" target="_blank">Bootstrap admin templates</a> from Bootstrapdash.com</span>
                   </div>
                 </footer>
                 <!-- partial -->

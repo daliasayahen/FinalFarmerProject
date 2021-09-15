@@ -8,21 +8,21 @@
                 <div class="products-single fix">
                     <div class="box-img-hover">
                         <div class="type-lb">
-                            <p class="sale">Sale</p>
+                           
                         </div>
                         <img src="{{getImagePath(productImg)}}" class="img-fluid" alt="Image">
                         <div class="mask-icon">
-                            <ul>
+                         <!--    <ul>
                                 <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
                                 <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
                                 <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                            </ul>
-                            <a class="cart" href="#">Add to Cart</a>
+                            </ul> -->
+                            <a class="cart" (click)="gotocart()">Add to Cart</a>
                         </div>
                     </div>
                     <div class="why-text">
                         <h4>{{productName}}</h4>
-                        <h5> {{productPrice}}</h5>
+                        <h5> {{productPrice}} $</h5>
                     </div>
                 </div>
             </div>

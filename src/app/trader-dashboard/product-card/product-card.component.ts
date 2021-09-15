@@ -57,5 +57,9 @@ export class ProductCardComponent implements OnInit {
       this.productService.uploadAttachment(formData);
       }​​​
       
+      gotocart(){
+        this.router.navigate(['Cart'])
+      }
+      
 
 }
