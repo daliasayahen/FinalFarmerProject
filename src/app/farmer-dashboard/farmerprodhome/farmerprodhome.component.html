@@ -1,40 +1,93 @@
 <div class="container-scroller">
   <!-- partial:partials/_navbar.html -->
-  <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0  d-flex flex-row">
-    <div class="navbar-brand-wrapper d-flex align-items-center">
+  <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row" style="margin-left: 1.20%;">
+    <div class="navbar-brand-wrapper d-flex align-items-center" style=" background-color: white;">
       <a class="navbar-brand brand-logo" href="index.html">
-        <img src="../../assets/images/logo.png" style="width: 110%;" alt="logo" class="logo-dark" />
+        <img src="../../assets/images/logo.png" style="width: 100%;height: 100%;margin-left: 5%; " alt="logo" class="logo-dark" />
       </a>
-      <a class="navbar-brand brand-logo-mini" href="index.html"><img src="../../assets/imagesDash/logo-mini.svg" alt="logo" /></a>
+      <a class="navbar-brand brand-logo-mini" href="index.html"><img src="../../assets/imagesDash/logo-mini.svg" /></a>
     </div>
     <div class="navbar-menu-wrapper d-flex align-items-center flex-grow-1">
-      <h5  style="font-weight: 100%;">Welcome Farmers Dashboard !</h5>
       <ul class="navbar-nav navbar-nav-right ml-auto">
-        <form class="search-form d-none d-md-block" action="#">
+        <!-- <form class="search-form d-none d-md-block" action="#">
           <i class="icon-magnifier"></i>
           <input type="search" class="form-control" placeholder="Search Here" title="Search here">
-        </form>
+        </form> -->
         <li class="nav-item"><a href="#" class="nav-link"><i class="icon-basket-loaded"></i></a></li>
-        <li class="nav-item"><a href="#" class="nav-link"><i class="icon-chart"></i></a></li>
+        <!-- <li class="nav-item"><a href="#" class="nav-link"><i class="icon-chart"></i></a></li> -->
         <li class="nav-item dropdown">
-          <a class="nav-link count-indicator message-dropdown" id="messageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+        <!--   <a class="nav-link count-indicator message-dropdown" id="messageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
             <i class="icon-speech"></i>
-           
+            <span class="count">7</span>
+          </a> -->
+          <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0" aria-labelledby="messageDropdown">
+            <a class="dropdown-item py-3">
+              <p class="mb-0 font-weight-medium float-left">You have 7 unread mails </p>
+              <span class="badge badge-pill badge-primary float-right">View all</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item preview-item">
+              <div class="preview-thumbnail">
+                <img src="../../assets/imagesDash/faces/face10.jpg" alt="image" class="img-sm profile-pic">
+              </div>
+              <div class="preview-item-content flex-grow py-2">
+                <p class="preview-subject ellipsis font-weight-medium text-dark">Marian Garner </p>
+                <p class="font-weight-light small-text"> The meeting is cancelled </p>
+              </div>
+            </a>
+            <a class="dropdown-item preview-item">
+              <div class="preview-thumbnail">
+                <img src="../../assets/imagesDash/faces/face12.jpg" alt="image" class="img-sm profile-pic">
+              </div>
+              <div class="preview-item-content flex-grow py-2">
+                <p class="preview-subject ellipsis font-weight-medium text-dark">David Grey </p>
+                <p class="font-weight-light small-text"> The meeting is cancelled </p>
+              </div>
+            </a>
+            <a class="dropdown-item preview-item">
+              <div class="preview-thumbnail">
+                <img src="../../assets/imagesDash/faces/face1.jpg" alt="image" class="img-sm profile-pic">
+              </div>
+              <div class="preview-item-content flex-grow py-2">
+                <p class="preview-subject ellipsis font-weight-medium text-dark">Travis Jenkins </p>
+                <p class="font-weight-light small-text"> The meeting is cancelled </p>
+              </div>
+            </a>
+          </div>
+        </li>
+        <li class="nav-item dropdown language-dropdown d-none d-sm-flex align-items-center">
+          <a class="nav-link d-flex align-items-center dropdown-toggle" id="LanguageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+            <div class="d-inline-flex mr-3">
+              <i class="flag-icon flag-icon-us"></i>
+            </div>
+            <span class="profile-text font-weight-normal">English</span>
           </a>
+         <!--  <div class="dropdown-menu dropdown-menu-left navbar-dropdown py-2" aria-labelledby="LanguageDropdown">
+            <a class="dropdown-item">
+              <i class="flag-icon flag-icon-us"></i> English </a>
+            <a class="dropdown-item">
+              <i class="flag-icon flag-icon-fr"></i> French </a>
+            <a class="dropdown-item">
+              <i class="flag-icon flag-icon-ae"></i> Arabic </a>
+            <a class="dropdown-item">
+              <i class="flag-icon flag-icon-ru"></i> Russian </a>
+          </div> -->
+        </li>
+        <li class="nav-item dropdown d-none d-xl-inline-flex user-dropdown">
+          <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+            <img class="img-xs rounded-circle ml-2" src="../../assets/imagesDash/faces/face1.jpg" alt="Profile image"> <span class="font-weight-normal"> Jozaif </span></a>
           
         </li>
-        
-        
       </ul>
       <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
         <span class="icon-menu"></span>
       </button>
     </div>
   </nav>
-  <!-- partial -->
-  <div class="container-fluid page-body-wrapper">
+   <!-- partial -->
+   <div class="container-fluid page-body-wrapper" >
     <!-- partial:partials/_sidebar.html -->
-    <nav class="sidebar sidebar-offcanvas" id="sidebar">
+    <nav class="sidebar sidebar-offcanvas" id="sidebar" style=" background-color:black;">
       <ul class="nav">
         <li class="nav-item nav-profile">
           <a href="#" class="nav-link">
@@ -43,10 +96,13 @@
               <div class="dot-indicator bg-success"></div>
             </div>
             <div class="text-wrapper">
-              <p class="profile-name">Jozaf</p>
-              <p class="designation">Farmer</p>
+              <p class="profile-name">Farmaer<p>
+              <!-- <p class="designation">Trader</p> -->
             </div>
-           
+            <div class="icon-container">
+              <i class="icon-bubbles"></i>
+              <div class="dot-indicator bg-danger"></div>
+            </div>
           </a>
         </li>
         <li class="nav-item nav-category">
@@ -54,110 +110,123 @@
         </li>
         <li class="nav-item">
           <a class="nav-link">
-            <span class="menu-title" (click)="GetAllproducts()" >show all products</span>
-            
+            <span class="menu-title"  (click)="GetAllproducts()">Show All Products </span>
+            <i class="icon-basket-loaded menu-icon"></i>
           </a>
         </li>
-       
-       
         <li class="nav-item">
           <a class="nav-link" >
             <span class="menu-title" (click)="GetAllproductssoldout()"> all products sold out</span>
-           
+            <i class="icon-basket-loaded menu-icon"></i>
           </a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link" data-toggle="collapse" aria-expanded="false" aria-controls="ui-basic">
-            <span class="menu-title" (click)="addreviews()">Add Reviews</span>
-           
-          </a>
-         
         </li>
 
 
         <li class="nav-item">
           <a class="nav-link" >
-            <span class="menu-title" (click)="logout()">logout</span>
-            
+            <span class="menu-title" (click)="addreviews()" >Add Review </span>
+            <i class="icon-docs menu-icon"></i>
           </a>
         </li>
-
-        <li class="nav-item pro-upgrade">
-          <span class="nav-link">
-            <a class="btn btn-block px-0 btn-rounded btn-upgrade" (click)="gohome()" >Go To Home</a>
-          </span>
+       
+       
+        <li class="nav-item">
+          <a class="nav-link" (click)="logout()" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+            <span class="menu-title">LogOut Farmer!</span>
+            <i class="icon-user menu-icon"></i>
+          </a>
+        
         </li>
+      
       </ul>
     </nav>
-    <!-- partial -->
-    <div class="main-panel">
-      <div class="content-wrapper">
-       
-        <div class="row">
-        
-         
-        </div>
-        <!-- Quick Action Toolbar Starts-->
-       
-        <!-- Quick Action Toolbar Ends-->
-       
-       
-      
-      </div>
-          <!-- Quick Action Toolbar Ends-->
-         
 
-        
-          <div class="container">
-            <div class="cards">
-                <app-productcardfarmer *ngFor="let card of productsservics.data"
-                 [productID]="card.productID"  
-                 [productName]="card.productName" 
-                 [productPrice]="card.productPrice"
-                 [productImg]="card.productImg"
-                  [productQuantity]="card.productQuantity"
-                 [categoryID]="card.categoryID" 
-                    [userID]="card.userID" 
-                    class="col-4"
-                    style="display: inline-block; display: inline-block;
-                    width: 50%;
-                    padding: 5%;
-                    height: 17%;
-                    margin-top: -12%;
-                    margin-bottom: 3%;"
-                    
-                    >
-          
-            </app-productcardfarmer>
-              
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row purchace-popup">
+            <div class="col-12 stretch-card grid-margin" >
+              <div class="card card-secondary" >
+                <span class="card-body d-lg-flex align-items-center">
+                  <p class="mb-lg-0" >Farmer Dashboard  </p>
+               
+                </span>
+              </div>
             </div>
-  
+          </div>
+          <!-- Quick Action Toolbar Starts-->
+          <div>
+           <!--  <span class="card-body d-lg-flex align-items-center">
+              <p class="mb-lg-0" >Trader dashboard  </p>
+            
+            </span> 
+            -->
+          </div>
+          <div class="row quick-action-btns"   >
+            <div class="col-md-12 grid-margin">
+              <div class="card"  style="color: black;"  >
+                <div class="card-header d-block d-md-flex" style="color: black;"  >
+                  <h5 class="mb-0"  >Quick Actions</h5>
+                  <p class="ml-auto mb-0"><i class=""></i></p>
+                </div>
+                <div class="d-md-flex row m-0 quick-action-btns" role="group" aria-label="Quick action buttons">
+                  <div class="col-sm-6 col-md-3 p-3 text-center btn-wrapper">
+                    <button type="button" class="btn px-0" > <i class="icon-basket-loaded menu-icon"  (click)="create()">Create Products </i> </button>
+                  </div>
+                  <div class="col-sm-6 col-md-3 p-3 text-center btn-wrapper">
+                    <button type="button" class="btn px-0"><i class="icon-docs menu-icon" >Update Products </i> </button>
+                  </div>
+                  <div class="col-sm-6 col-md-3 p-3 text-center btn-wrapper">
+                    <button type="button" class="btn px-0"><i class="icon-basket-loaded menu-icon">Delete Product </i></button>
+                  </div>
+                  <!-- <div class="col-sm-6 col-md-3 p-3 text-center btn-wrapper">
+                    <button type="button" class="btn px-0"><i class="icon-book-open mr-2"></i>Create Invoice</button>
+                  </div> -->
+                </div>
+              </div>
+          
+          
+            </div>
+          </div>
+          <!-- Quick Action Toolbar Ends-->     
+        </div>  
+        <div class="container">
+          <div class="cards">
+              <app-productcardfarmer *ngFor="let card of productsservics.data"
+               [productID]="card.productID"  
+               [productName]="card.productName" 
+               [productPrice]="card.productPrice"
+               [productImg]="card.productImg"
+                [productQuantity]="card.productQuantity"
+               [categoryID]="card.categoryID" 
+                  [userID]="card.userID" 
+                  class="col-4"
+                  style="display: inline-block; display: inline-block;
+                  width: 30%;
+                  padding: 5%;
+                  height: 10%;
+                  margin-top: -12%;
+                  margin-bottom: 3%;"
+                  
+                  >
+        
+          </app-productcardfarmer>
+            
+          </div> 
 
 
 
 
-
-
-
-
-        </div>
-        <!-- content-wrapper ends -->
         <!-- partial:partials/_footer.html -->
         <footer class="footer">
           <div class="d-sm-flex justify-content-center justify-content-sm-between">
             <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © bootstrapdash.com 2020</span>
-            
           </div>
         </footer>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
 
-
-
-
-
-
-
-
-
-
-  

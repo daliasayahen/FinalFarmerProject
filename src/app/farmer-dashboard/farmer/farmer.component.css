@@ -1,4 +1,4 @@
-
+/* 
 
   
 .col-12 {
@@ -12,7 +12,7 @@
 }
 .sidebar .nav .nav-item.nav-profile .nav-link .designation {
     margin-bottom: 0;
-    font-weight: 300;
+    font-weight: 150;
     color: #6deb82;
     font-size: 20px;
 }
@@ -29,7 +29,7 @@ p {
     color: inherit;
     display: inline-block;
     font-size: 20px;
-    line-height: 2;
+    line-height: 1;
     vertical-align: middle;
 }
 .sidebar .nav .nav-item.pro-upgrade
@@ -38,4 +38,4 @@ p {
     background-image: linear-gradient(to left, #4aec52, #4aec52);
     background-color: #4aec52;
     color: #ffffff;
-}
+} */

@@ -50,10 +50,10 @@ export class FarmerprodhomeComponent implements OnInit {
     this.router.navigate(['HomePage'])
   }
 
-  Updateproduct(){
-    this.dialog.open(UpdateFarmerProductComponent);
+  // Updateproduct(){
+  //   this.dialog.open(UpdateFarmerProductComponent);
 
-  }
+  // }
   getall(){
     this.spiner.show();
     this.productsservics.getall().subscribe((res:any)=>{
@@ -72,6 +72,9 @@ export class FarmerprodhomeComponent implements OnInit {
     
     this.dialog.open(CreatproductfarmerComponent);
   }
+  // delete (){
+  //   this.dialog.open(CreatproductfarmerComponent);
+  // }
  
 
 

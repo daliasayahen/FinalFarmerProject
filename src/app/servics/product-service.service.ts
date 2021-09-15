@@ -64,7 +64,7 @@ export class ProductServiceService {
     };
     this.spiner.show();
     debugger
-    this.http.post('https://localhost:44379/api/products',data,requestOptions).subscribe((res:any)=>{
+    this.http.post('https://localhost:44379/api/Products',data,requestOptions).subscribe((res:any)=>{
     this.toaster.success('Created');
     this.spiner.hide();
     },err=>{
@@ -87,7 +87,7 @@ export class ProductServiceService {
       headers: new HttpHeaders(headerDict), 
     };
     this.spiner.show();
-    this.http.put('https://localhost:44379/api/products',data,requestOptions).subscribe((res:any)=>{
+    this.http.put('https://localhost:44379/api/Products',data,requestOptions).subscribe((res:any)=>{
     this.toaster.success('Created');
     this.spiner.hide();
     },err=>{
@@ -102,7 +102,7 @@ export class ProductServiceService {
   DeleteProduct(id:number){
     debugger
     this.spiner.show();
-    this.http.delete('https://localhost:44379/api/products/'+id).subscribe((data:any)=>{
+    this.http.delete('https://localhost:44379/api/Products/'+id).subscribe((data:any)=>{
       this.toaster.success('Deleted');
       this.spiner.hide();
     },err=>{
