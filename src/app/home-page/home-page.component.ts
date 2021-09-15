@@ -103,6 +103,6 @@ export class HomePageComponent implements OnInit {
 
 
   AddtoCart(){
-    this.router.navigate(['Cart'])
+    this.router.navigate(['Login'])
   }
 }

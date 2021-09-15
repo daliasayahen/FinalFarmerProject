@@ -40,5 +40,6 @@ export class TraderprodhomeComponent implements OnInit {
     this.router.navigate(['/Login'])
     
   }
+  
 
 }

@@ -45,6 +45,7 @@ import { CartproductComponent } from './cartproduct/cartproduct.component';
     GalaryProductsComponent,
     FruitsComponent,
     VegitableComponent,
+    
     CartproductComponent,
   ],
   imports: [
@@ -58,7 +59,8 @@ import { CartproductComponent } from './cartproduct/cartproduct.component';
     ToastNoAnimationModule.forRoot(),
     HttpClientModule,
     MatDialogModule,
-    SharedModule
+    SharedModule,
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,41 @@
+/* 
+
+  
+.col-12 {
+    -ms-flex: 0 0 200%;
+    flex: 0 0 100%;
+    max-width: 200%;
+}
+.img-xs {
+    width: 80px;
+    height: 65px;
+}
+.sidebar .nav .nav-item.nav-profile .nav-link .designation {
+    margin-bottom: 0;
+    font-weight: 150;
+    color: #6deb82;
+    font-size: 20px;
+}
+
+p {
+    font-family: Poppins-Regular;
+    font-size: 25px;
+    line-height: 1.7;
+    color: #f4f8f2;
+    margin: 0px;
+}
+
+.sidebar .nav .nav-item .nav-link .menu-title {
+    color: inherit;
+    display: inline-block;
+    font-size: 20px;
+    line-height: 1;
+    vertical-align: middle;
+}
+.sidebar .nav .nav-item.pro-upgrade
+.nav-link .btn-upgrade {
+    background-image: -webkit-gradient(linear, right top, left top, from(#4aec52), to(#4aec52));
+    background-image: linear-gradient(to left, #4aec52, #4aec52);
+    background-color: #4aec52;
+    color: #ffffff;
+} */

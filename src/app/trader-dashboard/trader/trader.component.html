@@ -21,25 +21,25 @@
             <div class="container-scroller">
                 <!-- partial:partials/_navbar.html -->
                 <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row" style="margin-left: 1.20%;">
-                  <div class="navbar-brand-wrapper d-flex align-items-center">
+                  <div class="navbar-brand-wrapper d-flex align-items-center" style=" background-color: white;">
                     <a class="navbar-brand brand-logo" href="index.html">
-                      <img src="../../assets/images/logo.png" style="width: 100%;height: 100%;margin-left: 5%;" alt="logo" class="logo-dark" />
+                      <img src="../../assets/images/logo.png" style="width: 100%;height: 100%;margin-left: 5%; " alt="logo" class="logo-dark" />
                     </a>
                     <a class="navbar-brand brand-logo-mini" href="index.html"><img src="../../assets/imagesDash/logo-mini.svg" /></a>
                   </div>
                   <div class="navbar-menu-wrapper d-flex align-items-center flex-grow-1">
                     <ul class="navbar-nav navbar-nav-right ml-auto">
-                      <form class="search-form d-none d-md-block" action="#">
+                      <!-- <form class="search-form d-none d-md-block" action="#">
                         <i class="icon-magnifier"></i>
                         <input type="search" class="form-control" placeholder="Search Here" title="Search here">
-                      </form>
+                      </form> -->
                       <li class="nav-item"><a href="#" class="nav-link"><i class="icon-basket-loaded"></i></a></li>
-                      <li class="nav-item"><a href="#" class="nav-link"><i class="icon-chart"></i></a></li>
+                      <!-- <li class="nav-item"><a href="#" class="nav-link"><i class="icon-chart"></i></a></li> -->
                       <li class="nav-item dropdown">
-                        <a class="nav-link count-indicator message-dropdown" id="messageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+                      <!--   <a class="nav-link count-indicator message-dropdown" id="messageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
                           <i class="icon-speech"></i>
                           <span class="count">7</span>
-                        </a>
+                        </a> -->
                         <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0" aria-labelledby="messageDropdown">
                           <a class="dropdown-item py-3">
                             <p class="mb-0 font-weight-medium float-left">You have 7 unread mails </p>
@@ -99,7 +99,7 @@
                         <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
                           <div class="dropdown-header text-center">
                             <img class="img-md rounded-circle" src="../../assets/imagesDash/faces/face8.jpg" alt="Profile image">
-                            <p class="mb-1 mt-3">Trader</p>
+                            <p class="mb-1 mt-3" style="font-weight:bolder;">ADMIN</p>
                             <p class="font-weight-light text-muted mb-0">allenmoreno@gmail.com</p>
                           </div>
                           <a class="dropdown-item"><i class="dropdown-item-icon icon-user text-primary"></i> My Profile <span class="badge badge-pill badge-danger">1</span></a>
@@ -116,9 +116,9 @@
                   </div>
                 </nav>
                 <!-- partial -->
-                <div class="container-fluid page-body-wrapper">
+                <div class="container-fluid page-body-wrapper" >
                   <!-- partial:partials/_sidebar.html -->
-                  <nav class="sidebar sidebar-offcanvas" id="sidebar">
+                  <nav class="sidebar sidebar-offcanvas" id="sidebar" style=" background-color:black;">
                     <ul class="nav">
                       <li class="nav-item nav-profile">
                         <a href="#" class="nav-link">
@@ -127,8 +127,8 @@
                             <div class="dot-indicator bg-success"></div>
                           </div>
                           <div class="text-wrapper">
-                            <p class="profile-name">Allen Moreno</p>
-                            <p class="designation">Trader</p>
+                            <p class="profile-name">Trader/<p>
+                            <!-- <p class="designation">Trader</p> -->
                           </div>
                           <div class="icon-container">
                             <i class="icon-bubbles"></i>
@@ -141,8 +141,8 @@
                       </li>
                       <li class="nav-item">
                         <a class="nav-link">
-                          <span class="menu-title" (click)="GetAllproducts()">show all products </span>
-                          <i class="icon-screen-desktop menu-icon"></i>
+                          <span class="menu-title" (click)="GetAllproducts()">Show All Products </span>
+                          <i class="icon-basket-loaded menu-icon"></i>
                         </a>
                       </li>
                      <!--  <li class="nav-item" (click)="GetAlltraders()">
@@ -160,10 +160,10 @@
                       <li class="nav-item">
                         <a class="nav-link" >
                           <span class="menu-title" (click)="AddReview()">Add Review </span>
-                          <i class="icon-book-open menu-icon"></i>
+                          <i class="icon-docs menu-icon"></i>
                         </a>
                       </li>
-                      <li class="nav-item">
+                 <!--      <li class="nav-item">
                         <a class="nav-link" href="pages/charts/chartist.html">
                           <span class="menu-title">Charts</span>
                           <i class="icon-chart menu-icon"></i>
@@ -174,11 +174,11 @@
                           <span class="menu-title">Tables</span>
                           <i class="icon-grid menu-icon"></i>
                         </a>
-                      </li>
+                      </li> -->
                       <li class="nav-item">
                         <a class="nav-link" (click)="logout()" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
                           <span class="menu-title">LogOut Trader!</span>
-                          <i class="icon-doc menu-icon"></i>
+                          <i class="icon-user menu-icon"></i>
                         </a>
                       
                       </li>
@@ -192,26 +192,33 @@
                         <div class="col-12 stretch-card grid-margin" >
                           <div class="card card-secondary" >
                             <span class="card-body d-lg-flex align-items-center">
-                              <p class="mb-lg-0" >Trader dashboard to show product buy product, and more! </p>
+                              <p class="mb-lg-0" >ADMIN dashboard  </p>
                            
                             </span>
                           </div>
                         </div>
                       </div>
                       <!-- Quick Action Toolbar Starts-->
-                      <div class="row quick-action-toolbar">
+                      <div>
+                       <!--  <span class="card-body d-lg-flex align-items-center">
+                          <p class="mb-lg-0" >Trader dashboard  </p>
+                        
+                        </span> 
+                        -->
+                      </div>
+                      <div class="row quick-action-btns"   >
                         <div class="col-md-12 grid-margin">
-                          <div class="card" >
-                            <div class="card-header d-block d-md-flex">
-                              <h5 class="mb-0">Quick Actions</h5>
-                              <p class="ml-auto mb-0"><i class="icon-bulb"></i></p>
+                          <div class="card"  style="color: black;"  >
+                            <div class="card-header d-block d-md-flex" style="color: black;"  >
+                              <h5 class="mb-0"  >Quick Actions</h5>
+                              <p class="ml-auto mb-0"><i class=""></i></p>
                             </div>
                             <div class="d-md-flex row m-0 quick-action-btns" role="group" aria-label="Quick action buttons">
                               <div class="col-sm-6 col-md-3 p-3 text-center btn-wrapper">
-                                <button type="button" class="btn px-0" (click)="GetAllproducts()"> <i class="icon-user mr-2">Get All Products</i> </button>
+                                <button type="button" class="btn px-0" (click)="GetAllproducts()"> <i class="icon-basket-loaded menu-icon">Get All Products and Bay</i> </button>
                               </div>
                               <div class="col-sm-6 col-md-3 p-3 text-center btn-wrapper">
-                                <button type="button" class="btn px-0"(click)="AddReview()"><i class="icon-docs mr-2"></i> Add Review</button>
+                                <button type="button" class="btn px-0"(click)="AddReview()"><i class="icon-docs menu-icon"></i> Add Review</button>
                               </div>
                               <div class="col-sm-6 col-md-3 p-3 text-center btn-wrapper">
                                 <button type="button" class="btn px-0"(click)="GetAllproducts()"><i class="icon-folder mr-2"></i> Enter Payment</button>
@@ -221,6 +228,8 @@
                               </div>
                             </div>
                           </div>
+                      
+                      
                         </div>
                       </div>
                       <!-- Quick Action Toolbar Ends-->

@@ -78,7 +78,9 @@ export class ProductCardComponent implements OnInit {
       
       }​​​
       
-      
+      AddtoCart(){
+        this.router.navigate(['Cart'])
+      }
 
 
 
