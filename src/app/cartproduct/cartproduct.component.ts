@@ -64,19 +64,16 @@ export class CartproductComponent implements OnInit {
       }​​​
 
 
-      insertRecord(Id: any) {
+      insertRecord(Id: any,Quantity:any, productPrice:any) {
         console.log(this.Quantity);
             this.productID = Id;
           
           const val = {
-            quantity: this.Quantity,
-       
+         quantity: this.Quantity,
+         amount :+Quantity*+productPrice,
         prouductId: Id,
+
         username: this.loginservice.username.value
-            
-           
-            
-           
 
 
           };
@@ -84,6 +81,8 @@ export class CartproductComponent implements OnInit {
         
           console.log(val);
           this.cartService.Book(val).subscribe((res) => {
+            this.toast.success('Add to cart');
+
           });
           console.log(val);
         }

@@ -126,10 +126,10 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th>Images</th>
-                                <th>Product Name</th>
-                                <th>Price</th>
-                                <th>Quantity</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
                                 
                             </tr>
                         </thead>
@@ -137,7 +137,7 @@
 
                 <tbody >
                           
-                           <app-cartproduct
+                           <app-cartproduct 
                           *ngFor="let card of userservice.data"
                           [productID]="card.productID"  
                             [productName]="card.productName" 
@@ -145,8 +145,9 @@
                          [productImg]="card.productImg"
                          [productQuantity]="card.productQuantity"
                           [categoryID]="card.categoryID" 
-                           [userID]="card.userID"  style="margin-top:-1%" >
-                        </app-cartproduct >  
+                           [userID]="card.userID"  style="margin-top:-1%" 
+                           style=" margin-bottom: -50%;">
+                        </app-cartproduct  >  
                           
                         </tbody>
                     </table>
