@@ -1,20 +1,4 @@
 
-<!-- Card  angular material-->
-<!-- <div class="container">
-    <div class="cards">
-        <app-product-card *ngFor="let card of userService.data"
-         [productID]="card.productID"  
-         [productName]="card.productName" 
-         [productPrice]="card.productPrice"
-         [productImg]="card.productImg"
-          [productQuantity]="card.productQuantity"
-         [categoryID]="card.categoryID" 
-            [userID]="card.userID"  style="display: inline-block; padding: 1%;">
-  
-    </app-product-card >
-      
-    </div>
-  </div> -->
   <div class="container-scroller">
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row" style="margin-left: 1.20%;">
@@ -127,9 +111,9 @@
                 
                 <p class="designation">Farmer</p>
               </div>
-              <div class="icon-container">
-                <i class="icon-bubbles"></i>
-                <div class="dot-indicator bg-danger"></div>
+              <div class="preview-item-content flex-grow py-2">
+                <p class="preview-subject ellipsis font-weight-medium text-dark">Travis Jenkins </p>
+                <p class="font-weight-light small-text"> The meeting is cancelled </p>
               </div>
             </a>
           </li>
@@ -204,34 +188,25 @@
 
                 <div class="d-md-flex row m-0 quick-action-btns" role="group" aria-label="Quick action buttons">
                   <div class="col-sm-6 col-md-3 p-3 text-center btn-wrapper">
-                    <button type="button" class="btn px-0"
-                     (click)="create()"> 
-                      <i class="icon-user mr-2" >
-
-                    </i>
-                     Add new Products
-                    </button>
+                    <button type="button" class="btn px-0" > <i class="icon-basket-loaded menu-icon"  (click)="create()">Create Products </i> </button>
                   </div>
                   <div class="col-sm-6 col-md-3 p-3 text-center btn-wrapper">
-                    <button type="button" class="btn px-0" (click)="Updateproduct()">
-                      <i class="icon-docs mr-2"></i>Update Products</button>
+                    <button type="button" class="btn px-0"><i class="icon-docs menu-icon" >Update Products </i> </button>
                   </div>
                   <div class="col-sm-6 col-md-3 p-3 text-center btn-wrapper">
-                    <button type="button" class="btn px-0"><i class="icon-folder mr-2"></i> Enter Payment</button>
+                    <button type="button" class="btn px-0"><i class="icon-basket-loaded menu-icon">Delete Product </i></button>
                   </div>
-                  <div class="col-sm-6 col-md-3 p-3 text-center btn-wrapper">
-                    <button type="button" class="btn px-0"><i class="icon-book-open mr-2">
-
-                    </i>Create Invoice</button>
-                  </div>
+                  <!-- <div class="col-sm-6 col-md-3 p-3 text-center btn-wrapper">
+                    <button type="button" class="btn px-0"><i class="icon-book-open mr-2"></i>Create Invoice</button>
+                  </div> -->
                 </div>
               </div>
+          
+          
             </div>
           </div>
-          <!-- Quick Action Toolbar Ends-->
-         
-
-        
+          <!-- Quick Action Toolbar Ends-->     
+        </div> 
           <div class="container">
             <div class="cards">
                 <app-productcardfarmer *ngFor="let card of productsservics.data"
@@ -264,23 +239,16 @@
 
 
 
-        </div>
-        <!-- content-wrapper ends -->
         <!-- partial:partials/_footer.html -->
         <footer class="footer">
           <div class="d-sm-flex justify-content-center justify-content-sm-between">
             <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © bootstrapdash.com 2020</span>
-            
           </div>
         </footer>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
 
-
-
-
-
-
-
-
-
-
-  

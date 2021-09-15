@@ -32,3 +32,69 @@
   </div>
    -->
    
+
+
+   <!-- <div class="container">
+    <h2> Products Sold Out  </h2>
+    <ul class="responsive-table">
+      <li class="table-header">
+       
+        <div class="col col-2">Products Name</div>
+        <div class="col col-3">Product Price</div>
+        <div class="col col-4">Product Quantity</div>
+       
+      </li>
+      
+      <li class="table-row">
+        <div class="col col-2" data-label="Products Name">{{productName}}</div>
+        <div class="col col-3" data-label="Product Price">{{productPrice}}</div>
+        <div class="col col-4" data-label="Product Quantity">{{productQuantity}}</div>
+      </li>
+    </ul>
+  </div> -->
+
+
+
+
+
+  <div class="cart-box-main">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="table-main table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Images</th>
+                                <th>Product Name</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                               
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="thumbnail-img">
+                                    <a href="#">
+                                <img class="img-fluid" src= "{{getImagePath(productImg)}}"  alt=""  />
+                            </a>
+                                </td>
+                                <td class="name-pr">
+                                    
+                                        {{productName}}
+                            
+                                </td>
+                                <td class="price-pr">
+                                    <p>{{productPrice}} JD</p>
+                                </td>
+                               
+                                <td class="total-pr">
+                                    <p>{{productQuantity}}</p>
+                                </td>
+                               
+                                
+                            </tr>
+                          
+                           
+                        </tbody>
+                    </table>

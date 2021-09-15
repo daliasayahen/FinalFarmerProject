@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ReviewService } from 'src/app/servics/review.service';
 import { UsersService } from 'src/app/servics/users.service';
+
 
 @Component({
   selector: 'app-reviewform',
@@ -11,9 +12,10 @@ import { UsersService } from 'src/app/servics/users.service';
   styleUrls: ['./reviewform.component.css']
 })
 export class ReviewformComponent implements OnInit {
- 
+  
+  
   formReview:FormGroup=new FormGroup({
-   
+    
     userName:new FormControl('',[Validators.required]),
     descriptiontext:new FormControl('',[Validators.required]),
     img:new FormControl('',[Validators.required]),
@@ -21,13 +23,20 @@ export class ReviewformComponent implements OnInit {
 
   
   }
-
   )
+   
+  // isRated=false;
+  // changeRating(){
+  //  this.isRated=!this.isRated
+  // }
 
   constructor(private router:Router, private spinner: NgxSpinnerService ,
      public reviewservic:ReviewService, public userService:UsersService) { }
 
+    
   ngOnInit(): void {
+    
+    
   }
   GetAllproducts(){
     this.router.navigate(['dashboard/producthome'])
@@ -86,4 +95,5 @@ export class ReviewformComponent implements OnInit {
       this.reviewservic.uploadAttachment(formData);
       }​​​
     
-}
+} 
+

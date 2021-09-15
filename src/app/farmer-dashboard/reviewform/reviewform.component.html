@@ -174,67 +174,60 @@
             </div>
           </div>
         </div>
-        <!-- Quick Action Toolbar Starts-->
-        <div>
-          <!-- Quick Action Toolbar Starts-->
-      <!--     <div class="row quick-action-toolbar">
-            <div class="col-md-12 grid-margin">
-             
-
-            </div>
-          </div> -->
-          <!-- Quick Action Toolbar Ends-->
-         
-          
-           <form [formGroup]="formReview">
-  <mat-form-field class="example-full-width">
-    <mat-label>Enter Name </mat-label>
-    <input matInput  formControlName="userName" placeholder="enter your name">
-    <mat-error *ngIf="formReview.controls.userName.hasError('required')">
-      Please Enter your name
-    </mat-error>
-
-  </mat-form-field>
-
-   <mat-form-field class="example-full-width">
-    <mat-label>Enter img</mat-label>
-    <input matInput  formControlName="img" placeholder="enter your description">
-    </mat-form-field> 
-
-
-    <div class="row" style="margin-bottom:15px;">
-
-      <div class="col-md-3">
-        <input type="file" #file placeholder="Choose Image" 
-           formControlName="img" (change)="uploadFile(file.files)" 
-        style="display:none;">
-        <button type="button" class="btn btn-success" 
-        (click)="file.click()">Upload Image</button>
       </div>
-     
-    </div>
-
-
-
+         
+ <div class="row">
+  <form [formGroup]="formReview" style="margin-left: 30%;"> 
     <mat-form-field class="example-full-width">
-      <mat-label>Enter rate</mat-label>
-      <input matInput  formControlName="rate" placeholder="enter your description">
-      </mat-form-field>
-
-  <mat-form-field class="example-full-width">
-    <mat-label>Enter Description</mat-label>
-    <input matInput  formControlName="descriptiontext" placeholder="enter your description">
+      <mat-label>Enter Full name</mat-label>
+      <input matInput placeholder="enter your name" formControlName="userName">
+       <mat-error *ngIf="formReview.controls.userName.hasError('required')">
+         please enter your name
+      </mat-error>
+    
     </mat-form-field>
 
 
+    
+    <mat-form-field class="example-full-width" >
+      <mat-label>Leave a comment</mat-label>
+      <textarea matInput placeholder="Ex. It makes me feel..." formControlName="descriptiontext" ></textarea>
+    </mat-form-field>
 
-  <button  mat-button color="black" (click)="submit()" 
-  style="flex:1;width:100%; margin-top: 20px; ; font-size: 119%; background-color: #b1b539; 
-  font-family:  Georgia, 'Times New Roman', Times, serif; color: seashell;">
+ 
 
-    <ng-container>Send</ng-container>  </button>
- </form>  
-   
+    
+<div class="row" style="margin-bottom:15px;">
+
+                <div class="col-md-3">
+                  <input type="file" #file placeholder="Choose Image" 
+                     formControlName="img" (change)="uploadFile(file.files)" 
+                  style="display:none;">
+                  <button type="button" class="btn btn-success" 
+                  (click)="file.click()">Upload Image</button>
+                </div>
+               
+              </div>
+      <mat-form-field class="example-full-width" >
+        <mat-label>add rate</mat-label>
+        <textarea matInput placeholder="Ex. It makes me feel..." formControlName="rate" ></textarea>
+      </mat-form-field>
+    
+     
+      <button [disabled]="!formReview.controls.descriptiontext.valid" mat-button color="primary" (click)="submit()" style="flex:1;width:100%;margin-top:50px ;" > 
+
+        <ng-container>send</ng-container>
+        </button>
+
+      </form> 
+</div>
+
+
+
+
+
+
+
         
         </div>
         <!-- content-wrapper ends -->
