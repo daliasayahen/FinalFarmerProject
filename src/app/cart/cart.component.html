@@ -137,7 +137,7 @@
                         <tbody>
                           
                           <app-cartproduct
-                          *ngFor="let card of userservice.data"
+                          *ngFor="let card of  userService.data"
          [productID]="card.productID"  
          [productName]="card.productName" 
          [productPrice]="card.productPrice"
@@ -153,6 +153,36 @@
                 </div>
             </div>
         </div>
+
+        <button (click)=" Filter(loginservice.username.value)">Show {{loginservice.username.value}} Chart</button>
+        <table class="table table-hover">
+
+            <tr>
+              <th>Product Id</th>
+              <th>
+               Quantity
+              </th>
+              
+            </tr>
+    
+            <tbody>
+    
+              <tr *ngFor="let dataitem of filterd">
+                <td>{{dataitem.prouductId}}</td>
+                <td>{{dataitem.quantity}}</td>
+               
+                
+              
+                
+                
+    
+    
+    
+              </tr>
+            </tbody>
+            <label> the totoal payment ={{totalpayment}}</label>
+            <label>to confirm your  orders click here => <button class="btn btn-success" (click)="confirm(loginservice.username.value)"> Confirm </button>></label>
+          </table>
 
         <div class="row my-5">
 

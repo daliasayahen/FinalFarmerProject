@@ -26,6 +26,9 @@ Book(val: any) {
   return this.http.post('https://localhost:44379/api/Cart/order', val);
 }
 
+confirm(val: any) {
+  return this.http.post('https://localhost:44379/api/Cart/confirm', val);
+}
 
 
 
@@ -74,5 +77,10 @@ emptyCart(id:number){
  
 getCartItems(): Observable<any[]>{
     return this.http.get<any>('https://localhost:44379/api/products');
+  }
+ 
+
+  getUserCart(): Observable<any[]>{
+    return this.http.get<any>('https://localhost:44379/api/cart/pay');
   }
   }
