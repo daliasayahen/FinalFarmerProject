@@ -177,7 +177,20 @@
                     <!-- Quick Action Toolbar Starts-->
                   
                   <!-- content-wrapper ends -->
-                
+                  <div class="row">
+                    <div class="col-lg-12">
+                        <div class="table-main table-responsive">
+                          <table class="table">
+                  <thead>
+                    <tr >
+                        <th   >Images</th>
+                        <th>Product Name</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                       
+                    </tr>
+                </thead>
+                 
                   <div class="cards">
                     <app-product-soldout *ngFor="let card of productService.data"
                      [productID]="card.productID"  
@@ -190,9 +203,13 @@
                         style="padding-top: 1px; padding-left: 6%;">
               
                 </app-product-soldout>
-                  
+                  </div>
+              </table>
+                  </div>
                 </div>
-
+</div>
+                
+            
 
 
 

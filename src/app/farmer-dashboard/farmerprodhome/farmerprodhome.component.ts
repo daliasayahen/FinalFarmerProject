@@ -72,15 +72,18 @@ export class FarmerprodhomeComponent implements OnInit {
     
     this.dialog.open(CreatproductfarmerComponent);
   }
-  // delete (){
-  //   this.dialog.open(CreatproductfarmerComponent);
-  // }
+  //  delete (){
+  //    this.dialog.open(CreatproductfarmerComponent);
+  //  }
+ 
+
+  UpdateProduct(){
+    this.dialog.open(CreatproductfarmerComponent);
+  }
  
 
 
-
-
-
+ 
 
 
 }

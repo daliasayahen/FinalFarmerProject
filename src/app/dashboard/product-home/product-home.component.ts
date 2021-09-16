@@ -14,16 +14,28 @@ import { CreateFarmerComponent } from '../create-farmer/create-farmer.component'
   styleUrls: ['./product-home.component.css']
 })
 export class ProductHomeComponent implements OnInit {
+  Property2: Array<any> = [];
 
   constructor(private router:Router,private toast:ToastrService,
     private spiner:NgxSpinnerService, public userService:UsersService,private dialog:MatDialog) { }
   ngOnInit(): void {
-    this.getallproducts();
-    
+    this.userService.getallproducts().subscribe(
+      (data: any) => {
+        
+        this.Property2=(data);
+  })
+  console.log(this.Property2)
   }
   
   getallproducts(){
     this.spiner.show();
+    this.userService.getallproducts().subscribe(
+      (data: any) => {
+        
+        this.Property2=(data);
+  })
+  console.log(this.Property2)
+
     this.userService.getallproducts().subscribe((res:any)=>{
       this.userService.data=res;
       this.spiner.hide();

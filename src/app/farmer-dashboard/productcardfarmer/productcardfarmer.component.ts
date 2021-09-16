@@ -43,6 +43,18 @@ export class ProductcardfarmerComponent implements OnInit {
     )
   }
 
+  DeleteItem(id:any){
+    if(this.productID){
+      
+      debugger
+      this.productService.DeleteProduct(id);
+      this.toast.success('Deleted Item');
+    }else{
+      this.toast.warning('This item connot be deleted');
+    }
+  }
+
+
 
   getImagePath(value:string ){
 
@@ -61,3 +73,6 @@ export class ProductcardfarmerComponent implements OnInit {
       this.productService.uploadAttachment(formData);
       }​​​
     }
+
+   
+  
