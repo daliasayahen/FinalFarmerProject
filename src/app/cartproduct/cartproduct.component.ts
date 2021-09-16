@@ -78,6 +78,7 @@ totalpayment:number=0;
             quantity: this.Quantity,
        amount :+Quantity*+ProductPrice,
         prouductId: Id,
+
         username: this.loginservice.username.value
             
           
@@ -91,6 +92,8 @@ totalpayment:number=0;
         
           console.log(val);
           this.cartService.Book(val).subscribe((res) => {
+            this.toast.success('Add to cart');
+
           });
           console.log(val);
         }
