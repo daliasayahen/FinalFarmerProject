@@ -1,7 +1,7 @@
 
     .table {
-        width: 80%;
-        max-width: 100%;
+        width: 100%;
+        max-width: 150%;
         margin-bottom: 1rem;
         margin-left: 8%;
         background-color:#ecf0f4;
@@ -13,13 +13,16 @@
     background-color:#ecf0f4;
    }
    .table td img {
-    width: 85px;
+    width: 200px;
     height: 50px;
-    border-radius: 45%;
+    border-radius: 60%;
 }
 
 
-
+.thumbnail-img{
+    width: 200px;
+    height: 80px;
+}
 
 
 
@@ -30,7 +33,7 @@
     max-width: 200%;
 }
 .img-xs {
-    width: 80px;
+    width: 100px;
     height: 65px;
 }
 .sidebar .nav .nav-item.nav-profile .nav-link .designation {

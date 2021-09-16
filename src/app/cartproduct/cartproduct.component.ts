@@ -22,14 +22,20 @@ export class CartproductComponent implements OnInit {
    @Input() categoryID:number|undefined
    @Input() userID:number|undefined
    Quantity:any;
-
-
+   filterd:Array<any> = [];
+totalpayment:number=0;
+   paymentArr: Array<any> = [];
   constructor(private router:Router,public userService:UsersService,
     private toast:ToastrService , private spiner :NgxSpinnerService ,
     public productService:ProductServiceService,private cartService: CartService,public loginservice:LoginServiceService){}
 
 
   ngOnInit(): void {
+    this.cartService.getUserCart().subscribe((data: any) => {
+      this.paymentArr = data;
+    });
+    this.Filter();
+    
   }
   getall(){
     this.spiner.show();
@@ -64,19 +70,24 @@ export class CartproductComponent implements OnInit {
       }​​​
 
 
-      insertRecord(Id: any,Quantity:any, productPrice:any) {
+      insertRecord(Id: any,Quantity : any , ProductPrice:any) {
         console.log(this.Quantity);
             this.productID = Id;
           
           const val = {
-         quantity: this.Quantity,
-         amount :+Quantity*+productPrice,
+            quantity: this.Quantity,
+       amount :+Quantity*+ProductPrice,
         prouductId: Id,
 
         username: this.loginservice.username.value
+            
+          
+            
+           
 
 
           };
+          console.log(val);
 
         
           console.log(val);
@@ -86,6 +97,24 @@ export class CartproductComponent implements OnInit {
           });
           console.log(val);
         }
+
+        Filter() {
+         
+         
+          this. paymentArr.forEach((element) => {
+            if (
+              element.username=this.loginservice.username.value)
+              {
+              this.filterd.push(element);
+              this.totalpayment=this.totalpayment+element.amount
+              
+          }});
+         
+      
+          
+          return (this.paymentArr=this.filterd);
+        }
+      
       
       }
       
